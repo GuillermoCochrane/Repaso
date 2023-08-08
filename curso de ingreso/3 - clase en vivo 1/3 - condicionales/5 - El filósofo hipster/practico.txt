@@ -1,0 +1,37 @@
+El filósofo hipster
+Como ya lo vimos en ejercicios anteriores, un operador con el que ya te encontraste, es la conjunción lógica && (también llamada 'and' o en español'y'), que sólo retorna verdadero cuando las dos expresiones que evalúa son verdaderas.
+
+Así mismo, ya sabemos que podemos unir varias expresiones a evaluar mediante este operador y si alguna de ellas no es verdadera (false) el resultado final será falso.
+
+Por ejemplo, si analizamos la siguiente función:
+
+function esCantanteExitoso(cdsEditados, recitalesRealizados, tieneTemasEnSpotify) {
+    return  cdsEditados >= 10 && recitalesRealizados >= 20 && tieneTemasEnSpotify  == true;
+}
+Nos podemos dar cuenta que basta con que un cantante no tenga temas en Spotify para no ser considerado exitoso 😞, incluso aunque haya editado 10 o más CDs y dado 20 o más recitales.
+
+El código que acabamos de ver está bien, pero es mejorable, mira este bloque:
+
+function esCantanteExitoso(cdsEditados, recitalesRealizados, tieneTemasEnSpotify) {
+return  cdsEditados >= 10 && recitalesRealizados >= 20 && tieneTemasEnSpotify;
+}
+¿Ya te diste cuenta? La ultima condición dejó de tener comparación. Ésto es porque ese dato tieneTemasEnSpotify ya de por sí es un dato booleano, o sea que ya vamos a estar diciendo si es true/false.
+
+Como siempre, ahora es tu turno.
+
+Definí la función filosofoHipster  que tome 3 parámetros (en éste orden):
+
+La profesión de una persona(string)
+Su nacionalidad (string)
+La cantidad de kilómetros que camina por día (number)
+Y que evalúe con estos datos, si una persona es o no (true/false) un Filósofo Hipster. Tené en cuenta que un Filósofo Hipster es alguien con Nacionalidad Argentina, de profesión Músico y a quien le gusta caminar más de 2 kilómetros por día.
+
+
+Recordá que nuevamente tenés que resolver éste ejercicio sin hacer uso de if/else.
+
+------------------------------------------
+
+// this file is read only, you cannot write it
+function filosofoHipster( profesion , nacionalidad , cantidadDeKms) {
+return  profesion == "Músico" && nacionalidad == "Argentina"  && cantidadDeKms > 2;
+}

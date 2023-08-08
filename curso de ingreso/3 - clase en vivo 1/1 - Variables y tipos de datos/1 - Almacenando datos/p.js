@@ -1,0 +1,23 @@
+/* Almacenando datos
+
+Ya vimos cómo declarar una variable, pero ¿cómo guardamos un valor en ella?.
+
+Para guardar un valor en una variable utilizamos el signo = y a continuación el valor que queremos almacenar.
+
+En programación, almacenar un valor en una variable se denomina “asignar”.
+
+Por ejemplo:
+
+let meses = 12;
+let cantidadDeAlumnos = 30;
+
+
+
+Declará dos variables, una llamada edad y otra llamada peso y asignales un valor numérico. Luego, presioná Ejecutar respuesta.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+ */
+
+// this file is read only, you cannot write it
+let edad = 40;
+let peso = 75;

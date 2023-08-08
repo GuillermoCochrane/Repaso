@@ -1,0 +1,32 @@
+Un ejercicio sin precedentes
+Vamos con otro ejercicio:
+
+Escribí la función puedeJubilarse que recibe por parámetro la edad, el género y además, los años de aportes jubilatorios (en ese orden) que posee una persona, ejemplo:
+
+puedeJubilarse(62, 'F', 34);
+// Ésto da como resultado true ya que cumple con las tres condiciones. 
+Tené en cuenta que el mínimo de edad para realizar el trámite para las mujeres (género "F") es de 60 años, mientras que para los hombres (género "M") es 65. En ambos casos, se deben contar con al menos 30 años de aportes jubilatorios.
+
+Te recomendamos que primero trates de resolver el ejercicio, después fijate lo que sigue y si podes resolverlo de ésta otra manera, deberíamos usar funciones dentro de otra función, eso ya lo hicimos en funcionception , ¿Lo recordás?
+
+¿Y si delegamos parte de la funcionalidad en otra función? Podríamos separar la lógica de la siguiente manera:
+
+function puedeJubilarse(edad, genero, aniosAporte) {
+    return  estaEnEdad(edad, genero) && tieneSuficientesAportes(aniosAporte);
+}
+Al delegar correctamente hay veces en las que no es necesario alterar el orden de precedencia (cómo usamos los || OR y los && AND), ¡otro punto a favor de la delegación!
+
+---------------------------------------------------------
+
+// this file is read only, you cannot write it
+function puedeJubilarse(edad, genero, aniosAporte) {
+    return  estaEnEdad(edad, genero) && tieneSuficientesAportes(aniosAporte);
+}
+
+function estaEnEdad(edad, genero){
+    return (edad>=60 && genero=="F") || (edad>=65 && genero=="M");
+}
+
+function tieneSuficientesAportes(aniosAporte){
+    return aniosAporte>30;
+}

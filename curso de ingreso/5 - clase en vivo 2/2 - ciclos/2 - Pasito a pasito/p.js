@@ -1,0 +1,24 @@
+/* Pasito a pasito
+Antes de seguir avanzando con el for, tratemos de analizar bien qué es lo que sucede adentro del mismo. Ya sabemos que ejecuta el código que nosotros le pedimos mientras se cumpla una determinada condición.
+
+El for tiene una variable que va cambiando, y esta es i. Es importante entender el comportamiento de esta variable. Recordemos del apartado anterior que el valor i se va incrementando a medida que va iterando.
+
+for ( let i = 0 ; i < 4; i++ ){ 
+    console.log ("¡Hola!");
+}
+Sabiendo esto, escribí una función pasitoAPasito, que imprime por consola 5 veces el contenido de i. Por ejemplo:
+
+pasitoAPasito();
+// Debe imprimir 0, 1, 2, 3, 4 
+Esto hizo un console.log(valor) por cada iteración.
+
+--------------------------------------------------------------
+ */
+// this file is read only, you cannot write it
+function pasitoAPasito(){
+    for ( let i = 0 ; i < 5; i++ ){ 
+    console.log (i);
+    };
+};
+
+pasitoAPasito();

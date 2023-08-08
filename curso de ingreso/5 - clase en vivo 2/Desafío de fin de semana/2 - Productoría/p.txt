@@ -1,0 +1,18 @@
+Productoría
+Necesitamos una función productoria que reciba un array de números y devuelva su productoria. La productoria es el resultado de multiplicar todos sus elementos entre ellos.
+
+Por ejemplo, productoria([1, 4, 7]) debe devolver 28, que es 1 * 4 * 7.
+
+Escribí la función productoria
+
+-------------------------------------
+
+// this file is read only, you cannot write it
+function productoria(numero){
+    let productoriaDelNumero = 1
+    for (i=0; i < numero.length; i++){
+        let valor = numero[i];
+        productoriaDelNumero=productoriaDelNumero*valor;
+         }
+    return productoriaDelNumero
+}

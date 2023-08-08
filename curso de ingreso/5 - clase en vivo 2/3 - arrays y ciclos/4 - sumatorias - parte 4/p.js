@@ -1,0 +1,49 @@
+/* Sumatorias - Parte 4
+Entonces tenemos que repetir la operación de acumular varias veces, una por cada elemento del array. Esto no solo nos esta quedando desprolijo, sino que también es muy repetitivo!!!.
+
+¿No habia una estructura que vimos previamente que nos permitiía repetir una acción una cantidad de veces?.
+
+¡Si el for!
+
+¿Y puedo hacer que repita esa acción por todos los elementos?
+
+¡Si pidiendole el length al array!
+
+Ejemplo:
+
+function gananciaTotal(unPeriodo) {
+    let sumatoria = 0;
+    for (let i = 0; i < unPeriodo.length; i++) {
+        let mes = unPeriodo[i];
+        sumatoria = sumatoria + mes;
+    }
+    return sumatoria;
+}
+unPeriodo está a un array que tiene una cantidad de datos que no conocemos.
+Como no conocemos ese número vamos a utilizar el ciclo for ya que le podemos dar un límite.
+Ese límite como dijimos anteriormente es unPeriodo.length ya que va a cortar el ciclo cuando alcancemos el  total de elementos que tiene una array, no importa si es 10, 2, 25 ...
+Dentro del bloque del ciclo for vemos que la variable mes adquiere el valor de unPeriodo[i] , ésto lo hacemos ya que en la primera iteración del ciclo la variable i vale 0 (primera posición del array), en la segunda iteración del ciclo la variable i vale 1 (segunda posición del array) y así sigue creciendo...
+¿Aún no te convenciste? Nuevamente, probá las siguientes expresiones en la consola para avanzar:
+
+gananciaTotal([])
+gananciaTotal([100])
+gananciaTotal([100, 2])
+gananciaTotal([2, 10, -20])
+gananciaTotal([2, 10, -20, 0, 0, 10, 10])
+
+---------------------------------------------------- */
+
+// this file is read only, you cannot write it
+function gananciaTotal(unPeriodo) {
+    let sumatoria = 0;
+    for (let i = 0; i < unPeriodo.length; i++) {
+        let mes = unPeriodo[i];
+        sumatoria = sumatoria + mes;
+    }
+    return sumatoria;
+}
+console.log(gananciaTotal([]));
+console.log(gananciaTotal([100]));
+console.log(gananciaTotal([100, 2]));
+console.log(gananciaTotal([2, 10, -20]));
+console.log(gananciaTotal([2, 10, -20, 0, 0, 10, 10]));

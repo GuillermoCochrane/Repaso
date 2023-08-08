@@ -1,0 +1,27 @@
+Enésimo elemento
+Al reves que con indexOf (que nos dice la posición de un elemento particular) existe un operador para averiguar qué elemento hay en una posición dada:
+
+let mesesDelAnio = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio"];
+// mesesDelAnio[0]-> Devuelve "Enero"
+
+let palabra = ["Ese", "perro", "tiene", "la", "cola", "peluda"];
+//palabra[1]-> Devuelve "perro"
+
+let colores = ["Azul", "Negro", "Blanco", "Naranja"];
+//colores[3]-> Devuelve "Naranja"
+¡Cuidado! El índice que le pasás debe ser menor a la longitud del array, o cosas malas pueden suceder.
+
+Probalo vos mism@ en la consola: Creá una variable, dentro asignale un array con algunos valores y luego pedile un índice en particular.
+
+¿Qué sucede si le pedís el elemento 0 a una lista vacía? ¿O si le pedís el elemento 48 a una lista de 2 elementos?
+
+Luego de probar utilizando distintos console.log para avanzar simplemente haz click en Ejecutar respuesta.
+
+------------------------------------------------------------------------------------------------------------
+
+// this file is read only, you cannot write it
+let array = [ 1, 2, 4, 8, 0];
+console.log (array [0]);
+console.log (array [3]);
+console.log (array [0]);
+

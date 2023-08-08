@@ -1,0 +1,17 @@
+Sumatorias de bajo importe
+Resulta que cuando hay que presentar ganancias mayores a $ 1.000 no se presentan junto con las rendiciones que veníamos haciendo, por lo cual vamos a necesitar darle una vuelta de tuerca mas a nuestra función de Sumatorias.
+Escribí la función sumatoriaBajoImporte la cual recibiendo un array con importes nos devuelva el resultado final de la suma de los importes de todos los meses que tienen ganancia, a excepción de los que superen un importe de $ 1.000
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// this file is read only, you cannot write it
+function sumatoriaBajoImporte (meses) {
+  let cantidad = 0;
+  for (let i= 0; i< meses.length;i++) {
+    if ((meses[i] > 0) &&(meses[i]<=1000) ){
+    cantidad = cantidad + meses[i];
+    };
+    
+    };
+  return cantidad;
+}

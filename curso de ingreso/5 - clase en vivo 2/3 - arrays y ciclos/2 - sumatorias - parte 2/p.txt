@@ -1,0 +1,27 @@
+Sumatorias - Parte 2
+¿Lo pensaste?
+
+La función sumatoriaGananciasSemestre anterior tiene dos problemas:
+
+Es muy repetitiva y tediosa de escribir. ¡Tenemos que hacer muchas sumas a mano!
+No es genérica, sólo sirve para arrays de 6 elementos:
+Si tiene más de seis elementos, sólo suma los primeros
+Si tiene menos, devuelve cosas bizarras (¿te acordás cuando te dijimos que si te ibas de índice cosas malas podían ocurrir ?)
+Lo que nos gustaría es poder sumar de forma genérica a todos los elementos del array, sin importar cuántos haya realmente: queremos una función gananciaTotal, que pueda sumar periodos de cualquier tamaño: semetres, cuatrimestres,trimestres, etc. ¡Qué difícil!
+
+¿Qué? ¿No nos creés que eso se pueda hacer? ¡Qué poca confianza, che!
+
+Nosotros ya hicimos nuestra versión; probala con las siguientes ejecuciones y mostrá sus resultados por consola con console.log para avanzar:
+
+gananciaTotal( [2, 3] );
+gananciaTotal( [2, 3, 1, 8, 8, -1] );
+gananciaTotal( [] );
+
+Podés llamar a la función gananciaTotal directamente, la misma se encuentra escrita en un archivo que no podes acceder, hay que mantener el misterio...
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// this file is read only, you cannot write it
+console.log(gananciaTotal( [2, 3] ));
+console.log(gananciaTotal( [2, 3, 1, 8, 8, -1] ));
+console.log(gananciaTotal( [] ));

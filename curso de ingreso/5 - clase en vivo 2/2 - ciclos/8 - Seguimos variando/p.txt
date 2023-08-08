@@ -1,0 +1,16 @@
+Seguimos variando
+Hagamos un ejercicio más para incorporar mejor lo aprendido en el apartado anterior.
+
+Definí ahora la función sumaDeLosParesDel0Al(x) que tome como parámetro un número X y que devuelva el total de la suma de todos los números que son pares del 0 al X (incluyendo a X). 
+Suponiendo que X es par ésta función hará la siguiente operación: 0 + 2 + 4 + 6 + 8 + 10 + ... x
+
+---------------------
+
+// this file is read only, you cannot write it
+function sumaDeLosParesDel0Al(x){
+    let resultado = 0;
+    for (i=0; i<=(x); i=i+2){
+        resultado = resultado + i
+    };
+    return resultado
+};

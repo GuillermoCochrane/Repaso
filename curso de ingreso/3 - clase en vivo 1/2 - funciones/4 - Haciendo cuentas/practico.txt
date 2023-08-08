@@ -1,0 +1,16 @@
+Ya vimos los operadores básicos matemáticos +, -, / y *
+
+Ahora podemos usar las funciones para hacer las cuentas mas fáciles.
+
+function sumar(numero1, numero2) {
+    return numero1 + numero2;
+}
+Escribí la función multiplicar que tome dos parámetros, los multiplique y retorne su valor.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// this file is read only, you cannot write it
+function multiplicar (numero1, numero2) {
+    return numero1 * numero2;
+}

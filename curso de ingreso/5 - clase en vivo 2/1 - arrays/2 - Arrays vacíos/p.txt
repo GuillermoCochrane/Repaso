@@ -1,0 +1,14 @@
+Arrays vacíos
+Genial, ¡parece que un array puede contener cualquier tipo de elementos! Podemos tener arrays de booleanos, de números, de strings, de arrays...
+
+Y no sólo eso, sino que además pueden contener cualquier cantidad de elementos: uno, dos, quince, cientos.
+
+¿Podremos entonces tener arrays vacíos, es decir, que no tengan elementos? ¡Por supuesto!
+
+let unArrayVacio = [];
+Declara la variable otroArrayVacio y asignale un array vacío como en el ejemplo para continuar.
+
+------------------------------
+
+// this file is read only, you cannot write it
+let otroArrayVacio = [];

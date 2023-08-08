@@ -1,0 +1,42 @@
+/* Como lo viste en el ejercicio anterior, la operación con mayor precedencia es la negación ! , seguida de la conjunción && y luego disyunción || pero ¿qué pasa si quiero alterar el orden en que se resuelven dichas operaciones?
+
+Exacto, tal como lo dijimos al principio del ejercicio anterior, al igual que en matemática, podemos usar los paréntesis para agrupar las operaciones que queremos que se realicen primero.
+
+Perfecto. Ahora te toca a vos. Demostrá que vas incorporando lo anterior. Para ello ayudanos a resolver lo siguiente:
+
+Mariana, una gran amiga de la casa, nos dice que para ella un número es de la suerte si cumple con las siguientes tres condiciones:
+
+Ese número es positivo
+Ese número es múltiplo de 2 o de 3
+Ese número no es el número 15
+Escribí la función esNumeroDeLaSuerte la cual recibiendo un número, le diga a Mariana si es un número de la suerte. Recuerda que el número debe cumplir con las tres condiciones mencionadas:
+
+Tiene que ser un número positivo.
+Tiene que ser múltiplo de 2 o de 3
+No tiene que ser el número 15
+Tu reto adicional será: NO usar el if. Sólo deberás usar la palabra reservada  return  dentro de tu código para generar la expresión.
+
+MÚLTIPLOS
+
+Para saber si un número múltiplo recordá que en las primera unidad "Variables y tipos de datos" vimos el operador módulo(%), que nos devuelve el resto de la división entera entre dos números.
+
+Por ejemplo:
+
+11 % 5 --> me devuelve el resto de dividir 11 entre 5. En este caso devuelve 1. Como es distinto de 0, 11 NO es múltiplo de 5.
+12 % 3 --> dará 0. Esto implica que 12 es múltiplo de 3.
+
+----------------------- */
+
+// this file is read only, you cannot write it
+
+function esNumeroDeLaSuerte(numero){
+    return numero > 0 && (numero%2 == 0 || numero%3 == 0) && numero !=15; 
+}
+
+let n = -15
+
+if (esNumeroDeLaSuerte(n)){
+    console.log("el numero " + n + " es numero de la suerte")
+}else{
+    console.log("el numero " + n + " no es numero de la suerte")
+}

@@ -1,0 +1,30 @@
+Operando strings
+¿Y que podemos hacer que no sea matemática? ¡Varias cosas! Por ejemplo, podemos trabajar con Strings:
+
+Si te acordás, los strings son un tipo de dato. Representan cadenas de texto y lo que se escribe dentro de las comillas("") es literal.
+
+¿Qué podemos hacer entonces con los strings? Por ejemplo podemos medir qué tan largos son (en caracteres) con el método length:
+
+"biblioteca".length // devuelve 10
+"Buenos días".length      // devuelve 11, porque el espacio es un caracter también
+Javascript nos permite a través de ese método saber, como mencionamos antes, que cantidad de caracteres tiene una cadena de texto, lo único que tenemos que hacer en poner .length luego de la cadena de caracteres de la cual necesitemos el dato de su longitud.
+También te recordamos que podemos sumar strings... Si, ¡sumarlos! Aunque el término correcto es concatenarlos, es decir, obtener uno nuevo, juntando dos o más strings:
+
+"aa" + "bb"       // devuelve "aabb"
+"aa" + " " + "bb" // devuelve "aa bb"
+Probemos qué tan claro quedó: Escribí una función longitudNombreCompleto que tome un nombre y un apellido como parametro y devuelva su longitud total, contando un espacio extra para separar a ambos.
+
+Por ejemplo cuando la ejecutemos:
+
+longitudNombreCompleto("Cosme", "Fulanito")
+//  devuelve 14
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// this file is read only, you cannot write it
+function longitudNombreCompleto (nombre,
+apellido){
+let lnc = nombre + " " + apellido;
+return lnc.length
+}

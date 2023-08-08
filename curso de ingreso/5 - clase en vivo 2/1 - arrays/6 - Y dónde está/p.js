@@ -1,0 +1,24 @@
+/* ¿Y dónde está?
+Otro método útil de los arrays es indexOf, que nos dice en que posición está un elemento dentro del array:
+
+let miArray = ["A", "la", "grande", "le", "puse", "cuca"];
+let posicion = miArray.indexOf("grande"); //devuelve 2
+
+let diasLaborales = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
+let unDia = diasLaborales.indexOf("Lunes"); //devuelve 0
+Como ves, lo "raro" del método indexOf es que pareciera devolver siempre una posición menos de lo esperado. ¿Es que los creadores de JavaScript se equivocaron?
+
+No, se trata de que en JavaScript, al igual que en muchos lenguajes, las posiciones de los arrays arrancan en 0: el primer elemento es la posición 0, el segundo, 1, el tercero, 2, y así.
+
+¿Y qué sucede si le pasás por parámetro a indexOf un elemento que no tiene? ¡Averigualo vos mismo!
+
+Probá mostrar por consola con el console.log lo siguiente:
+
+diasLaborales.indexOf("Osvaldo");
+
+---------------------------------------- */
+
+// this file is read only, you cannot write it
+
+let diasLaborales = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
+console.log(diasLaborales.indexOf("Osvaldo"));

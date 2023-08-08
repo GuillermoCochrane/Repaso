@@ -1,0 +1,20 @@
+a sobre la hora , Ana nos dejó con un problema más interesante: quiere saber los saldos de los meses que hubo ganancia .
+
+saldosDeMesesConGanancia([100, 20, 0, -10, 10])
+[100, 20, 10]
+Completá la función saldosDeMesesConGanancia. Nuevamente tiene una estructura similar a los problemas anteriores, pero, ¡no tan rápido!: esta función tiene que devolver un array.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// this file is read only, you cannot write it
+function saldosDeMesesConGanancia(periodo) {
+  let saldo = [];
+  for (let i = 0; i < periodo.length;i++) {
+    if (periodo[i] > 0){
+      let saldoPositivo = periodo[i];
+      saldo.push(saldoPositivo);
+    }
+    
+    }
+  return saldo;
+}
