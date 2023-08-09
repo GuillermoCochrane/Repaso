@@ -1,0 +1,11 @@
+Punto de partida
+Esta es la primera de las tres clases donde veremos estrictamente JavaScript. A continuación, compartimos los objetivos de esta clase para tenerlos en cuenta y poder chequear que hayamos entendido todo lo necesario para pasar a los siguientes temas.
+
+Objetivos de la clase
+Retomar los conceptos vistos en la clase virtual.
+Tener lista y preparada la computadora para empezar a trabajar.
+ Armar una aplicación.
+Encontrar errores y buscar soluciones.
+Modularizar código.
+Implementar buenas prácticas.
+
