@@ -4,7 +4,7 @@ Esta es la primera de las tres clases donde veremos estrictamente JavaScript. A 
 Objetivos de la clase
 Retomar los conceptos vistos en la clase virtual.
 Tener lista y preparada la computadora para empezar a trabajar.
- Armar una aplicación.
+Armar una aplicación.
 Encontrar errores y buscar soluciones.
 Modularizar código.
 Implementar buenas prácticas.
