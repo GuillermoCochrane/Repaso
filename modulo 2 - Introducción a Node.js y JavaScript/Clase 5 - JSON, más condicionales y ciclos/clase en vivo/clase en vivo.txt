@@ -1,0 +1,7 @@
+Punto de partida
+Llegamos a la segunda de las tres clases de JavaScript. A continuación, compartimos los objetivos de esta clase para tenerlos en cuenta y poder chequear que hayamos entendido todo lo necesario para pasar a los siguientes temas.
+
+Objetivos de la clase
+Retomar los conceptos vistos en la clase virtual.
+ Implementar lógica de JavaScript utilizando: condicionales, acceso a propiedades de objetos literales y asignación de valores a variables con un switch.
+ Comenzar a armar una app de notas

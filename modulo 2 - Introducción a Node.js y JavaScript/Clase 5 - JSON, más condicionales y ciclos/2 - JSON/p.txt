@@ -1,0 +1,41 @@
+json
+
+1
+¿Qué significan las siglas JSON? 
+
+
+Java Single Object Notation.
+
+JavaScript Object Notation. (X)
+
+JavaScript Object Notice.
+
+El mejor villano del universo.
+
+2
+¿Para qué se utiliza JSON?
+
+
+Comunicar sistemas entre sí. (X)
+
+Transformar un texto en un objeto.
+
+Para declarar funciones locales.
+
+3
+¿Para qué puedo utilizar el método JSON.stringify()?
+
+
+Para transformar un string en un objeto.
+
+Para transformar un objeto en un string. (X)
+
+4
+¿Para qué puedo utilizar el método JSON.parse()?
+
+
+Para transformar un number en un objeto.
+
+Para transformar un string en un objeto. (X)
+
+Para transformar un objeto en un string.
