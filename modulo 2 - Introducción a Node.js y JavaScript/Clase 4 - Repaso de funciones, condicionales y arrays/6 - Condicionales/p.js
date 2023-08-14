@@ -6,7 +6,10 @@ Declaremos una variable con el nombre dato y asignémosle un valor booleano.
 Luego, deberemos hacer un if que evalúe esa variable y, si el valor es igual a  true, que imprima por consola "es true". Caso contrario, que imprima por consola "es false".
 
  */
-
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 1");
+console.log("");
 let dato = true;
 if(dato==true){
     console.log("es true");
@@ -22,7 +25,10 @@ igualdad, if y else
 En este ejercicio nos viene dada una variable llamada lenguaje, que tiene asignado un string. Nuestro trabajo es construir un condicional if/else para que, si la variable contiene "javascript", imprima por consola el texto "Estoy aprendiendo". De lo contrario, que imprima"Lo aprenderé más adelante".
 
  */
-
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 2");
+console.log("");
 let lenguaje = "javascript";
 if(lenguaje=="javascript"){
     console.log("Estoy aprendiendo")
@@ -48,6 +54,11 @@ function puedePasar(nombre) {
         return true;
     }
 }
-
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 3");
+console.log("");
 console.log(puedePasar("pepe"));
 console.log(puedePasar("Cosme Fulanito"));
+console.log("");
+console.log("--------------------------------------------------------------------");

@@ -20,9 +20,17 @@ let resultadoResta = primerNumero - segundoNumero;
 let resultadoMultiplicacion = primerNumero * segundoNumero;
 let resultadoDivision  = primerNumero / segundoNumero;
 
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 1");
+console.log("");
+
 console.log("Los numeros con los que vamos a trabajar son " + primerNumero + " y " + segundoNumero);
 console.log("");
 console.log("El resultado de su suma es: " + resultadoSuma);
 console.log("Si al primer numero le restamos el segundo nos da: " + resultadoResta );
 console.log("El resultado de su multiplicacion es: " + resultadoMultiplicacion);
 console.log("Si al primer numero lo divididmos por el segundo nos da: " + resultadoDivision );
+
+console.log("");
+console.log("--------------------------------------------------------------------");

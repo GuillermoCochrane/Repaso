@@ -8,7 +8,10 @@ Nuestra tarea es crear una función que se va a llamar ejemplo y tiene que devol
 function ejemplo (){
     return  "hola, soy una función"
 };
-
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 1");
+console.log("");
 console.log(ejemplo())
 
 /* -----------------------------------------------------------------------------------------------------------------------------------------
@@ -21,7 +24,10 @@ Primero creamos una variable con el nombre  ejemplo y le asignamos como valor un
 let ejemplo1 = function(){
     return  "hola, soy una función expresada"
 }
-
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 2");
+console.log("");
 console.log(ejemplo1());
 
 /* -----------------------------------------------------------------------------------------------------------------------------------------
@@ -34,7 +40,10 @@ Debemos modificar el código que ya está escrito para agregarle los parámetros
 function saludar(nombre,apellido) {
     return 'Hola, ' + nombre + ' ' + apellido + '!';
 }
-
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 3");
+console.log("");
 console.log(saludar("Guillermo", "Cochrane"));
 
 /* -----------------------------------------------------------------------------------------------------------------------------------------
@@ -48,7 +57,10 @@ Tips: utilizar la consola para probar la función esPar y observar si devuelve e
 function esPar(n){
     return n % 2 == 0
 }
-
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 4");
+console.log("");
 console.log(esPar(22));
 console.log(esPar(13));
 
@@ -74,5 +86,10 @@ function triple(n){
 function anteriorDelTriple(n){
     return anterior(triple(n))
 };
-
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 5");
+console.log("");
 console.log(anteriorDelTriple(8));
+console.log("");
+console.log("--------------------------------------------------------------------");

@@ -18,7 +18,10 @@ let perro ={
     edad: 6,
     vacunado: false,
 };
-
+console.log("");
+console.log("-----------------------------------------------");
+console.log("ejercicio 1");
+console.log("");
 console.log(perro)
 /* -----------------------------------------------------------------------
 
@@ -45,7 +48,10 @@ let deportista = {
         this.experiencia = this.experiencia + cantidadDeHoras*2;
     },
 }
-console.log(" ");
+console.log("");
+console.log("-----------------------------------------------");
+console.log("ejercicio 2");
+console.log("");
 console.log("-----------------------------------------------");
 console.log("     == Antes de comenzar entrenamiento ==     ");
 console.log("-----------------------------------------------");

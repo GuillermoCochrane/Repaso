@@ -7,7 +7,10 @@ let verdadero = true;
 let nada = null ;
 let texto = "hola";
 let numero = 13;
-
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 1");
+console.log("");
 console.log(verdadero);
 console.log(nada);
 console.log(texto);
@@ -33,7 +36,10 @@ Sabiendo esto, creemos tres variables utilizando la función Number(), las misma
 let positivo = Number('43') ;
 let negativo = Number('-43') ;
 let decimal = Number('0.43') ;
-
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 2");
+console.log("");
 console.log(positivo);
 console.log(negativo);
 console.log(decimal);
@@ -58,6 +64,11 @@ Además, tenemos una variable ya declarada llamada correcto, a la cual queremos 
 
 const nan = parseInt("casa");
 const correcto = parseInt('28.28');
-
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 3");
+console.log("");
 console.log(nan);
 console.log(correcto);
+console.log("");
+console.log("--------------------------------------------------------------------");

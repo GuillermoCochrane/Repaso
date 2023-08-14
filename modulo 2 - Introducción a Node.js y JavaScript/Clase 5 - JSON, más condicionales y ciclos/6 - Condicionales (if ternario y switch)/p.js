@@ -28,6 +28,10 @@ function finDeSemana (dia) {
 		};
 	};
 
+console.log("");
+console.log("-----------------------------------------------");
+console.log("ejercicio 1");
+console.log("");
 finDeSemana(dia);
 
 /* 
@@ -58,7 +62,10 @@ function tengoClases(dia) {
 			break;
 	};
 };
-
+console.log("");
+console.log("-----------------------------------------------");
+console.log("ejercicio 2");
+console.log("");
 tengoClases(dia);
 /* ---------------------------------------------------------
 
@@ -80,9 +87,13 @@ let bicicletaB = {
 };
 
 let marcaRodadoMasGrande = bicicletaA.rodado > bicicletaB.rodado ? bicicletaA.marca : bicicletaB.marca;
-
+console.log("");
+console.log("-----------------------------------------------");
+console.log("ejercicio 3");
+console.log("");
 console.log("La bicicleta con  mayor rodado es la "+ marcaRodadoMasGrande );
-
+console.log("");
+console.log("-----------------------------------------------");
 
 
 

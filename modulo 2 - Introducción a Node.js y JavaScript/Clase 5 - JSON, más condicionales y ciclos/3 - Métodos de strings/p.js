@@ -8,6 +8,10 @@ function dominio(string){
 };
 
 let string = "digitalhouse.com.ar";
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 1");
+console.log("");
 console.log(dominio(string));
 
 /* ---------------------------------------
@@ -18,7 +22,11 @@ Lo primero que necesitamos es declarar una variable llamada texto, asignándole 
  */
 
 let texto = "Lo esencial es invisible a los ojos";
-console.log(texto.length);
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 2");
+console.log("");
+console.log("la frase: " + '"' + texto + '"'+ " tiene " + texto.length + " caracteres");
 
 /* ---------------------------------------
 
@@ -46,6 +54,10 @@ function reemplazoFastFast(texto,palabraABuscar,palabraParaReemplazar){
 
 let reemplazo = "importante";
 let palabra = "esencial";
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 3");
+console.log("");
 console.log(reemplazoFastFast(texto,palabra,reemplazo));
 
 /* ---------------------------------------
@@ -62,7 +74,10 @@ menciona('Existen muchos lenguajes de programación y JavaScript es uno de ellos
 function menciona(texto,palabra){
     return texto.indexOf(palabra) != -1
 }
-
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 4");
+console.log("");
 console.log(menciona(texto,palabra));
 console.log(menciona(texto,reemplazo));
 
@@ -75,5 +90,11 @@ Teniendo como punto de partida la cadena de texto '¡Hola!, soy Carli', deberemo
 IMPORTANTE: Para la resolución tendremos que usar la función slice(). */
 
 let frase = 'Hola!, soy Carli';
-let licenciada = frase.slice(11,16);
-console.log(licenciada);
+let nombre = frase.slice(11,16);
+console.log("");
+console.log("--------------------------------------------------------------------");
+console.log("ejercicio 5");
+console.log("");
+console.log(nombre);
+console.log("");
+console.log("-----------------------------------------------");

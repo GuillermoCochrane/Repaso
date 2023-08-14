@@ -10,7 +10,10 @@ function loro(loQueRepite){
         console.log(loQueRepite);
     };
 };
-
+console.log("");
+console.log("-----------------------------------------------");
+console.log("ejercicio 1");
+console.log("");
 loro("hola!!");
 
 /* ------------------------------------
@@ -35,5 +38,10 @@ function noParesDeContarImparesHasta(numero){
     return contador
 };
 let numero = 11 ;
+console.log("");
+console.log("-----------------------------------------------");
+console.log("ejercicio 1");
+console.log("");
 console.log("Del cero al " + numero + " hay " + noParesDeContarImparesHasta(numero) + " numeros impares.");
-
+console.log("");
+console.log("-----------------------------------------------");

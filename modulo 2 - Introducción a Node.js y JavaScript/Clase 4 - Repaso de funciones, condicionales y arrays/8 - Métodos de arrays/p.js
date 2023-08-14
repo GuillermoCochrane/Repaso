@@ -9,6 +9,10 @@ Para eso, declaremos las variables indiceJuan e indiceFrancisco y almacenemos en
 let alumnos = ["Juan", "Pepe", "Jorge", "Francisco"];
 let indiceJuan = alumnos.indexOf('Juan');
 let indiceFrancisco =alumnos.indexOf('Francisco');
+console.log("");
+console.log("-------------------------------------------------------------------------------");
+console.log("ejercicio 1");
+console.log("");
 console.log("Juan se encuentar en el indice " + indiceJuan );
 console.log("Francisco se encuentar en el indice " + indiceFrancisco );
 
@@ -41,6 +45,10 @@ let arrayFrase = [
   "equivocadas"
 ];
 let fraseNueva = arrayFrase.join( ' ' );
+console.log("");
+console.log("-------------------------------------------------------------------------------");
+console.log("ejercicio 2");
+console.log("");
 console.log(fraseNueva);
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------
@@ -74,7 +82,10 @@ let estudiantes = [
   }
 ];
 let alumnoEgresado = estudiantes.pop();
-
+console.log("");
+console.log("-------------------------------------------------------------------------------");
+console.log("ejercicio 3");
+console.log("");
 console.log("El ultimo egresado es " + alumnoEgresado.nombre + ", del curso de " + alumnoEgresado.curso+ " y tubo un promedio de " + alumnoEgresado.promedio);
 /* ------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -127,7 +138,10 @@ estudiantes1.push({
     promedio : 2,
     curso : 'Android',
   });
-
+  console.log("");
+  console.log("-------------------------------------------------------------------------------");
+  console.log("ejercicio 4");
+  console.log("");
 console.log(estudiantes1);
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------
@@ -158,7 +172,10 @@ let estudiantes2= [
 ]
 
 let alumnoDeBaja = estudiantes2.shift();
-
+console.log("");
+console.log("-------------------------------------------------------------------------------");
+console.log("ejercicio 5");
+console.log("");
 console.log(alumnoDeBaja);
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------
@@ -214,4 +231,10 @@ estudiantes3.unshift({
     curso : 'Android',
   });
 
+console.log("");
+console.log("-------------------------------------------------------------------------------");
+console.log("ejercicio 6");
+console.log("");
 console.log(estudiantes3);
+console.log("");
+console.log("-------------------------------------------------------------------------------");

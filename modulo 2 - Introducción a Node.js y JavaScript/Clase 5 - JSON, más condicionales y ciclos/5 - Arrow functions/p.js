@@ -22,6 +22,11 @@ let multiplicarPorDos = () => 123 * 2;
 
 let mostrarNombre = () => "Mi nombre es Hernán";
 
+console.log("");
+console.log("-----------------------------------------------");
+console.log("ejercicio 1");
+console.log("");
+
 console.log(dameCinco());
 console.log(multiplicarPorDos());
 console.log(mostrarNombre());
@@ -38,6 +43,10 @@ function saludar(nombre){
 
 let  saludar = nombre => 'Hola, ' + nombre + '!';
 
+console.log("");
+console.log("-----------------------------------------------");
+console.log("ejercicio 2");
+console.log("");
 console.log(saludar("Juan"));
 /* -----------------------------------------------------
 
@@ -53,7 +62,12 @@ function saluda(nombre,apellido){
 }
  */
 let saluda = (nombre, apellido) => 'Hola, ' + nombre + ' ' +  apellido + '!';
-
+console.log("");
+console.log("-----------------------------------------------");
+console.log("ejercicio 3");
+console.log("");
 console.log(saluda("Nicolas","Secco"));
+console.log("");
+console.log("-----------------------------------------------");
 
 
