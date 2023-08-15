@@ -3,8 +3,12 @@ let concesionaria ={
 
     autos: autos,
 
-    buscar: function(){
-
+    buscarAuto: function(patente){
+        let resultadoBusqueda = this.autos.filter(auto => auto.patente == patente);
+        if (resultadoBusqueda == false){
+            resultadoBusqueda = null
+        }
+        return resultadoBusqueda
     },
 
     vender: function(){
@@ -14,4 +18,4 @@ let concesionaria ={
 }
 
 
-console.log(concesionaria);
+console.log(concesionaria.buscarAuto("abc123"));
