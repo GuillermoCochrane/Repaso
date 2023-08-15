@@ -1,0 +1,94 @@
+Vamos a simular una situación de trabajo para situarnos en un contexto. Estás trabajando como desarrollador de CodeAR S.A., una
+reconocida software factory. En el equipo de trabajo contás con María y con Juan.
+
+Maria
+
+Es líder técnica del área. Es una persona muy ocupada y su rol consiste en traducir las necesidades del cliente a requerimientos 
+técnicos.
+
+Juan
+
+Es pasante y está empezando en el mundo de la programación. Si bien es algo tímido, le gusta aprender cosas nuevas y encarar nuevos 
+desafíos.
+
+Vos
+
+Si bien estás aprendiendo cosas como Juan, ya contás con algunos conocimientos previos.
+
+María presenta al equipo un nuevo proyecto para una concesionaria de automóviles, cuya principal línea de negocios es la compra y venta 
+de automóviles. La concesionaria necesita construir una lista con todos los vehículos que tiene registrados. Por cada vehículo necesita 
+conocer la siguiente información:
+
+Marca (Ford, Fiat, etc). (marca)
+Modelo (Fiesta, Corolla, etc). (modelo)
+Color (Azul, Rojo, etc). (color)
+Año de fabricación. (año)
+Cantidad de kilómetros recorridos. (km)
+Precio final. (precio)
+Cantidad de cuotas. (cuotas)
+Patente. (patente)
+Vendido: para indicar si el auto está o no vendido. (vendido)
+
+María quiere saber con qué tipo de dato representarán a cada vehículo individual. Juan pensó en 3 opciones para el vehículo individual. 
+¿Podrías ayudarlo a elegir la correcta?
+
+----------------------------------------------------------------------------------------------------------------------------------------
+1.
+
+Juan menciona sus tres ideas para que lo ayudes a elegir la correcta. ¿Cuál de las siguientes ideas te parece la más correcta para 
+representar un auto?
+
+
+Una cadena de texto en formato JSON.
+
+Un objeto literal con las propiedades de cada auto. (X)
+
+Un array por cada auto.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+2.
+
+Juan pensó también en opciones para representar la lista. Las presentó de la siguiente manera en código. ¿Podrías ayudarlo una vez más 
+a elegir la que te parezca correcta?
+
+
+var autos = "";
+
+let autos = [ [ ] ,[ ], [ ] ];
+
+let autos = [ { }, { }, { } ]; (X)
+
+let autos = { [ ], [ ], [ ] };
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Aclarado el diseño del sistema. María tiene mucha experiencia, es súper profesional y está un paso adelante nuestro, por eso ella 
+escribió en forma anticipada los tests de nuestro código, para asegurarse que el mismo funcione bien. Además, le pidió algunas tareas a 
+Juan, quien te pregunta cómo él va a poder acceder a los objetos literales que vas a crear si el trabaja en otro archivo.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+3.
+
+Ahora que tenemos guardada la lista de vehículos, Juan se pregunta cómo hará el sistema para usar esa información dentro de diferentes 
+archivos. María te consulta cuál sería la manera correcta de resolver la duda de Juan.
+
+
+Usando la función "JSON.parse()".
+
+Exportando el contenido de la variable mediante "module.exports" y requiriéndolo en los archivos que lo necesiten. (X)
+
+Usando el método "fs.readFileSync()".
+
+----------------------------------------------------------------------------------------------------------------------------------------
+5.
+
+¡Al fin es momento de codear!
+En base a las definiciones técnicas tomadas con el equipo deberás declarar la variable autos. Esta debe contener los siguientes vehículos:
+
+El primer auto es un Ford Fiesta Azul, del 2019, con 200 kilómetros, cuyo precio es 150000, disponible en 12 cuotas, con la patente APL123 que no está vendido.
+El segundo auto es un Toyota Corolla Blanco, del 2019, 0 kilómetros, cuyo precio es 100000, disponible en 14 cuotas, con la patente JJK116 que no está vendido.
+Cada auto debe tener los siguientes atributos: marca, modelo, precio, km, color, cuotas, anio, patente, vendido.
+
+Luego de eso, deberemos exportar la variable con nuestro array
+
+----------------------------------------------------------------------------------------------------------------------------------------
