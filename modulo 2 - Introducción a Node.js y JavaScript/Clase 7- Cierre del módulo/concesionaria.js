@@ -5,17 +5,21 @@ let concesionaria ={
 
     buscarAuto: function(patente){
         let resultadoBusqueda = this.autos.filter(auto => auto.patente == patente);
-        if (resultadoBusqueda == false){
-            resultadoBusqueda = null
+        if (resultadoBusqueda == false){            
+            return null
         }
-        return resultadoBusqueda
+        return resultadoBusqueda[0]
     },
 
-    vender: function(){
-
-    }
+    venderAuto : function(patente){
+        let autoAvender = this.buscarAuto(patente)
+        if (autoAvender != null){
+            autoAvender.vendido = true;
+        };
+        return autoAvender
+    },
 
 }
 
 
-console.log(concesionaria.buscarAuto("abc123"));
+console.log(concesionaria.venderAuto("APL123"));

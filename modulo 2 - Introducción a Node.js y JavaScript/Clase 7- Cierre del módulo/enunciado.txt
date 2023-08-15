@@ -139,3 +139,16 @@ el auto al cual le corresponde. En caso de no encontrar el mismo, deberá retorn
 Para que todo funcione tenés que agregar el código que escribiste en el ejercicio anterior.
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+9.
+
+Etapa 3
+Ahora, María les pide que agreguen la funcionalidad de venderAuto que recibe la patente y, en caso de encontrar al automóvil, le asigna 
+el estado de vendido.
+
+¿Cómo lo resuelven?
+
+Recordatorio: Para comenzar tenés que agregar el código que escribiste en el ejercicio anterior. Para resolver esta nueva 
+funcionalidad, tendrás que utilizar la función buscarAuto.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
