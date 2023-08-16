@@ -20,14 +20,18 @@ let concesionaria ={
     },
 
     autosParaLaVenta: function(){
-        let autosDisponibles = this.autos.filter(auto=> auto.vendido == false)
+        let autosDisponibles = this.autos.filter(auto => auto.vendido == false)
         if (autosDisponibles == false){            
             return null
         }
         return autosDisponibles
     },
 
+    autosNuevos : function(){
+        return this.autosParaLaVenta().filter( autoNuevo =>autoNuevo.km < 100 );
+    }
+
 }
 
 
-console.log(concesionaria.autosParaLaVenta());
+console.log(concesionaria.autosNuevos());
