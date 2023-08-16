@@ -19,7 +19,15 @@ let concesionaria ={
         return autoAvender
     },
 
+    autosParaLaVenta: function(){
+        let autosDisponibles = this.autos.filter(auto=> auto.vendido == false)
+        if (autosDisponibles == false){            
+            return null
+        }
+        return autosDisponibles
+    },
+
 }
 
 
-console.log(concesionaria.venderAuto("APL123"));
+console.log(concesionaria.autosParaLaVenta());
