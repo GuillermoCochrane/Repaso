@@ -8,7 +8,7 @@ let autos = [
         precio: 150000,    
         cuotas: 12,
         patente: "APL123",
-        vendido: false,
+        vendido: true,
     },
     {
         marca : "Toyota",
@@ -31,6 +31,17 @@ let autos = [
         cuotas: 10,
         patente: "JIS106",
         vendido: false,
+    },
+    {
+        marca : 'Chevrolet',
+        modelo: 'Sonic',
+        color: 'gris',
+        anio: 2021,
+        km: 50,
+        precio: 175000,    
+        cuotas: 10,
+        patente: "NBC911",
+        vendido: true,
     },
 ];
 

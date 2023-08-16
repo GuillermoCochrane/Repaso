@@ -23,15 +23,20 @@ let concesionaria ={
         let autosDisponibles = this.autos.filter(auto => auto.vendido == false)
         if (autosDisponibles == false){            
             return null
-        }
+        };
         return autosDisponibles
     },
 
     autosNuevos : function(){
         return this.autosParaLaVenta().filter( autoNuevo =>autoNuevo.km < 100 );
+    },
+
+    listaDeVentas : function(){
+        let autosVendidos = this.autos.filter(auto => auto.vendido == true);
+        return autosVendidos.map(auto => auto.precio);
     }
 
 }
 
 
-console.log(concesionaria.autosNuevos());
+console.log(concesionaria.listaDeVentas());
