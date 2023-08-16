@@ -27,16 +27,20 @@ let concesionaria ={
         return autosDisponibles
     },
 
-    autosNuevos : function(){
+    autosNuevos: function(){
         return this.autosParaLaVenta().filter( autoNuevo =>autoNuevo.km < 100 );
     },
 
-    listaDeVentas : function(){
+    listaDeVentas: function(){
         let autosVendidos = this.autos.filter(auto => auto.vendido == true);
         return autosVendidos.map(auto => auto.precio);
+    },
+
+    totalDeVentas: function(){
+        return this.listaDeVentas().reduce((acumulador, precio) =>  acumulador+precio);
     }
 
 }
 
 
-console.log(concesionaria.listaDeVentas());
+console.log(concesionaria.totalDeVentas());
