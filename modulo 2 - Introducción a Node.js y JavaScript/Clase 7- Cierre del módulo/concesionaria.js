@@ -49,12 +49,18 @@ let concesionaria ={
         };
     },
 
+    //ingresando una persona y la patente de un auto, nos devuelve si puede comprar el mismo
     puedeComprar: function(auto,persona){
         let autoPorComprar = this.buscarAuto(auto)
         return ((autoPorComprar.precio/autoPorComprar.cuotas) <= persona.capacidadDePagoEnCuotas && autoPorComprar.precio <= persona.capacidadDePagoTotal);
+    },
+
+    // Ingresando una persona, nos devuelve el listado de autos que puede comprar
+    autosQuePuedeComprar: function(persona){
+        return this.autosParaLaVenta().filter(auto => ((auto.precio/auto.cuotas) <= persona.capacidadDePagoEnCuotas && auto.precio <= persona.capacidadDePagoTotal))
     }
 
-}
+};
 
 let persona = {
     nombre: 'Juan',
@@ -62,4 +68,4 @@ let persona = {
     capacidadDePagoTotal: 100000
 };
 
-console.log(concesionaria.puedeComprar("NBC911", persona));
+console.log(concesionaria.autosQuePuedeComprar(persona));
