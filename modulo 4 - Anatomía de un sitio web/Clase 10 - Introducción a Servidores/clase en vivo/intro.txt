@@ -1,0 +1,7 @@
+Punto de partida
+En esta primera clase en vivo del módulo buscaremos mediante una práctica integradora:
+
+ Levantar un servidor con Express.
+Comprender el protocolo HTTP.
+Organizar nuestro proyecto para comenzar a trabajar a lo largo del módulo con HTML y CSS.
+Para eso, dejamos la siguiente ejercitación.
