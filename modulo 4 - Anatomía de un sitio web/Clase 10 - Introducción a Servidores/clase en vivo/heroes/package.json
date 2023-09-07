@@ -4,7 +4,7 @@
   "description": "ejercicio clase en vivo 10 del curso Fullstack de DH",
   "main": "app.js",
   "scripts": {
-    "test": "start"
+    "start": "nodemon app.js"
   },
   "author": "Guillermo Cochrane",
   "license": "ISC",
