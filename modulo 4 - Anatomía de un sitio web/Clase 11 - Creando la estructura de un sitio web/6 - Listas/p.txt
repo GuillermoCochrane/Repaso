@@ -1,0 +1,34 @@
+Listas
+
+Buenas prácticas: la importancia de indentar el código
+
+La indentación se utiliza para mejorar la legibilidad del código y comprender qué estructura está dentro de otra en términos de código. Se realiza mediante un espacio al principio de la línea de código, tal como se ve en el ejemplo:
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Armando listas
+¡Vamos a listar algunos ítems!
+
+En este caso, debemos definir dos listas, utilizando las etiquetas y sus atributos aprendidos. La primera deberá ser una lista desordenada de 3 colores (los que queramos). La segunda, una lista ordenada de 3 películas (también las que queramos), pero ¡ojo!, esta lista deberá empezar a partir del número 10.
+Dejamos a mano este link que nos va a ayudar a resolver ese último desafío (arriba a la derecha podemos cambiar el idioma a Español).
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>Listas</title>
+  </head>
+  <body>
+      <ul> 
+        <li> Rojo </li>
+        <li> Verde </li>
+        <li> Negro </li>
+      </ul>
+      <ol start="10">
+        <li> Matrix </li>
+        <li> Avengers </li>
+        <li> Iron Man </li>
+      </ol>
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------

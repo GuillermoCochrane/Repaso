@@ -1,0 +1,74 @@
+Rutas, hipérvínculos e imágenes
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Mis primeras rutas
+Para este desafío tenemos que incluir, dentro del código que está definido en el archivo index.html, dos elementos nuevos: un hipervínculo y una imagen.
+
+Por ahora nada rebuscado. Primero, tenemos que crear un hipervínculo hacia la web de Digital House (https://www.digitalhouse.com) y, luego, insertar una imagen y utilizar como ruta el siguiente link: http://bit.do/imagen-blend.
+
+No olvidemos ver los resultados en el navegador de respuesta para verificar la solución.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>Rutas</title>
+  </head>
+  <body>
+    <a href="https://www.digitalhouse.com"> Digital House </a>
+    <img src="http://bit.do/imagen-blend" alt="imagen-blend"> </img>
+
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Imágenes linkeadas
+Probemos con un desafío más complejo.
+
+Queremos que, al hacer clic en una imagen, la misma nos lleve hacia https://google.com. Es decir que, al pasar el mouse por encima de la imagen, deberíamos ver la "manito" indicándonos que ese elemento es un hipervínculo. La URL de la imagen que debemos usar es la siguiente: https://bit.ly/2WDMapV
+Spoiler Alert: Aunque le demos click, el hipervínculo hacia Google no va a funcionar en nuestro test de respuesta. Pero tranquilos: ¡si pasan las pruebas, significa que el código está perfecto!
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>Imágenes Linkeadas</title>
+  </head>
+  <body>
+    <a href="https://google.com"> 
+    <img src="https://bit.ly/2WDMapV"></img>
+    </a>
+
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Listas linkeadas
+Combinemos algunas de las cosas que estuvimos aprendiendo hasta el momento...
+
+Nuestro trabajo será crear una lista desordenada de los siguientes sitios web, que se vea en el siguiente orden y de la siguiente manera:
+
+Facebook
+Instagram
+Olé
+Pero, ojo, el ejercicio no termina ahí. Queremos que cada palabra sea un hipervínculo hacia la página correspondiente de cada sitio.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>Listas linkeadas</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="https://www.facebook.com">facebook</a></li>
+      <li><a href="https://www.instagram.com">instagram</a></li>
+      <li><a href="https://www.ole.com.ar">ole</a></li>
+    </ul>
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+

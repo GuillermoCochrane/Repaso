@@ -1,0 +1,23 @@
+Etiquetas y atributos
+
+Mi primer HTML
+¡Hora de escribir nuestro primer HTML! Recordemos la estructura básica: todo documento HTML cuenta, al menos, con tres etiquetas esenciales: <html>, <head> y <body>
+
+Nuestro desafío será completar la estructura que ya está definida. Además, deberemos agregar la etiqueta <title> donde corresponda y escribir adentro el texto "Mi primer HTML".
+
+Por último, debemos escribir algún texto —el que queramos— dentro de la etiqueta <body> y evidenciar los resultados en el navegador.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+    <head>
+        <title> Mi primer HTML </title>
+    </head>
+    <body> 
+        <p> Hola </p>
+
+    </body>
+
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,22 @@
+Etiquetas de texto
+
+Practicamos cómo escribir etiquetas de texto
+¡Hora de practicar las etiquetas de texto!
+
+En este caso, tenemos la estructura básica del sitio ya definida. Nuestro trabajo será incluir las etiquetas <h1>, <h2>, y <p> y agregarles algún texto a cada una para evidenciar los resultados en el navegador.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>Etiquetas de texto</title>
+  </head>
+  <body>
+    <h1> Esto es un titulo principal </h1>
+    <h2> Esto es un titulo secundario </h2>
+    <p> Esto es un parrafo </p>
+
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------

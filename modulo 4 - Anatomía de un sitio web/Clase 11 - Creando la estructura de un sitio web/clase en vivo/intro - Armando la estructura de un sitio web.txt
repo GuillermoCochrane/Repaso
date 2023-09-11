@@ -1,0 +1,3 @@
+Punto de partida
+
+En esta clase comenzaremos a trabajar en el proyecto Mercado Liebre. Para eso adjuntamos la ejercitación y los profesores nos darán más contexto respecto de qué se trata.
