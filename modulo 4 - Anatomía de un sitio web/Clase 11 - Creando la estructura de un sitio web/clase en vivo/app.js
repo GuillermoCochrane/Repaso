@@ -12,7 +12,7 @@ app.use(express.static(publicPath));
 
 //rutas
 app.get('/', (req,res) => {
-    res.send("probando 1, 2, 3, probando...")
+    res.sendFile(path.join(__dirname,"./views/home.html"))
 });
 
 //levantamos el server
