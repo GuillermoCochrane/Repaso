@@ -1,0 +1,143 @@
+Primer selector
+
+¡Hora de escribir CSS!
+
+Vamos a modificar el estilo de una estructura HTML ya definida usando código CSS. Debemos escribir, en el archivo style.css, un selector que afecte a TODAS las etiquetas <p> con la regla color:red.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>Primeros selectores</title>
+  </head>
+  <body>
+    <p>¡Hola Mundo!</p>
+    <p>Estamos practicando los selectores de CSS para darle estilo a nuestro sitio web</p>
+  </body>
+</html>
+
+--
+
+p {
+    color :red;
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Más selectores
+Sigamos escribiendo selectores de CSS para modificar una estructura HTML ya definida.
+
+En este caso, vamos a crear tres selectores en los cuales deberemos escribir las reglas ya definidas:
+
+Un selector que afecte a todas las etiquetas <h3> con la regla color:blue
+Un selector que afecte a aquellas etiquetas con clase negrita con la regla font-weight:bold
+Un selector que afecte a aquella etiqueta con id gigante con la regla font-size:40px
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>Más selectores</title>
+  </head>    
+  <body>
+    <h1 id="gigante">Desarollo Web Full-Stack</h1>
+    
+    <h3>HTML5</h3>
+    <p class="negrita">Descripción</p>
+    <P>Estructura y maquetado</P>
+    
+    <h3>CSS</h3>
+    <p class="negrita">Descripción</p>
+    <p>Estilos y apariencia</p>
+    
+    <h3>JS</h3>
+    <p class="negrita">Descripción</p>
+    <p>Interacción y dinamismo</p>
+  </body>
+</html>
+
+-----
+
+h3{
+    color: blue;
+}
+
+.negrita{
+    font-weight: bold;
+}
+
+#gigante{
+    font-size: 40px;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Atributo class
+Para este ejercicio contamos con una estructura HTML y un archivo CSS con tres reglas ya definidas, pero de momento ninguna etiqueta tiene asignada alguna de esas clases o id.
+
+Nuestro trabajo será utilizar los atributos class y id para que esas reglas afecten a las etiquetas HTML y lograr:
+
+que el encabezado principal sea dorado.
+que los encabezados que contienen nombres de productos estén en mayúscula.
+que el texto "¡Contactanos vía whatsapp!" aparezca con fondo verde y letra blanca.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+    <head>
+        <title>Class y Id</title>
+    </head>
+    <body>
+        <h1 class="destacado" >OFERTAS</h1>
+
+        <h3 class="en-mayuscula">Smartphones</h3>
+        <p>Celulares de útlima marca</p>
+
+        <h3 class="en-mayuscula">Notebooks</h3>
+        <p>Gamers, office y más</p>
+
+        <h3 class="en-mayuscula">Tablets</h3>
+        <p>Llevalas a todos lados</p>
+
+        <h4 id="whatsapp">¡Contactanos via whastapp!</h4>
+    </body>
+</html>
+
+------
+
+.destacado {
+    color: gold;
+}
+
+.en-mayuscula {
+    text-transform: uppercase;
+}
+
+#whatsapp {
+    background-color: green;
+    color: white;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Incluyendo un archivo CSS
+Démosle el toque final:
+
+Tenemos una estructura HTML y un CSS ya definidos... ¡solo falta unirlos! Dejamos la URL del CSS para vincular los dos archivos: https://bit.do/blend-css
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>CSS</title>
+    <link href="https://bit.do/blend-css"> 
+  </head>
+    
+  <body>
+     <div class="container">
+       <div class="jumbotron">
+         <h1>¡Hola Mundo!</h1>
+         <button class="btn btn-default">Continuar</button>
+       </div>
+     </div>
+  </body>
+</html>

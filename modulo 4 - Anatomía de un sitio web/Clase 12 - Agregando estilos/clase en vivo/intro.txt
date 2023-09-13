@@ -1,0 +1,12 @@
+Punto de partida
+
+
+Hoy continuaremos con la tarea de agregar estilos a nuestro sitio Mercado Liebre. Nos enfocaremos en los siguientes puntos:
+
+Desarrollo CSS del header completo:
+
+* site navbar
+* login navbar
+* search bar
+
+Recordemos que es muy importante tener los archivos de lo que realizamos durante la clase en vivo: creando la estructura de un sitio web.

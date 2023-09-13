@@ -1,0 +1,30 @@
+p.primer {
+    color: red;
+}
+
+h3 {
+    color:blue
+}
+
+.negrita{
+    font-weight:bold;
+    color: black
+}
+
+#gigante{
+    font-size:40px
+}
+
+.destacado{
+    color: goldenrod;
+}
+
+.en-mayuscula{
+    text-transform: uppercase;
+}
+
+#whatsapp{
+    background-color: green;
+    color: whitesmoke;
+    width: 200px;
+}
