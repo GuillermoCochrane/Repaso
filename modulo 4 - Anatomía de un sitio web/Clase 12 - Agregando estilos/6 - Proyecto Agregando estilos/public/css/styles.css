@@ -1,0 +1,42 @@
+body{
+    font-family: 'lato',sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 300;
+}
+
+h2{
+    font-size: 20px;
+}
+
+p{
+    font-size: 17px;
+    line-height: 24px;
+}
+
+strong{
+    color: green;
+}
+
+/* uso de clases */
+
+.parrafo-destacado{
+    color: salmon;
+    font-size: 30px;
+    line-height: 38px;
+}
+
+/* selector descendente */
+
+p strong{
+    color: white;
+    background-color: orange;
+    font-style: italic;
+}
+
+.parrafo-destacado em{
+    color: red;
+    text-transform: uppercase;
+}
