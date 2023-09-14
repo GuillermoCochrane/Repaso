@@ -1,0 +1,52 @@
+Media queries
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Para repasar
+Media Queries V3
+
+
+1
+¿Qué hacemos cuando escribimos nuestras reglas de CSS mobile-first?
+
+----
+Primero escribimos reglas de CSS en el ámbito global para teléfonos móviles y luego hacemos reglas más específicas dentro de media queries. (X)
+
+Las reglas de CSS para celulares tienen prioridad.
+
+Queremos que el CSS cargue más rápido en dispositivos móviles.
+----
+
+¡Correcto! Mobile-first es una corriente de diseño que piensa primero en la visualización del sitio en dispositivos móviles. Por lo cual, escribimos las reglas generales del sitio o de la página pensando en estos dispositivos y luego las reglas de CSS para otros dispositivos en las media queries necesarias.
+
+
+2
+¿Para que sirven las media queries?
+
+----
+Para definir reglas de CSS que se adapten al viewport.
+
+Para definir reglas de CSS que se apliquen en algunos viewport, pero no en otros. (X)
+
+Para darle opciones de visualización a elegir por el usuario
+----
+
+¡Bien hecho! Cuando definimos reglas de CSS dentro de las media queries, estas solo afectan a algunos viewports que cumplen las condiciones que nosotros definimos.
+
+
+3
+¿Qué hace la siguiente media query? @media(min-device-width: 320px) and (max-device-width: 480px)
+
+----
+Las reglas de CSS que escribamos adentro solo aplicarán si el viewport tiene entre 320px y 480px de ancho.(X)
+
+Las reglas de CSS que escribamos adentro solo aplicarán si el viewport no tiene entre 320px y 480px de ancho.
+
+Las reglas de CSS dentro del media query se cargarán por default, pero tomarán prioridad si se cumplen las condiciones.
+----
+
+¡Correcto! Estamos indicando que las reglas que vamos a escribir solo van a ser aplicadas cuando el dispositivo cumpla las condiciones de tener entre 320px y 480px (inclusive) de ancho.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+

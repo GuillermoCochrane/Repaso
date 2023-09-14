@@ -1,0 +1,10 @@
+Diseño adaptativo
+En esta clase vamos a practicar la implementación de diversos media queries. En la configuración inicial del viewport nos planteamos como meta llevar a cabo las configuraciones necesarias para hacer que la estructura HTML presentada sea 100% responsive. Es decir, que pueda ser consumida cómodamente desde cualquier resolución de salida del dispositivo.
+
+Nuestros objetivos puntuales serán:
+
+* Entender cómo configurar el viewport con la etiqueta meta.
+* Conocer las claras diferencias entre breakpoints y media queries.
+* Trabajar bajo el concepto mobile-first.
+* Optimizar nuestra hoja de estilo bajo el contexto mobile-first.
+* Implementar al menos dos media queries en nuestro proyecto.

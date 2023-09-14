@@ -1,0 +1,45 @@
+Medidas relativas
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Jugando con vh y vw
+En index.html ya tenemos configurado un sitio para que sea responsive. Es momento de empezar a jugar con las medidas vh y vw.
+
+Para eso, queremos que:
+
+El <div> con clase "arriba" ocupe el 40% del alto del viewport
+El <div> con clase "abajo" ocupe el alto restante, de forma tal que ambos ocupen el 100% del alto del viewport
+Ambos ocupen el 100% del ancho del body
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+      <div class="arriba">
+        <p>ARRIBA</p>
+      </div>
+      <div class="abajo">
+        <p>ABAJO</p>
+      </div>
+  </body>
+</html>
+
+-------
+
+.arriba {
+background-color: blueviolet;
+height: 40vh;
+width: 100%;
+
+}
+
+.abajo {
+background-color: brown;
+height: 60vh;
+width: 100%;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
