@@ -15,6 +15,10 @@ app.get('/', (req,res)=>{
     res.sendFile(path.resolve(__dirname,"./views/index.html"));
 })
 
+app.get('/ejercicio', (req,res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/ejercicio.html"));
+})
+
 //Levantamos el servidor
 app.listen(port, ()=>{console.log("Levantando servidor en puerto " + port + ": http://localhost:" + port)
 });
