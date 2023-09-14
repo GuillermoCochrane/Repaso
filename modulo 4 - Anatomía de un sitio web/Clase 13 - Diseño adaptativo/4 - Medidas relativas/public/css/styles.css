@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+section{
+    margin: 20px;
+}
+
+.arriba{
+    height: 40vh;
+    width: 100%;
+    border: 1px gold solid;
+    background-color: blueviolet;
+}
+
+.abajo{
+    height: 60vh;
+    width: 100%;
+    border: 1px blue solid;
+    background-color: orange;
+}
