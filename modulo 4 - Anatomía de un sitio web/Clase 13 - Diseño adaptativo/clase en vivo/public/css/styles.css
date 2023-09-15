@@ -149,6 +149,7 @@ section article{
 
 .descripcion{
     font-size: 16px;
+    display: none;
 }
 /* estilos FOOTER */
 footer{
@@ -168,3 +169,15 @@ footer i{
     color: #1259c3;
 }
 
+@media (min-width:361px){
+    .descripcion{
+        display:block;
+    }
+    section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+
+@media (min-width:769px){
+    
+}
