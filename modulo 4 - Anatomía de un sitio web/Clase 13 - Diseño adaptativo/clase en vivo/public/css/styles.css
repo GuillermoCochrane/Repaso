@@ -1,0 +1,170 @@
+/* Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a; 
+
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px
+
+*/
+ *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+} 
+
+body{
+    background-color: #ebebeb;
+    font-family: 'roboto',Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #03264C;
+}
+/* Estilos HEADER */
+header{
+    background-color: #EAC926;
+}
+
+.header-top{
+    padding: 20px;
+}
+
+.header-img img{
+    margin-left: 25%;
+}
+
+
+.searchbar{
+    background-color: #ebebeb;
+    color: #666;
+    width: 240px;
+    height: 18px;
+    margin: 2px;
+    margin-left: 12%;
+}
+
+button{
+    background-color: #ebebeb;
+    font-size: 13px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    padding: 0px;
+    margin-left: 12%;
+}
+
+.info{
+    text-align: center;
+}
+
+.burger-menu{
+    text-align: center;
+}
+
+.burger-menu i{
+    background-color: #1259c3;
+    color: #ebebeb;
+    width: 28px;
+    height: 28px;
+    padding: 7px;
+    padding-bottom: 1px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 5px 0px 10px 0px;
+}
+
+ul{
+    text-decoration:none;
+    padding-inline-start: 0px;
+}
+
+li a{
+    text-decoration: none;
+    color: #03264C;
+}
+
+
+.banner{
+    width: 100%;
+    margin: auto;
+}
+.banner img{
+    width: 100%;
+}
+/* Estilos MAIN */
+
+main{
+    margin: auto;
+    width: 90%
+}
+
+.titular{
+    font-size: 24px;
+    text-align: center;
+}
+
+section article{
+    margin: 10px;
+    background-color: white;
+}
+
+.img-articulo{
+    margin: auto;
+}
+
+.img-articulo img{
+    margin: auto;
+    margin-left: 10%;
+    width: 240px;
+}
+
+.info-articulo{
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+.envio{
+    color: #39b54a;
+    border: solid 2px #39b54a;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    font-size: 15px;
+    padding: 4px;
+}
+
+.precios{
+    font-size: 18px;
+}
+
+.descuento{
+    font-size: 14px;
+    color: #39b54a;
+}
+
+.descripcion{
+    font-size: 16px;
+}
+/* estilos FOOTER */
+footer{
+    text-align: center;
+    background-color: white;
+    color: #666;
+    
+}
+
+footer section{
+    padding: 30px;
+}
+
+footer i{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #1259c3;
+}
+
