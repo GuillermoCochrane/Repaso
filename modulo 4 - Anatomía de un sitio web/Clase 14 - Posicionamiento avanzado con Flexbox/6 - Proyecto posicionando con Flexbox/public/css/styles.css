@@ -32,6 +32,7 @@ header{
 
 .logo{
     width: 150px;
+    margin: 14px;
 }
 
 .info-header{
@@ -67,4 +68,32 @@ header{
     padding: 1px 0;
     font-size: 15px;
     display: inline-block;
+}
+
+.main-navbar i{
+    padding: 0 3px;
+}
+
+@media (min-width:768px){
+    .main-header-top{
+        display: flex;
+        justify-content: space-between;
+    }
+    .info-header{
+        max-width: 210px;
+        text-align: right;
+    }
+    .burger-menu{
+        display: none;
+    }
+    .main-navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-navbar ul{
+        display: flex;
+    }
+    .main-navbar li{
+        margin: 0 3px;
+    }
 }
