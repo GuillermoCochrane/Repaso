@@ -1,0 +1,10 @@
+
+*{
+    box-sizing: border-box;
+}
+.homero-sapiens{
+    display: flex;
+}
+.sapiens-5{
+    order: 1
+}
