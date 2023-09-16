@@ -97,3 +97,35 @@ header{
         margin: 0 3px;
     }
 }
+
+@media (min-width:1200px){
+    .logo {
+        width: 250px;
+    }
+
+    .main-header-top,
+    .main-navbar{
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .main-header-top{
+        align-items: center;
+    }
+
+    .info-header{
+        margin: 0;
+        max-width: none;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .main-navbar{
+        margin-top: 15px;
+    }
+    .main-navbar li{
+        margin: 0 10px;
+    }
+    .main-navbar a{
+        font-size: 20px;
+    }
+}
