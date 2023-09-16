@@ -1,0 +1,100 @@
+Ordenando la evolución de Homero
+¡Esta imagen no tiene sentido!
+
+Tenemos un sitio que, de momento, se ve así:
+
+(imagen)
+
+Como podemos observar, en la estructura HTML quedó la imagen de HomeroSapien arriba de todo. Necesitamos, utilizando una regla de CSS, asignarle un nuevo orden a la imagen con clase "sapiens-5" para que la misma pase a ocupar el último lugar y se ordene la secuencia evolutiva de Homeros.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<html>
+  <head>
+    <title>Flexbox</title>
+  </head>
+  <body>
+    <div class="homero-sapiens">
+
+        <img class="sapiens-5" src="https://i.imgur.com/f891qhc.jpg">
+
+        <img class="sapiens-1" src="https://i.imgur.com/ogxb6OU.jpg">
+
+        <img class="sapiens-2" src="https://i.imgur.com/Egt5qy7.jpg">
+
+        <img class="sapiens-3" src="https://i.imgur.com/iwkd7AX.jpg">
+
+        <img class="sapiens-4" src="https://i.imgur.com/glXlrug.jpg">
+        
+    </div>
+  </body>
+</html>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.homero-sapiens {
+  display: flex;
+  width: 50%;
+}
+
+.sapiens-5 {
+    order: 1;
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Ordenando imágenes
+Contamos con un sitio que muestra la siguiente secuencia de imágenes:
+
+(imagen)
+
+Queremos, usando la regla order, ubicar a la tabla de surf adelante de todo. ¿Qué valor tenemos que asignarle?
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<html>
+  <head>
+    <title>Flexbox</title>
+  </head>
+  <body>
+     <div class="surf-en-el-mar">
+        <img src="https://i.imgur.com/RGqQuPS.png">
+        <img src="https://i.imgur.com/sf76emp.png"> 
+        <img class="tabla" src="https://i.imgur.com/k4qubEK.png">
+    </div>
+  </body>
+</html>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.surf-en-el-mar {
+  display: flex;
+  width: 100%;
+}
+
+.tabla {
+  order: -1;
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Situando elementos al final
+Tenemos un sitio que, de momento, se ve así:
+
+(imagen)
+
+Nuestro desafío será situar la imagen de la pieza de Tetris abajo de todo del contenedor.
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<html>
+  <head>
+    <title>Flexbox</title>
+  </head>
+  <body>
+    <div class="tetris">
+        <img class="pieza-tetris" src="https://i.imgur.com/C5mVK8n.png">
+    </div>
+  </body>
+</html>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+.tetris {
+  display: flex;
+}
+
+.pieza-tetris {
+  align-self: flex-end
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,151 @@
+Ejes
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+exerciseProgressIcon
+Reordenando un texto
+¡Cortázar nos prestó una gran frase! Pero... no estamos del todo conformes con cómo se ve en el navegador.
+
+El sitio, de momento, se ve así: (1)
+
+Queremos jugar un poco con el significado del texto y lograr que se lea de abajo hacia arriba.
+
+Para eso tenemos que convertir el <div> con clase "frase-cortazar" en un contenedor flex y asignarle la regla necesaria para cambiar la dirección de la frase, para que empiece a leerse desde abajo.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+<head>
+  <title>Flexbox</title>
+</head>
+<body>
+  <div class="frase-cortazar">
+      <div class="parte-1">"Las escaleras</div>
+      <div class="parte-2">se suben de frente,</div>
+      <div class="parte-3">pues hacia atrás</div>
+      <div class="parte-4">o de costado</div>
+      <div class="parte-5">resultan particularmente</div>
+      <div class="parte-5">incómodas."</div>
+    </div>
+</body>
+</html>
+
+-------
+
+.frase-cortazar {
+  display: flex;
+  flex-direction: column-reverse;
+};
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Reordenando otra frase
+¡Afrontemos otro desafío!
+
+Teníamos pensado mostrar una frase clásica en el navegador. Ya tenemos algunas reglas de CSS declaradas, pero la estructura HTML quedó al revés. Nuestro trabajo será invertir el orden de la frase para que se lea correctamente, asignándole una nueva regla de CSS a la clase "frase".
+Dejamos una imagen de cómo se ve el sitio de momento:(2)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>Flexbox</title>
+  </head>
+  <body>
+    <div class="frase">
+        <p>existo</p>
+        <p>luego</p>
+        <p>Pienso,</p>
+    </div>  
+  </body>
+</html>
+
+-------
+
+.frase {
+  display: flex;
+  width: 350px;
+  flex-direction: row-reverse;
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Estilizando elementos de forma horizontal
+¡Pero que viva el fútbol!
+
+Nos piden armar una maqueta del sitio para la Superliga Argentina. Por ahora, tenemos una barra de navegación y un logo en el index.html, pero sin mucho diseño. Queremos estilizarla para que todos los elementos estén en una misma línea horizontal.
+El sitio, de momento, se ve así: (3)
+
+Para esto, debemos convertir al <div> con clase "enlaces" y al <div> con clase "nav-bar" en contenedores flex. Además, tanto la <img> como el <ul> deben estar distribuidos de manera uniforme a lo largo de la fila.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>Flexbox</title>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <img src="https://bit.ly/2Qy9lB9">
+
+      <ul class="enlaces">
+          <li><a href="">Equipos |</a></li>
+          <li><a href="">Fechas |</a></li>
+          <li><a href="">Árbitros |</a></li>
+          <li><a href="">Directores Técnicos |</a></li>
+          <li><a href="">Tabla promedios |</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+-------
+
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.enlaces {
+  display: flex;  
+  justify-content: space-around;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Centrando la x
+Afrontemos un nuevo desafío...
+
+Para este ejercicio contamos con un tablero de dardos y queremos, usando reglas de CSS, lograr centrar la X sobre él.
+El sitio, de momento, se ve así:(4)
+Para esto, debemos convertir al <div> con clase "juego-dardos" en un contenedor flex, y centrar a la <img> en el eje x y en el eje y, para que quede exactamente en el medio.
+¡A divertirse!
+
+Si no sabemos por dónde empezar, podemos hacer click en la pista de abajo.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>Flexbox</title>
+  </head>
+  <body>
+
+    <div class="juego-dardos">
+      <img src="https://i.imgur.com/TzuYXUL.png">
+    </div>
+
+  </body>
+</html>
+
+-------
+
+.juego-dardos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+

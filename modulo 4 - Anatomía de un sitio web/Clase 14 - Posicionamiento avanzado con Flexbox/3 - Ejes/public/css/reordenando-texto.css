@@ -1,0 +1,9 @@
+
+*{
+    box-sizing: border-box;
+}
+
+.frase-cortazar{
+    display: flex;
+    flex-direction: column-reverse;
+}
