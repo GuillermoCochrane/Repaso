@@ -1,0 +1,38 @@
+
+*{
+    box-sizing: border-box;
+}
+
+.caja-1,
+.caja-2,
+.caja-3,
+.caja-4,
+.caja-5,
+.caja-6{
+    width: 360px;
+    padding: 15px;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+.caja-1{
+    background-color: teal;
+}
+.caja-2{
+    background-color: aquamarine;
+}
+.caja-3{
+    background-color: indianred;
+}
+.caja-4{
+    background-color: lightgreen;
+}
+.caja-5{
+    background-color: silver;
+}
+.caja-6{
+    background-color: beige;
+}

@@ -1,0 +1,22 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: tan;
+}
+
+.nav-bar{
+    display: flex;
+    list-style-type: none;
+}
+
+li{
+    margin: 2px;
+    padding: 1px;
+}
+
+a{
+    text-decoration: none
+}
