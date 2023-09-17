@@ -29,11 +29,45 @@ header{
     background-color: #EAC926;
     padding: 20px;
 }
+.logo-search{
+    display: flex;
+    justify-content: space-around;
+}
 
 .logo{
-    width: 150px;
+    width: 50%;
     margin: 14px;
+    max-width: 150px;
 }
+
+.search-bar{
+    display: flex;
+    width: 50%;
+}
+
+.search-icon,
+.search-field{
+    margin: auto;
+    padding: 5px 3px 5px 3px;
+    background-color: #ebebeb;
+    color: #666;
+    font-size: 14px;
+    border: 1px #666 solid;
+}
+
+.search-field{
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+    flex-grow: 1;
+}
+
+.search-icon{
+    border-radius: 0 5px 5px 0;
+}
+
+
 
 .info-header{
     font-weight: 400;
@@ -79,6 +113,19 @@ header{
         display: flex;
         justify-content: space-between;
     }
+    .logo-search{
+        flex-grow: 1;
+    }
+    .logo{
+        width: 30%;
+    }
+
+    .search-bar{
+        width: 70%;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
     .info-header{
         max-width: 210px;
         text-align: right;
@@ -100,7 +147,7 @@ header{
 
 @media (min-width:1200px){
     .logo {
-        width: 250px;
+        min-width: 215px;
     }
 
     .main-header-top,
@@ -116,8 +163,8 @@ header{
     .info-header{
         margin: 0;
         max-width: none;
-        font-size: 25px;
-        font-weight: 700;
+        font-size: 22px;
+        font-weight: 400;
     }
     .main-navbar{
         margin-top: 15px;
