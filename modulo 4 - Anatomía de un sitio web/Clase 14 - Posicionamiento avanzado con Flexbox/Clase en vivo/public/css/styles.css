@@ -1,18 +1,4 @@
-/* Amarillo: #EAC926;
-Azul: #03264C;
-Celeste: #1259c3;
-Gris oscuro: #666;
-Gris claro: #ebebeb;
-Verde: #39b54a; 
-
-Cuerpos de texto: 12px
-Titulares (Basado en tu última visita/Ofertas): 24px
-Precios: 18px
-Descuentos: 16px
-Descripciones: 16px
-
-*/
- *{
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -122,36 +108,50 @@ main{
     width: 90%
 }
 
-.titular{
+.title{
     font-size: 24px;
     text-align: center;
+    margin: 20px
+}
+
+.articles-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 section article{
-    margin: auto;
+    margin: 0px;
+    margin-bottom: 20px;
     background-color: white;
-    max-width: 300px;
-    margin-bottom: 10px;
+    min-width: 250px;
+    width: 320px;
 }
 
-.img-articulo{
+.img-article{
     margin: auto;
-}
-
-.img-articulo img{
-    margin: auto;
-    margin-left: 10%;
-    width: 240px;
-}
-
-.info-articulo{
-    border-top: 1px solid #ebebeb;
-    padding: 15px;
-    position: relative;
     display: flex;
+    justify-content: center;
+}
+
+.img-article img{
+    margin: auto;
+    width: 200px;
+}
+
+.info-article-box{
+    border: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+.info-article{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
 }
 
 main section article i{
+    display: block;
     font-size: 15px;
     padding: 5px;
     width: 30px;
@@ -162,44 +162,59 @@ main section article i{
     border-radius: 50%;
     position: absolute;
     right: 20px;
-    top: -15px;
+    top: -30px;
 }
 
-.precios{
+.price{
+    padding: 5px;
     font-size: 18px;
     width: 30%;
     margin: 0 10px;
+    min-width: fit-content;
 }
 
-.descuento{
+.discount{
+    margin-left: 15px;
     font-size: 14px;
     color: #39b54a;
     width: 70%;
+    min-width: fit-content;
 }
 
-.descripcion{
+.description{
     font-size: 16px;
-    padding: 5px;
-    padding-bottom: 10px;
-    padding-left: 25px;
+    padding: 10px;
+    padding-bottom: 0px;
     display: none;
+    margin-left: 5px;
 }
+
 /* estilos FOOTER */
+
 footer{
+    margin-top: 20px;
     text-align: center;
-    background-color: white;
-    color: #666;
-    
+    background-color: #FFF;
+    color: #03264C;
+    padding-top: -13px;
 }
 
 footer section{
-    padding: 30px;
+    padding: 10px;
 }
 
-footer i{
-    font-size: 2em;
-    margin-bottom: 10px;
+.footer-icon{
+    padding: 5px;
+    border: none;
+    background-color: #fff;
     color: #1259c3;
+    font-size: 3em;
+    margin-bottom: 10px;;
+}
+
+footer section h3{
+    margin: 5px;
+    font-size: 20px;
 }
 
 @media (min-width:768px){
@@ -223,6 +238,7 @@ footer i{
     .info-header{
         max-width: 210px;
         text-align: right;
+        align-self: center;
     }
     .burger-menu{
         display: none;
@@ -237,11 +253,13 @@ footer i{
     .main-navbar li{
         margin: 0 3px;
     }
-    .descripcion{
+    .description{
         display:block;
     }
     section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 45%;
+        min-width: none;
     }
 }
 
@@ -262,33 +280,31 @@ footer i{
 
     .info-header{
         margin: 0;
-        max-width: none;
-        font-size: 22px;
+        min-width: none;
+        font-size: 20px;
         font-weight: 400;
     }
+
     .main-navbar{
         margin-top: 15px;
     }
+
     .main-navbar li{
         margin: 0 10px;
     }
+
     .main-navbar a{
         font-size: 20px;
     }
+
+    section article{
+        width: 23%;
+    }
+
+    .footer-box{
+        display: flex;
+        flex-wrap: nowrap;
+    }
 }
 
-/* @media (min-width:361px){
-    .descripcion{
-        display:block;
-    }
-    section article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-    nav {
-        display: block;
-    }
-    .burger-menu{
-        display: none;
-    }
-} */
 
