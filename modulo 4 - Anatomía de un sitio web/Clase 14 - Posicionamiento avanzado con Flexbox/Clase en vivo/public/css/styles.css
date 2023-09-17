@@ -83,6 +83,7 @@ header{
     margin: auto;
     text-align: center;
     border-radius: 7px;
+    margin-top: 10px;
 }
 
 .main-navbar{
@@ -129,7 +130,8 @@ main{
 section article{
     margin: auto;
     background-color: white;
-    max-width: 350px;
+    max-width: 300px;
+    margin-bottom: 10px;
 }
 
 .img-articulo{
@@ -145,29 +147,41 @@ section article{
 .info-articulo{
     border-top: 1px solid #ebebeb;
     padding: 15px;
+    position: relative;
+    display: flex;
 }
 
-.envio{
-    color: #39b54a;
-    border: solid 2px #39b54a;
-    border-radius: 50%;
-    text-align: center;
-    width: 30px;
+main section article i{
     font-size: 15px;
-    padding: 4px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: solid 2px #39b54a;
+    color: #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 
 .precios{
     font-size: 18px;
+    width: 30%;
+    margin: 0 10px;
 }
 
 .descuento{
     font-size: 14px;
     color: #39b54a;
+    width: 70%;
 }
 
 .descripcion{
     font-size: 16px;
+    padding: 5px;
+    padding-bottom: 10px;
+    padding-left: 25px;
     display: none;
 }
 /* estilos FOOTER */
