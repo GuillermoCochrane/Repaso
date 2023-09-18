@@ -1,0 +1,9 @@
+Trabajando con formularios
+
+Punto de partida
+
+Ya casi vamos llegando al punto final de este módulo. A lo largo de las clases anteriores, hemos puesto en práctica todo lo aprendido en las clases virtuales.
+
+En esta clase en vivo, seguiremos trabajando con nuestro proyecto, generando para el mismo un formulario de registro y de login. Así cómo también los posibles mensajes de error de datos inválidos y los mensajes de satisfacción de los datos válidos.
+
+Todo esto, en miras de implementar los conocimientos adquiridos hasta ahora, e ir cerrando el círculo inicial del desarrollo front-end de aplicaciones web.

@@ -1,0 +1,58 @@
+¿Tiene mascota?
+
+Queremos crear un formulario para averiguar si el usuario tiene o no tiene una mascota.
+
+Para eso, dentro del formulario ya declarado, debemos:
+
+* Crear un <label> con el texto "¿Tenés mascota?".
+* Agregar dos radio-button para darle la opción "Sí" y la opción "No".
+* Configurar el atributo name="mascota" en ambos <input> para que asocie que estamos hablando del mismo campo.
+
+Atención: Para poder averiguar, luego, qué es lo que eligió el usuario, no debemos olvidarnos de agregarle el atributo value a cada <input>.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<html>
+  <head>
+    <title>Formularios</title>
+  </head>
+  <body>
+    <form action="resultado.html" method="POST">
+        <label>¿Tenés mascota?
+          <input type="radio" name="mascota" value="Sí">Sí
+          <input type="radio" name="mascota" value="no">No
+          </label>
+        <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Hobbies
+
+Queremos crear un formulario para saber los hobbies del usuario.
+
+Para eso, dentro del formulario ya declarado, debemos:
+
+* Crear un <label> con el texto "¿Cuáles son tus hobbies?".
+* Crear tres etiquetas <input> de tipo checkbox con las opciones: Pescar, Correr y Yoga.
+* Configurar el atributo name="hobby" a todos los <input> para que asocie que estamos hablando del mismo campo.
+
+Por último, no debemos olvidarnos de agregar el atributo value a cada <input> para poder averiguar luego qué es lo que eligió el usuario.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<html>
+  <head>
+    <title>Formularios</title>
+  </head>
+  <body>
+    <form action="resultado.html" method="POST">
+      <label>¿Cuáles son tus hobbies?"</label>
+        <input type="checkbox" name="hobby" value="Pescar">Pescar
+        <input type="checkbox" name="hobby" value="Correr">Correr
+        <input type="checkbox" name="hobby" value="Yoga">Yoga
+      
+        <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

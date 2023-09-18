@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/completar-el-formulario">
+    <title>Completar el formulario</title>
+</head>
+<body>
+    
+    <h1>Completar el formulario</h1>
+
+    <form action="resultado.html" method="POST">
+        <p>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre">
+        </p>
+
+        <p>
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email" required>
+        </p>
+
+        <p>
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password"  id="password" required>
+        </p>
+
+        <p>
+            <input type="submit" name="submit" value="ENVIAR">
+        </p>
+    </form>
+
+    <a href="/">
+        <button>Volver</button>
+    </a>
+</body>
+</html>

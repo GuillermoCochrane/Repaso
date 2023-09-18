@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>2 - Formularios</title>
+</head>
+<body>
+    <h1>2 - Formularios</h1>
+    
+    <article>
+        <a href="/primer-formulario">
+            <h2>Primer formulario</h2>
+        </a>
+        
+        <h3>¡Vamos a hacer nuestro primer formulario!</h3>
+        
+        <p>
+            Para eso, debemos escribir, en el archivo index.html, la etiqueta necesaria para crear un formulario, aclarando dos de sus atributos esenciales:
+            <ul>
+                <li>El atributo method que indique POST como valor.</li>
+                <li>El atributo action que indique resultado.html como valor.</li>
+            </ul>
+        </p>
+    </article>
+
+    <article>
+        <a href="/campos-de-texto">
+            <h2>Campos de texto</h2>
+        </a>
+        
+        <h3>Veamos cómo empezar a darle cuerpo a nuestro formulario.</h3>
+            
+        <p>
+            Queremos que exista un campo dentro del formulario para que el usuario pueda ingresar su nombre. Para eso, debemos agregar dos etiquetas dentro del formulario:
+
+            <ul>
+                <li>
+                    La etiqueta < label> para informarle al usuario que debe ingresar su nombre. La misma deberá tener el atributo for con el valor nombre.
+                </li>
+                <li>
+                    La etiqueta < input> con atributo type con el valor text (para que el usuario pueda ingresar su nombre) y el atributo id con el valor nombre. Por último, también debemos declarar el atributo name con el valor nombre ya que si este atributo no figura, no se enviará el campo como resultado.
+                </li>
+            </ul>
+            
+            Recordemos que si están bien configurados los atributos for de la etiqueta < label> y el atributo id de la etiqueta < input>, al hacer click en el < label>, el cursor para escribir se posicionará automáticamente en el < input> relacionado.
+        </p>
+
+    </article>
+
+    <article>
+        <a href="/mas-campos-de-texto">
+            <h2>Más campos de texto</h2>
+        </a>
+
+        <h3>¡Creemos un formulario de registro!</h3>
+
+        <p>
+            Queremos agregar tres campos para que el usuario pueda ingresar un nombre, un e-mail y una contraseña. Deberemos usar las siguientes etiquetas:
+            <ul>
+                <li>Una etiqueta < input> para que el usuario ingrese su nombre.</li>
+                <li>Una etiqueta < input> para que el usuario ingrese su e-mail.</li>
+                <li>Una etiqueta < input> para que el usuario ingrese su contraseña.</li>
+                <li>Una etiqueta < label> para cada uno de los < input>.</li>
+            </ul>
+        </p>
+        
+        <h3>Atención: en el index.html ya están listas las etiquetas de párrafo para escribir en ellas cada uno de los campos y así visualizar el formulario más prolijo en el navegador.</h3>
+    </article>
+
+    <article>
+        <a href="/completar-el-formulario">
+            <h2>Completar el formulario</h2>
+        </a>
+
+        <p>
+            Para este ejercicio tenemos un formulario ya definido que está casi completo. Queremos agregar algo fundamental que le está faltando: un botón que diga "ENVIAR" para que el usuario pueda, efectivamente, enviar sus datos.
+        </p>
+
+        <h3>
+            Atención: ya dejamos lista la etiqueta de párrafo para escribir en ella el campo para el botón y así visualizar el formulario más prolijo en el navegador.
+        </h3>
+
+    </article>
+
+
+</body>
+</html>
