@@ -13,7 +13,6 @@ Descripciones: 16px
 
 */
 *{
-
     box-sizing: border-box;
 } 
 
@@ -67,8 +66,6 @@ header{
     border-radius: 0 5px 5px 0;
 }
 
-
-
 .info-header{
     font-weight: 400;
     text-align: center;
@@ -106,6 +103,36 @@ header{
 
 .main-navbar i{
     padding: 0 3px;
+}
+
+.form-frame{
+    padding: 35px 15px;
+    width: 80%;
+    max-width: 275px;
+    margin: auto;
+}
+
+.form-item{
+    margin-bottom: 10px;
+}
+
+.form-item label{
+    display: block;
+    margin: 5px;
+}
+
+.form-field{
+    width: 100%;
+    padding: 4px;
+}
+
+.form-frame button{
+    background-color: #1259c3;
+    color: #ebebeb;
+    padding: 4px;
+    border-radius: 6px;
+    font-size: 15px;
+    margin: 7px;
 }
 
 @media (min-width:768px){
@@ -173,6 +200,14 @@ header{
         margin: 0 10px;
     }
     .main-navbar a{
+        font-size: 20px;
+    }
+    .form-frame{
+        max-width: 300px;
+        font-size: 18px;
+    }
+
+    .form-frame button{
         font-size: 20px;
     }
 }

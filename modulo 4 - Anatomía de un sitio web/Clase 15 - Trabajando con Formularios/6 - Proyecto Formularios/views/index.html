@@ -51,19 +51,50 @@
     </header>
 
     <main>
-        <form action="/crear-producto" method="post" class="form">
+        <form action="/crear-producto" method="post" class="form-frame">
+            
             <div class="form-item">
                 <label for="product">Nombre del Producto:</label>
-                <input type="text" name="product" id="product">
+                <input type="text" name="product" id="product" placeholder="Notebook HP" class="form-field">
             </div>
+
             <div class="form-item">
                 <label for="price">Precio:</label>
-                <input type="number" name="price" id="price">
+                <input type="number" name="price" id="price" placeholder="1001010.99" class="form-field">
             </div>
+            
             <div class="form-item">
-                <label for="sale">¿Esta en oferta?:</label>
-                <input type="checkbox" name="sale" id="sale">
+                <label for="categoria">Categoría</label>
+                <select name="categoria" id="categoria" class="form-field">
+                    <option value="" selected>Selecionar Categoria</option>
+                    <option value="hogar">Hogar</option>
+                    <option value="electro">Electro</option>
+                    <option value="indumentaria">Indumentaria</option>
+                </select>
             </div>
+
+            <div class="form-item">
+                <label for="city">Ciudad:</label>
+                    <select name="city" id="city" class="form-field">
+                        <option value="" selected>Selecionar Ciudad</option>
+                        <option value="ba">Buenos Aires</option>
+                        <option value="ro">Rosario</option>
+                        <option value="mz">Mendoza</option>
+                    </select>
+            </div>
+            
+            <div class="form-item" class="form-field">
+                <label for="description">Descripción</label>
+                <input name="description" id="description" class="form-field"></input>
+            </div>
+            
+
+            <button type="submit">
+                Enviar
+            </button>
+            <button type="reset">
+                Borrar
+            </button>
         </form>
     </main>
 
