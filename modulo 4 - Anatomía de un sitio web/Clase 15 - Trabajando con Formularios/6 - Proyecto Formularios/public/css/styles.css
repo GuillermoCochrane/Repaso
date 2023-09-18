@@ -1,0 +1,178 @@
+/* Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a; 
+
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px
+
+*/
+*{
+
+    box-sizing: border-box;
+} 
+
+body{
+    background-color: #ebebeb;
+    font-family: 'roboto',Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #03264C;
+}
+/* Estilos HEADER */
+
+header{
+    background-color: #EAC926;
+    padding: 20px;
+}
+.logo-search{
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo{
+    width: 50%;
+    margin: 14px;
+    max-width: 150px;
+}
+
+.search-bar{
+    display: flex;
+    width: 50%;
+}
+
+.search-icon,
+.search-field{
+    margin: auto;
+    padding: 5px 3px 5px 3px;
+    background-color: #ebebeb;
+    color: #666;
+    font-size: 14px;
+    border: 1px #666 solid;
+}
+
+.search-field{
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+    flex-grow: 1;
+}
+
+.search-icon{
+    border-radius: 0 5px 5px 0;
+}
+
+
+
+.info-header{
+    font-weight: 400;
+    text-align: center;
+}
+
+.burger-menu{
+    background-color: #03264C;
+    color: #ebebeb;
+    display: block;
+    width: 35px;
+    padding: 4px;
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.main-navbar{
+    display: none;
+}
+
+.main-navbar ul{
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.main-navbar a{
+    text-decoration: none;
+    color: #03264C;
+    padding: 1px 0;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.main-navbar i{
+    padding: 0 3px;
+}
+
+@media (min-width:768px){
+    .main-header-top{
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo-search{
+        flex-grow: 1;
+    }
+    .logo{
+        width: 30%;
+    }
+
+    .search-bar{
+        width: 70%;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    .info-header{
+        max-width: 210px;
+        text-align: right;
+    }
+    .burger-menu{
+        display: none;
+    }
+    .main-navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-navbar ul{
+        display: flex;
+    }
+    .main-navbar li{
+        margin: 0 3px;
+    }
+}
+
+@media (min-width:1200px){
+    .logo {
+        min-width: 215px;
+    }
+
+    .main-header-top,
+    .main-navbar{
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .main-header-top{
+        align-items: center;
+    }
+
+    .info-header{
+        margin: 0;
+        max-width: none;
+        font-size: 22px;
+        font-weight: 400;
+    }
+    .main-navbar{
+        margin-top: 15px;
+    }
+    .main-navbar li{
+        margin: 0 10px;
+    }
+    .main-navbar a{
+        font-size: 20px;
+    }
+}
