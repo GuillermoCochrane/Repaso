@@ -1,0 +1,310 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+} 
+
+body{
+    background-color: #ebebeb;
+    font-family: 'roboto',Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #03264C;
+}
+/* Estilos HEADER */
+
+header{
+    background-color: #EAC926;
+    padding: 20px;
+}
+.logo-search{
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo{
+    width: 50%;
+    margin: 14px;
+    max-width: 150px;
+}
+
+.search-bar{
+    display: flex;
+    width: 50%;
+}
+
+.search-icon,
+.search-field{
+    margin: auto;
+    padding: 5px 3px 5px 3px;
+    background-color: #ebebeb;
+    color: #666;
+    font-size: 14px;
+    border: 1px #666 solid;
+}
+
+.search-field{
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+    flex-grow: 1;
+}
+
+.search-icon{
+    border-radius: 0 5px 5px 0;
+}
+
+.info-header{
+    font-weight: 400;
+    text-align: center;
+}
+
+.burger-menu{
+    background-color: #03264C;
+    color: #ebebeb;
+    display: block;
+    width: 35px;
+    padding: 4px;
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+.main-navbar{
+    display: none;
+}
+
+.main-navbar ul{
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.main-navbar a{
+    text-decoration: none;
+    color: #03264C;
+    padding: 1px 0;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.main-navbar i{
+    padding: 0 3px;
+}
+
+.banner{
+    width: 100%;
+    margin: auto;
+}
+.banner img{
+    width: 100%;
+}
+/* Estilos MAIN */
+
+main{
+    margin: auto;
+    width: 90%
+}
+
+.title{
+    font-size: 24px;
+    text-align: center;
+    margin: 20px
+}
+
+.articles-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+section article{
+    margin: 0px;
+    margin-bottom: 20px;
+    background-color: white;
+    min-width: 250px;
+    width: 320px;
+}
+
+.img-article{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.img-article img{
+    margin: auto;
+    width: 200px;
+}
+
+.info-article-box{
+    border: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+.info-article{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+main section article i{
+    display: block;
+    font-size: 15px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: solid 2px #39b54a;
+    color: #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -30px;
+}
+
+.price{
+    padding: 5px;
+    font-size: 18px;
+    width: 30%;
+    margin: 0 10px;
+    min-width: fit-content;
+}
+
+.discount{
+    margin-left: 15px;
+    font-size: 14px;
+    color: #39b54a;
+    width: 70%;
+    min-width: fit-content;
+}
+
+.description{
+    font-size: 16px;
+    padding: 10px;
+    padding-bottom: 0px;
+    display: none;
+    margin-left: 5px;
+}
+
+/* estilos FOOTER */
+
+footer{
+    margin-top: 20px;
+    text-align: center;
+    background-color: #FFF;
+    color: #03264C;
+    padding-top: -13px;
+}
+
+footer section{
+    padding: 10px;
+}
+
+.footer-icon{
+    padding: 5px;
+    border: none;
+    background-color: #fff;
+    color: #1259c3;
+    font-size: 3em;
+    margin-bottom: 10px;;
+}
+
+footer section h3{
+    margin: 5px;
+    font-size: 20px;
+}
+
+@media (min-width:768px){
+    .main-header-top{
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo-search{
+        flex-grow: 1;
+    }
+    .logo{
+        width: 30%;
+    }
+
+    .search-bar{
+        width: 70%;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    .info-header{
+        max-width: 210px;
+        text-align: right;
+        align-self: center;
+    }
+    .burger-menu{
+        display: none;
+    }
+    .main-navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-navbar ul{
+        display: flex;
+    }
+    .main-navbar li{
+        margin: 0 3px;
+    }
+    .description{
+        display:block;
+    }
+    section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 45%;
+        min-width: none;
+    }
+}
+
+@media (min-width:1200px){
+    .logo {
+        min-width: 215px;
+    }
+
+    .main-header-top,
+    .main-navbar{
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .main-header-top{
+        align-items: center;
+    }
+
+    .info-header{
+        margin: 0;
+        min-width: none;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .main-navbar{
+        margin-top: 15px;
+    }
+
+    .main-navbar li{
+        margin: 0 10px;
+    }
+
+    .main-navbar a{
+        font-size: 20px;
+    }
+
+    section article{
+        width: 23%;
+    }
+
+    .footer-box{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+
