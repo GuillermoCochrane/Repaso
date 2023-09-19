@@ -5,7 +5,7 @@
 } 
 
 body{
-    background-color: #ebebeb;
+    background-color: #ebebee;
     font-family: 'roboto',Arial, Helvetica, sans-serif;
     font-size: 12px;
     color: #03264C;
@@ -217,6 +217,72 @@ footer section h3{
     font-size: 20px;
 }
 
+/* Estilos Formulario registro */
+
+.login-form,
+.form-frame{
+    margin:auto;
+    margin-top: 20px;
+    padding: 10px 15px;
+    width: 70%;
+    background-color: #c8c8c8;
+    font-size: 15px;
+}
+
+.login-form{
+    background-color: #ebebeb;
+    font-size: 20px;
+}
+
+.login-item,
+.form-item{
+    margin: 5px 0;
+}
+
+.login-item label,
+.form-item label{
+    display: block;
+    margin: 3px 1px;
+    font-weight: bold;
+}
+
+.login-item input,
+.form-field{
+    width: 100%;
+    border: none;
+    padding: 3px 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.login-item input{
+    padding: 7px;
+}
+.form-radio{
+    display: flex;
+}
+
+.form-radio input{
+    margin: 5px;
+}
+
+.login-form button,
+.form-buttons button{
+    margin: 0 5px;
+    font-size: 15px;
+    padding: 3px;
+    font-weight: bolder;
+    background-color: #0c3f8bde;
+    color: #ebebeb;
+    border-radius: 5px;
+}
+.login-form button{
+    width: 100%;
+    margin: 15px 0;
+    padding: 8px;
+    font-size: 20px;
+}
+
 @media (min-width:768px){
     .main-header-top{
         display: flex;
@@ -261,6 +327,9 @@ footer section h3{
         width: 45%;
         min-width: none;
     }
+    .form-frame{
+        width: 45%;
+    }
 }
 
 @media (min-width:1200px){
@@ -304,6 +373,10 @@ footer section h3{
     .footer-box{
         display: flex;
         flex-wrap: nowrap;
+    }
+
+    .form-frame{
+        width: 25%;
     }
 }
 
