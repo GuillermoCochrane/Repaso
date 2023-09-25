@@ -1,0 +1,22 @@
+Parámetros compartidos
+Para este ejercicio debemos, analizando el HTML, completar el código que falta en el controlador para que el mismo pueda enviar al template engine las variables que necesita para poder renderizar la vista checkout. 
+
+Código HTML:
+
+<% for(let i =0; i < items.length; i++) {
+   <li>
+      <%= items[i] %>
+   </li>
+<% } %>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+let productos = ['Helado 1/4 kg', 'Franui Chocolate Negro', 'Surtido Chocolate 1/2kg'];
+       let carritoController = {
+         checkout: function (req,res){
+             res.render("checkout",{
+                 items: productos,
+             });
+         }
+     }
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

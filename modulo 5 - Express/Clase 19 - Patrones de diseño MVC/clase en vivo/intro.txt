@@ -1,0 +1,16 @@
+Patrones de diseño MVC
+
+
+a llegado el momento de comenzar a armar la rueda del MVC.
+
+Es importante tener en cuenta que con este patrón de diseño no solo podremos organizar mucho más nuestros archivos, sino que también vamos a hacer que nuestros proyectos sean más escalables. Ya que nos brinda la posibilidad de ir sumando funcionalidades parciales que hagan parte de un gran entorno programacional.
+
+En esta clase, particularmente:
+
+
+* Haremos bastante foco en las parte "VC" del patrón. Pues los modelos recién los comenzaremos a trabajar cuando sepamos mucho más de bases de datos.
+* Vamos a estructurar nuestro trabajo hecho, bajo el esquema de rutas y controladores.
+
+
+Generaremos la estructura ideal de carpetas y entenderemos dónde deben ir las cosas.
+Así que, sin más por decir, vamos a meterle manos al código.

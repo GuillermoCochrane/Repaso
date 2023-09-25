@@ -1,0 +1,36 @@
+Buscando series
+¡Listemos todas las series!
+
+Tenemos una lista de muchas series almacenadas en la variable series. Nuestro trabajo será crear una ruta que apunte a "/series" y las devuelva a TODAS.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+const express = require('express');
+const app = express();
+app.get('/series', (req,res) => {
+    res.send(series)    
+})
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Buscar una serie
+Veamos cómo armar nuestra primera ruta parametrizada con Express.
+
+Queremos crear una ruta que apunte a "/serie" y que la misma, a su vez, reciba un número. Ese número representará el id de la serie que estamos queriendo ver. Por lo tanto, la ruta deberá devolver únicamente la serie que coincida con el id que llegó por parámetro.
+
+Un ejemplo de cómo se vería la ruta sería el siguiente: http://localhost/serie/3
+
+Recordemos que la variable está declarada por detrás y podemos disponer de ella con solo nombrarla.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+const express = require('express');
+const app = express();
+console.log(series)
+app.get('/serie/:id', (req,res) => {
+    let numSerie = req.params.id;
+    let salida = series.filter ((elegida) => {
+    return elegida.id == numSerie
+    });
+    res.send(salida[0]);    
+})
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
