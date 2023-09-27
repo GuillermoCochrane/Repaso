@@ -1,0 +1,82 @@
+Usando query string para filtrar
+
+Imaginemos que tenemos una web que muestra productos. Nos gustaría poder mostrar el listado de todos lo productos. Por defecto, vamos a mostrar todos los productos sin importar a qué categoría pertenecen y los vamos a ordenar alfabéticamente según el nombre del producto. Pero también queremos darle la posibilidad al usuario que filtre por categoría y ordene por otro campo (por ejemplo: precio). Nos damos cuenta que la mejor opción para esto es usar una ruta que reciba un query string.
+Por lo tanto, debemos realizar las siguientes tareas:
+
+Crear la ruta "/productos".
+A partir del request, recuperar el query string y mostrarlo usando el método send del objeto response.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+const express = require('express');
+const router = express.Router();
+
+router.get('/productos', (req,res) =>{
+    let string = req.query
+    res.send(string);
+});
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Filtrando por precio
+
+Tenemos un listado de celulares, cada uno con su precio. Vamos a crear una ruta "/celulares" del tipo GET para listarlos a todos.
+
+Para mostrar el listado debemos usar el método send del parámetro response.
+
+Ahora bien, también nos gustaría poder filtrar la lista de celulares en función del precio. El usuario debería acceder a una URL que tenga un query string con el parámetro "max".
+
+A partir de ese parámetro, nosotros tenemos que ser capaces de devolver la lista, pero solo mostrando aquellos celulares cuyo precio no supere el valor del parámetro "max".
+
+Es decir, si el usuario accede a la URL  "/celulares?max=20000", deberíamos listar todos los modelos menos el "Samsung Galaxy A50".
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+const express = require('express');
+const router = express.Router();
+
+const celulares = [
+    {
+        nombre: 'Motorola Moto E6 Plus',
+        precio: 14999
+    },
+    {
+        nombre: 'Motorola Moto G7',
+        precio: 19999
+    },
+    {
+        nombre: 'Alcatel 5033A',
+        precio: 6999
+    },
+    {
+        nombre: 'Samsung Galaxy A50',
+        precio: 33499
+    }
+];
+router.get('/celulares', (req,res) =>{
+    let filtrados = []
+    let qString= req.query;
+    if(qstring == undefined){
+        res.send(celulares);
+        }else{
+            for(i=0; i < celulares.length; i++){
+                if (celulares[i].precio < qString ){
+                    filtrados.push(celulares[i].precio);
+                }
+            }
+        }
+});
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
