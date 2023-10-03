@@ -1,0 +1,17 @@
+Formularios y métodos HTTP
+Los sistemas web, tradicionalmente, poseen herramientas a través de las cuales podemos enviar información desde nuestro navegador hacia el servidor. A estas herramientas las conocemos naturalmente como formularios.
+
+Pero ¿cómo realmente se da el proceso a través del cual la información puesta dentro de un formulario llega al servidor? ¿Cómo hace el servidor para procesar dicha información?
+
+Aquí es donde cobran un particular protagonismo los métodos de HTTP. Estos nos va a permitir gestionar las distintas peticiones que se hacen desde un formulario de parte del cliente.
+
+Métodos de HTTP hay muchos, pero en esta clase trabajaremos particularmente con cuatro de ellos:
+
+* GET
+* POST
+* PUT/PATCH
+* DELETE
+
+Cada uno de estos métodos tiene una determinada responsabilidad y alude también a una acción específica ejecutada por parte del cliente, pues no será lo mismo querer consultar todos los productos existentes dentro de la base de datos, por ejemplo, a querer eliminar o actualizar un registro en particular.
+
+Así que sin más, adentrémonos en este maravilloso y místico mundo de los métodos de HTTP.
