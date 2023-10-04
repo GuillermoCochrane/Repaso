@@ -22,7 +22,17 @@ const controller = {
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
-		// Do the magic
+		let productId = req.params.id;
+		let product = products.filter(prod =>  prod.id == productId)
+		product = product[0];
+		console.log(product);
+		let discountedPrice = (product.price - ((product.price)*(product.discount/100)) )
+		product.finalPrice = Math.round(discountedPrice)
+		res.render("detail",{
+			product: product,
+			toThousand: toThousand,
+			title: product.name
+		})
 	},
 
 	// Create - Form to create
