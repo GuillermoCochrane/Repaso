@@ -12,7 +12,8 @@ const controller = {
 		let inSale = products.filter(product => product.category == "in-sale")
 		res.render("index", {
 			visited: visited,
-			inSale: inSale
+			inSale: inSale,
+			toThousand: toThousand
 		})
 	},
 	search: (req, res) => {
