@@ -13,8 +13,8 @@ router.get('/create', productsController.create);
 router.post('/', productsController.store); 
 
 /*** EDIT ONE PRODUCT ***/ 
-/* router.???('/:id/???', productsController.edit); 
-router.???('/:id', productsController.update);  */
+router.get('/edit/:id', productsController.edit); 
+router.put('/edit/:id', productsController.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 
