@@ -60,13 +60,23 @@ const controller = {
 		product = product[0];
 		res.render("product-edit-form", {
 			product: product,
-			toThousand: toThousand,
 			title: product.name
 		})
 	},
 	// Update - Method to update
 	update: (req, res) => {
-		// Do the magic
+		for (const product of products) {
+			if(product.id == req.params.id){
+				product.name = req.body.name
+				product.price = req.body.price
+				product.discount = req.body.discount
+				product.category = req.body.category
+				product.description = req.body.description
+			}
+		}
+		let productJSON = JSON.stringify(products);
+		fs.writeFileSync(productsFilePath,productJSON);
+		res.redirect("/products/"+req.params.id)
 	},
 
 	// Delete - Delete one product from DB
