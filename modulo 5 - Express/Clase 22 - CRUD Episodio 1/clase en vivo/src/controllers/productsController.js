@@ -5,12 +5,7 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-/* let allProducts = products;
-allProducts.map(product => {
-	let finalprice = product.price - ((product.price)*(product.discount/100))
-	product.finalPrice = toThousand(finalprice);
-	return product;
-}); */
+
 const controller = {
 	// Root - Show all products
 	index: (req, res) => {
@@ -23,9 +18,8 @@ const controller = {
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		let productId = req.params.id;
-		let product = products.filter(prod =>  prod.id == productId)
+		let product = products.filter( prod =>  prod.id == productId )
 		product = product[0];
-		console.log(product);
 		let discountedPrice = (product.price - ((product.price)*(product.discount/100)) )
 		product.finalPrice = Math.round(discountedPrice)
 		res.render("detail",{
@@ -37,12 +31,27 @@ const controller = {
 
 	// Create - Form to create
 	create: (req, res) => {
-		// Do the magic
+		res.render("product-create-form")
 	},
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		// Do the magic
+		let lastProductPosition = (products.length)-1;
+		console.log(lastProductPosition);
+		let lastproductid = products[lastProductPosition].id;
+		let newProduct = {
+			id: 			lastproductid+1,
+			name: 			req.body.name,
+			price: 			req.body.price,
+			discount: 		req.body.discount,
+			category: 		req.body.category,
+			description: 	req.body.description,
+			image: 			"default-image.png"
+		};
+		products.push(newProduct);
+		let newProductsJSON = JSON.stringify(products)
+		fs.writeFileSync(productsFilePath,newProductsJSON)
+		res.redirect("/products/"+newProduct.id)
 	},
 
 	// Update - Form to edit
