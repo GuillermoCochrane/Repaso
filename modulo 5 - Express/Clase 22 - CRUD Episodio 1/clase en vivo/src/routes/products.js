@@ -16,9 +16,8 @@ router.post('/', productsController.store);
 router.get('/edit/:id', productsController.edit); 
 router.put('/edit/:id', productsController.update); 
 
-
 /*** DELETE ONE PRODUCT***/ 
-/* router.???('/:id', productsController.destroy);  */
+router.delete('/delete/:id', productsController.destroy); 
 
 /*** GET ONE PRODUCT ***/ 
 router.get('/:id/', productsController.detail);

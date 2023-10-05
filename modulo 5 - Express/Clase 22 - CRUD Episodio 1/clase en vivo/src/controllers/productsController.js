@@ -17,8 +17,7 @@ const controller = {
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
-		let productId = req.params.id;
-		let product = products.filter( prod =>  prod.id == productId )
+		let product = products.filter( item =>  item.id == req.params.id )
 		product = product[0];
 		let discountedPrice = (product.price - ((product.price)*(product.discount/100)) )
 		product.finalPrice = Math.round(discountedPrice)
@@ -37,7 +36,6 @@ const controller = {
 	// Create -  Method to store
 	store: (req, res) => {
 		let lastProductPosition = (products.length)-1;
-		console.log(lastProductPosition);
 		let lastproductid = products[lastProductPosition].id;
 		let newProduct = {
 			id: 			lastproductid+1,
@@ -81,7 +79,10 @@ const controller = {
 
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
-		// Do the magic
+		let newProducts = products.filter((product)=> product.id != req.params.id);
+		let productsJSON = JSON.stringify(newProducts);
+		fs.writeFileSync(productsFilePath,productsJSON);
+		res.redirect("/");
 	}
 };
 
