@@ -1,0 +1,10 @@
+Punto de partida
+
+En esta clase buscaremos que se cumplan los siguientes objetivos:
+
+* Repasar las diferentes peticiones que podemos hacerle al servidor.
+* Profundizar en las diferencias entre los métodos HTTP para poder realizar un CRUD.
+* Ejercitar la subida de archivos utilizando Multer.
+* Repasar path y fs.
+
+Para eso les dejamos la siguiente ejercitación.
