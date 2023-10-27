@@ -26,7 +26,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({storage: storage})
 //como el nombre de la variable storage es igual a la propiedad de multer tambien podemos configurarlo de la siguiente manera
-// const upload = multer({storage: storage})
+// const upload = multer({storage})
 
 
 router.get('/', (req,res) =>{
