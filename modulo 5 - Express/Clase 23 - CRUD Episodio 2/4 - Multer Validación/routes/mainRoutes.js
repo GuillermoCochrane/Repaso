@@ -3,22 +3,13 @@
 Para esto debemos completar una ruta por post a /ver-body que como segundo parámetro cargue el avatar, que viene del formulario de registro con ese nombre, y como tercer parámetro un middleware que nos sirva para validar la imagen.
 En el caso de que la imagen no se suba, deberemos crear un error llamando a la clase Error con la palabra reservada new y pasándole como parámetro un mensaje. Este error se va a enviar como parámetro del next para ser tomado en el controller.
 En caso de existir una imagen, simplemente hacer un res.send de la misma. 
-
-app.post('/register', upload.single('avatar'), (req, res, next) => {
-  let file = req.file;
-  if(!file){
-    const error = new Error ('La imagen no cargo')
-    next();
-  }else{
-    res.send(file)
-  }
-})
 */
 
 const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
+const { log } = require('console');
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
@@ -44,7 +35,8 @@ router.post("/ver-body", upload.single("avatar"), (req,res,next) =>{
     let file = req.file;
     if(!file){
         const error = new Error ('La imagen no cargo')
-        next();
+        error.httpStatusCode = 400
+        return next(error);
     }else{
         res.send([file, req.body])
     }
