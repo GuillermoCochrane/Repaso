@@ -71,19 +71,32 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
-		for (const product of products) {
-			if(product.id == req.params.id){
-				product.name = req.body.name
-				product.price = req.body.price
-				product.discount = req.body.discount
-				product.category = req.body.category
-				product.description = req.body.description
+		let file = req.file;
+		let id = parseInt(req.params.id[0]+req.params.id[1])
+		if(file){
+			for (const product of products) {
+				if(product.id == id){
+					product.id == id
+					product.name = req.body.name
+					product.price = req.body.price
+					product.discount = req.body.discount
+					product.category = req.body.category
+					product.description = req.body.description
+					product.image = file.filename
+				}}
+				let productJSON = JSON.stringify(products);
+				fs.writeFileSync(productsFilePath,productJSON);
+				res.redirect("/products/"+req.params.id)
+			} else {
+				let product =req.body;
+				product.id = req.params.id
+				res.render(res.render('product-edit-form',{
+					product: product,
+					error: "Hubo un problema en la carga de la imagen",
+					title: req.body.name
+				}))
 			}
-		}
-		let productJSON = JSON.stringify(products);
-		fs.writeFileSync(productsFilePath,productJSON);
-		res.redirect("/products/"+req.params.id)
-	},
+		},
 
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
