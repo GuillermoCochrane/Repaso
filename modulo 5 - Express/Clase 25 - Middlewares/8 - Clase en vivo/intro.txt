@@ -1,0 +1,7 @@
+Punto de partida
+Como programadores es importante que aprendamos a utilizar middlewares ya que nos permiten diseñar aplicaciones con mayor eficiencia.
+
+¿Cuáles son los objetivos de la clase?
+
+* Comprender qué es y cuándo utilizar un middleware.
+* Desarrollar un middleware.

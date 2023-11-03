@@ -1,0 +1,21 @@
+Ejercitación
+
+
+Ya tenemos nuestra ruta de registro. Lo que necesitamos hacer ahora es agregar una validación para que el campo e-mail sea del tipo mail y la contraseña tenga por lo menos 6 caracteres.
+
+Para lograrlo vamos a requerir el módulo express-validator y usando el operador de destructuración vamos inicializar tres constantes: check, validationResult y body.
+En nuestra ruta vamos a agregar como segundo parámetro un array. El array va a tener solo dos posiciones: una para validar el input "email" y otra para validar el input "password".
+En cada posición del array, vamos a usar la función check pasando como parámetro el input a validar y vamos a concatenar a la ejecución de esta función una segunda función que va a ser la regla que queremos que cumpla nuestro input. Por ejemplo: isEmail.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+const express = require('express');
+const router = express.Router();
+const { check, validationResult,body} = require('express-validator')
+const UsuarioController = require('../controllers/UsuarioController');
+
+let validar =[
+    check('email').isEmail(),
+    check('password').isLength({min: 6})
+]
+router.post('/registro', validar,  UsuarioController.registro);
+

@@ -1,0 +1,79 @@
+Agregando el middleware express.json()
+¡Sin middleware no hay JSON!
+
+Resulta muy común enviar en el body de un request datos en formato JSON. Es por eso SÚPER importante incorporar un middleware que nos permita usar esta estructura directamente dentro de nuestro proyecto en Express. Acceder a este middleware es sencillo: simplemente invocamos la función json() en nuestro módulo importado de Express, luego debemos decirle, a esa misma instancia, que agregue ese middleware.
+
+Dado el siguiente código, debemos indicarle a Express que queremos incorporar el middleware.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+const express = require('express');
+const app = express();
+
+const middlewareJSON =express.json()
+
+//Agrear el middleware aquí
+
+
+app.use(middlewareJSON)
+
+const router = express.Router();
+router.post('/crear-usuario', (req, res) => {
+	console.log(req.body);
+
+	res.send('El usuario se creó con éxito');
+});
+
+app.use(router);
+
+app.listen(3000);
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Sitio en mantenimiento
+Aprovechando la capacidad de los middlewares, vamos a crear un código que nos permitirá poner a nuestro sitio en "mantenimiento". Cuando el usuario intente ingresar a cualquier ruta, se le presentará la vista de mantenimiento.
+
+
+
+Para resolver la ejercitación contamos con la variable enMantenimiento seteada por defecto con el valor false. Lo que debemos realizar es:
+
+1) Hacer que el método use de app reciba un middleware. Recordemos que podemos definir un middleware como una función que recibe los parámetros req, res y next.
+
+2) Implementar la lógica de negocio de forma tal que si la variable enMantenimiento es true, esta debe renderizar la página "mantenimiento", caso contrario, debe continuar con el flujo normal (next()).
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+const express = require('express');
+const app = express();
+let enMantenimiento = false;
+
+//Agrear el middleware aquí
+
+const enMantenimientoMiddleware = (req, res, next) =>{
+    if (enMantenimiento == true){
+        return res.render('en-mantenimiento')
+    }
+    next()
+}
+
+app.use(enMantenimientoMiddleware)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Agregando la propiedad usuario
+En el siguiente ejemplo tenemos definido un usuario dentro de la constante "usuario". Usando un middleware, debemos agregar en el objeto request la propiedad usuario con el valor de nuestra constante. De esta manera, todas las rutas deberían poder recuperar el valor de usuario mediante el objeto request. Ejemplo: req.usuario.
+Para lograr esto vamos a llamar al método use de app y pasarle una función. Esta función debe recibir tres argumentos: req, res y next. Nosotros vamos a agregar al objeto req un nuevo parámetro llamado usuario y pasarle como valor la constante "usuario".
+
+Finalmente debemos ejecutar el callback next.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+const express = _require('express');
+const app = express();
+const usuario = {
+    nombre: 'Máximo',
+    apellido: 'Cozzetti'
+};
+
+//Agrear el middleware aquí
+
+const usuarioMiddleware = (request, response,  next) =>{
+    request.usuario = usuario;
+    next()
+}
+
+app.use(usuarioMiddleware)
