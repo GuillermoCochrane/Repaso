@@ -14,11 +14,22 @@ Para resolver la ejercitación contamos con la variable enMantenimiento seteada 
 A) Hacer que el método use de app reciba un middleware. Recordemos que podemos definir un middleware como una función que recibe los parámetros req, res y next.
 
 B) Implementar la lógica de negocio de forma tal que si la variable enMantenimiento es true, esta debe renderizar la página "mantenimiento", caso contrario, debe continuar con el flujo normal (next()).
+
+----------------------------------------------------------------------------------------------------------------------------
+3)- Agregando la propiedad usuario
+
+En el siguiente ejemplo tenemos definido un usuario dentro de la constante "usuario". Usando un middleware, debemos agregar en el objeto request la propiedad usuario con el valor de nuestra constante. De esta manera, todas las rutas deberían poder recuperar el valor de usuario mediante el objeto request. Ejemplo: req.usuario.
+Para lograr esto vamos a llamar al método use de app y pasarle una función. Esta función debe recibir tres argumentos: req, res y next. Nosotros vamos a agregar al objeto req un nuevo parámetro llamado usuario y pasarle como valor la constante "usuario".
+
+Finalmente debemos ejecutar el callback next.
  */
+
 const express = require('express');
 const app = express();
-
+// 1)-
 const middlewareJSON = express.json()
+app.use(middlewareJSON)
+// 2)-
 let enMantenimiento = false;
 
 const enMantenimientoMiddleware = (req, res, next) =>{
@@ -27,9 +38,18 @@ const enMantenimientoMiddleware = (req, res, next) =>{
     }
     next()
 }
-
 app.use(enMantenimientoMiddleware)
-app.use(middlewareJSON)
+// 3)- 
+const usuario = {
+    nombre: 'Máximo',
+    apellido: 'Cozzetti'
+};
+const usuarioMiddleware = (req, res,  next) =>{
+    req.usuario = usuario;
+    next()
+}
+app.use(usuarioMiddleware)
+//------------------------------------------------------
 app.use(express.urlencoded({extended: false}));
 
 const rutasMain = require('./routes/mainRoutes');
