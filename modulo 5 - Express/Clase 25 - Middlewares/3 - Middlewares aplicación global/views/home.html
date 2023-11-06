@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación (CRUD)</title>
+</head>
+<!-- Preparando formularios para permitir la carga de archivos
+
+A la hora de cargar archivos mediante el formulario, no solo hace falta configurar nuestro código en Node.js, sino que también debemos agregar una configuración extra en la etiqueta form.
+Dado el siguiente formulario, agreguemos el atributo enctype con el valor correspondiente para permitir el envío de archivos.
+-->
+<body>
+    <h2>Nuevo usuario</h2>
+    <form action="/ver-body" method="post" enctype="multipart/form-data">
+        <label for="nombre">Nombre   :</label>
+        <input type="text" name="nombre" id="nombre">
+        <br>
+        <label for="email">E - mail   :</label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="avatar">Avatar   :</label>
+        <input type="file" name="avatar" id="avatar">
+        <br>
+        
+        <label for="password" >Password</label>
+        <input type="password" name="password"  id="password" >
+        <button type="submit">Enviar</button>
+        <br>
+    </form>
+    <br>
+    <br>
+    <h2>Crear Producto</h2>
+    <form action="/productos/crear" method="post" enctype="multipart/form-data">
+        <label for="nombreProducto">Nombre del Producto:</label>
+        <input type="text" name="nombreProducto" id="nombreProducto">
+        <br>
+        <label for="precioProducto">Precio:</label>
+        <input type="number" name="precioProducto" id="precioProducto">
+        <br>
+        <button type="submit">Crear</button>
+        <br>
+    </form>
+</body>
+</html>
