@@ -9,6 +9,8 @@ Para ello, vamos a tener que pasar como segundo parámetro de la ruta "subir-arc
 ---------------------------------------------------------------------------
 2)- en productosRoutes
 ---------------------------------------------------------------------------
+3)- en productosRoutes
+---------------------------------------------------------------------------
 */
 
 const express = require('express');
