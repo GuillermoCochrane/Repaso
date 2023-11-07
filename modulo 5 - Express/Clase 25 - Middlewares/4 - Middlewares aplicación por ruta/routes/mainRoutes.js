@@ -1,8 +1,14 @@
-/* ¡Ahora vamos a validar nuestra foto de perfil!
+/* 1)-
+Agregando middleware en la ruta "subir-archivo"
 
-Para esto debemos completar una ruta por post a /ver-body que como segundo parámetro cargue el avatar, que viene del formulario de registro con ese nombre, y como tercer parámetro un middleware que nos sirva para validar la imagen.
-En el caso de que la imagen no se suba, deberemos crear un error llamando a la clase Error con la palabra reservada new y pasándole como parámetro un mensaje. Este error se va a enviar como parámetro del next para ser tomado en el controller.
-En caso de existir una imagen, simplemente hacer un res.send de la misma. 
+A diferencia de los middleware de aplicación que se ejecutan para todas las rutas, los middleware de ruta permiten aplicar un middleware en una o varias rutas seleccionadas. Un ejemplo de esto es el middleware de Multer, que se agrega solo a las rutas que se van a encargar de subir archivos. (Recordemos que Multer es un paquete de Node.js que permite la carga de archivos en el servidor.)
+
+Para este ejemplo ya tenemos lista la configuración de Multer, pero nos falta agregar el middleware en la ruta "/ver-body".
+
+Para ello, vamos a tener que pasar como segundo parámetro de la ruta "subir-archivo" el middleware upload.any().
+---------------------------------------------------------------------------
+2)- en productosRoutes
+---------------------------------------------------------------------------
 */
 
 const express = require('express');
@@ -30,7 +36,7 @@ router.get('/', (req,res) =>{
     res.sendFile( path.join(__dirname, "../views/home.html"));
 });
 
-router.post("/ver-body", upload.single("avatar"), (req,res,next) =>{
+router.post("/ver-body", upload.any("avatar"), (req,res,next) =>{
     let file = req.file;
     if(!file){
         const error = new Error ('La imagen no cargo')
