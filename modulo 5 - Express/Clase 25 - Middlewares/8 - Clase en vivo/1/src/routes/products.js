@@ -2,21 +2,15 @@
 const express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/productMulterMDW');
-/* const multer = require('multer');
-const path = require('path');
+const { body } = require('express-validator');
 
-const storage = multer.diskStorage({
-    destination: function(req, file, cb){
-        cb(null, path.join(__dirname, "../../public/images/products"))
-    },
-    filename: function(req,file, cb){
-        console.log(file);
-        let newFileName = "product" + Date.now() + path.extname(file.originalname)
-        cb(null, newFileName)
-    }
-})
-
-const upload = multer({storage}) */
+const productValidations = [
+    body('name').notEmpty().withMessage('Debes completar el nombre del producto'),
+    body('price').notEmpty().withMessage('Debes completar el precio del producto'),
+    body('discount').notEmpty().withMessage('Debes completar el descuento del producto'),
+    body('category').notEmpty().withMessage('Debes seleccionar una categoría para el  producto'),
+    body('description').notEmpty().withMessage('Debes completar la descripción del producto'),
+]
 
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
