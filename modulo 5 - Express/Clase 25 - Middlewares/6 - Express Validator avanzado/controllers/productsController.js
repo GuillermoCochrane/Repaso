@@ -2,19 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult, body } = require('express-validator')
 
-/* const express = require('express');
-const router = express.Router();
-const { validationResult, body } = require('express-validator');
-
-const userController = {
-  login: (req, res) => {
-    const errores = validationResult(req);
-    if(!errores.isEmpty()){
-      res.render('login',{errores: errores.array()});
-    }
-  }  
-} */
-
 const productsFilePath = path.join(__dirname, '../db/productsDB.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
