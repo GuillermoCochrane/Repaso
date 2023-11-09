@@ -1,0 +1,17 @@
+Hacia la clase en vivo
+A lo largo de esta clase estuvimos entendiendo los conceptos clave de los middlewares y también implementado los mismos a nivel global, así como también a nivel de ruta. Además, aprendimos acerca del paquete Express Validator y de como el mismo nos permite validar los datos que deseamos almacenar en nuestra base de datos.
+
+Con esto en mente, dejamos las siguientes preguntas para plantearnos las mismas a manera de auto examen:
+
+* Entendiendo que un middleware es una función, a parte de los parámetros que representan al request y al response, ¿qué otro parámetro es indispensable que esté presente?
+* Para la carpeta de recursos estáticos, en donde se guardan las imágenes y las hojas de estilo de las vistas, ¿se debe usar un middleware global o un middleware de ruta?
+* ¿Cuál es la ventaja de usar middlewares de ruta?
+* Para usar Express Validator, ¿hay que instalarlo o ya viene por defecto con Express?
+* ¿Cuáles son los dos lugares clave en los que se debe usar Express Validator para validar los datos de nuestra aplicación?
+* ¿Cómo hacemos para enviar los errores generados en la validación para que se muestren en la vista?
+* Estando en la vista, ¿los errores de validación siempre van a estar presentes?
+
+Si logramos responder todas las preguntas sin problemas, estamos más que bien para poder afrontar la clase en vivo.
+Si, por el contrario, presentamos dudas en alguna que otra pregunta, recomendamos volver a ver el material para poder despejar las mismas.
+
+Nos vemos en clase.

@@ -64,29 +64,6 @@ const controller = {
 			} else {
 				res.render('product-create-form', { errors: errors.mapped(), oldData: req.body });
 			}
-		/* let file = req.file;
-		if(file){
-			let lastProductPosition = (products.length)-1;
-			let lastproductid = products[lastProductPosition].id;
-			let newProduct = {
-				id: 			lastproductid+1,
-				name: 			req.body.name,
-				price: 			req.body.price,
-				discount: 		req.body.discount,
-				category: 		req.body.category,
-				description: 	req.body.description,
-				image: 			file.filename,
-			};
-			products.push(newProduct);
-			let newProductsJSON = JSON.stringify(products)
-			fs.writeFileSync(productsFilePath,newProductsJSON)
-			res.redirect("/products/"+newProduct.id)
-		} else {
-			res.render(res.render('product-create-form',{
-				oldData: req.body,
-				error: "Hubo un problema en la carga de la imagen"
-			}))
-		} */
 	},
 
 	// Update - Form to edit

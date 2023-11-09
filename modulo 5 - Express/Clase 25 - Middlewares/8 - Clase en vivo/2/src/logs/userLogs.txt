@@ -1,0 +1,4 @@
+El usuario ingresó a la ruta: /user
+El usuario ingresó a la ruta: /services
+El usuario ingresó a la ruta: /products
+El usuario ingresó a la ruta: /
