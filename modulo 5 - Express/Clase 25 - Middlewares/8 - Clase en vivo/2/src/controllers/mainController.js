@@ -3,7 +3,7 @@ const controller = {
 		res.render("index");
 	},
 	search: (req, res) => {
-		res.render('index')
+		res.send("Ud tiene privilegios")
 	},
 	redirect: (req, res) => {
 		res.send("Hola")

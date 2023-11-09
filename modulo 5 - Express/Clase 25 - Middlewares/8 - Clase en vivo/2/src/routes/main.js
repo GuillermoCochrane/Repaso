@@ -1,12 +1,13 @@
 // ************ Require's ************
 const express = require('express');
 const router = express.Router();
+const adminMDW = require('../middlewares/adminMDW');
 
-// ************ Controller Require ************
+// ****../middlewares/adminMDW ******** Controller Require ************
 const mainController = require('../controllers/mainController');
 
 router.get('/', mainController.index); 
-router.get('/search', mainController.search);
+router.get('/admin', adminMDW, mainController.search);
 router.get("/services", mainController.redirect)
 router.get("/products", mainController.redirect)
 router.get("/user", mainController.redirect)
