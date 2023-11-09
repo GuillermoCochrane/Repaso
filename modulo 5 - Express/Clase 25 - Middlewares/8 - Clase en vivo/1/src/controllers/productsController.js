@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator')
 
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -35,7 +36,35 @@ const controller = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		let file = req.file;
+		let errors = validationResult(req)
+		if (errors.isEmpty()) {
+				let file = req.file;
+				if(file){
+					let lastProductPosition = (products.length)-1;
+					let lastproductid = products[lastProductPosition].id;
+					let newProduct = {
+						id: 			lastproductid+1,
+						name: 			req.body.name,
+						price: 			req.body.price,
+						discount: 		req.body.discount,
+						category: 		req.body.category,
+						description: 	req.body.description,
+						image: 			file.filename,
+					};
+					products.push(newProduct);
+					let newProductsJSON = JSON.stringify(products)
+					fs.writeFileSync(productsFilePath,newProductsJSON)
+					res.redirect("/products/"+newProduct.id)
+				} else {
+					res.render(res.render('product-create-form',{
+						oldData: req.body,
+						error: "Hubo un problema en la carga de la imagen"
+					}))
+				}
+			} else {
+				res.render('product-create-form', { errors: errors.mapped(), oldData: req.body });
+			}
+		/* let file = req.file;
 		if(file){
 			let lastProductPosition = (products.length)-1;
 			let lastproductid = products[lastProductPosition].id;
@@ -57,7 +86,7 @@ const controller = {
 				oldData: req.body,
 				error: "Hubo un problema en la carga de la imagen"
 			}))
-		}
+		} */
 	},
 
 	// Update - Form to edit
