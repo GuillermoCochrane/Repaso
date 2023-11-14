@@ -1,0 +1,3 @@
+Punto de partida
+
+En esta clase veremos cómo podemos utilizar Express Validator y, además, seguiremos aprendiendo sobre cookies y Session, ambos súper necesarios para nuestras aplicaciones.
