@@ -7,6 +7,7 @@
 </head>
 <body>
     <p><%= (locals && locals.idioma ? "El idioma seleccionado es " + locals.idioma :"No hay un idioma seleccionado" ) %></p>
+    <p><%= (locals && locals.admin ? "T" : "No T" )  %>iene privilegios de administrador</p>
 </body>
 <a href="/"><button>Volver</button></a>
 </html>

@@ -1,4 +1,5 @@
-/* 2)-
+/* 
+2)-
 Cambiando idioma:
 
 Tenemos un controlador que se va a encargar de guardar en Session el idioma de preferencia del usuario. Más tarde, podemos usar esta variable de Session para mostrar el contenido en el idioma seleccionado.
@@ -8,17 +9,6 @@ Para ello, dentro del controlador, vamos a guardar el valor del parámetro idiom
 Para recuperar la información del idioma que nos envía el usuario lo hacemos a través del objeto query: req.query.idioma.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-
-const express = require('express');
-const app = express();
-
-const session = require('express-session');
-app.use(session({secret: "frase secreta"}));
-
-const cambiarIdioma = (req, res) => {
-	req.session.idioma = req.query.idioma;
-	res.redirect('/');
-}
 
  */
 
@@ -49,13 +39,25 @@ router.get('/', (req,res) =>{
     res.render('home');
 });
 
+router.get('/login', (req,res) =>{
+    res.render('login');
+});
+
+router.post('/login', (req,res) =>{
+    req.session.admin = true;
+    res.redirect('/');
+});
+
 router.get('/cambiarIdioma', (req,res) =>{
     req.session.idioma = req.query.idioma;
 	res.redirect('/idioma');
 });
 
 router.get('/idioma', (req,res) =>{
-    res.render('idioma', {idioma: req.session.idioma});
+    res.render('idioma', {
+        idioma: req.session.idioma,
+        admin: req.session.admin
+    });
 });
 
 router.post("/ver-body", upload.single("avatar"), validar , (req,res,next) =>{
