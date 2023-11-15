@@ -14,7 +14,16 @@ En este controlador, estamos renderizando una vista. Nuestro objetivo es consult
 
 Para lograr esto debemos agregar un if para preguntar si existe el atributo estilo dentro de cookie. Si es así, dentro del if debemos configurar una variable llamada estilo con el valor guardado en la cookies. Caso contrario, en el else, debemos configurar la variable estilo con el valor "default".
 -----------------------------------------------------------------------------------------------------------------------------
- */
+3)-
+Recomendados:
+
+Previamente almacenamos en el navegador de usuario una cookie llamada "preferencias". Ahora, desde este controlador, queremos mostrar un listado de productos recomendados en función de las preferencias del usuario.
+Para lograr este objetivo vamos a recuperar el valor de la cookie "preferencias" y almacenarla en una constante llamada "preferencias".
+
+A partir del valor recuperado vamos a traer todos los productos del listado de listadoProductos cuya key conincida con este valor. Almacenamos los productos en una constante llamada "productos".
+
+Finalmente, pasamos al método render la constante productos.
+*/
 
 const express = require('express');
 const router = express.Router();
@@ -38,6 +47,19 @@ let validar =[
     check('email').isEmail(),
     check('password').isLength({min: 6})
 ]
+
+const listadoProductos = {
+	vestidos: [
+		'vestido broderie',
+		'vestido towel',
+		'vestido voile',
+	],
+	remeras: [
+		'remera alforzas',
+		'remera bordada',
+		'musculosa',
+	]
+}
 // 2)-
 router.get('/', (req,res) =>{
     let estilo = false
@@ -74,6 +96,24 @@ router.get('/idioma', (req,res) =>{
         admin: req.session.admin,
     });
 });
+
+// 3)-
+router.post("/preferencias", (req,res)=> {
+    let preferencias = req.body.preferencias;
+    res.cookie( "preferencias", preferencias, {maxAge: 30000});
+    res.redirect('/')
+})
+
+router.get("/preferencias", (req,res)=>{
+        let cookie = req.cookies.preferencias;
+        let productos = ["opción no válida"]
+        if (cookie == 1){
+            productos = listadoProductos.vestidos
+        } else if(cookie == 2){
+            productos = listadoProductos.remeras
+        }
+        res.send(productos)
+})
 
 router.post("/ver-body", upload.single("avatar"), validar , (req,res,next) =>{
     let file = req.file;
