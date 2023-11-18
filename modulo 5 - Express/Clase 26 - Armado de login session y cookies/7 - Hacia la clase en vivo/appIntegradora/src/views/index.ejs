@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clase en Vivo 26</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body class="<%= locals && locals.msg ? msg.bkg : ' '  %>">
+    <h2> Registro </h2>
+    <div class="form-container">
+      
+      <form action="/" method="post">
+        
+        <div class="form-field">
+          <label for="name">Ingrese su Nombre:</label>
+          <br>
+          <input type="text" id="name" name="name" >
+          <br>
+        </div>
+        
+        <div class="form-field">
+          <label for="email">Ingrese su Correo Electrónico:</label>
+          <br>
+          <input type="text" id="email" name="email" >
+          <br>
+        </div>
+        
+        <div class="form-field">
+          <label for="age">Ingrese su Edad:</label>
+          <br>
+          <input type="text" id="age" name="age">
+          <br>
+        </div>
+
+        <div class="form-field">
+          <label for="color">Seleccione un color</label>
+          <br>
+          <select name="color" id="color" class="form-input">
+            <option value="">Elegí</option>
+            <option value="1" class="option1">Rojo</option>
+            <option value="2" class="option2">Amarillo</option>
+            <option value="3" class="option3">Azul</option>
+            <option value="4" class="option4">Gris</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <span>
+        <%= locals && locals.msg ? `Hola ${msg.name}, elegiste el color: ${msg.color}, tu email es:
+        ${msg.email} y tu edad ${msg.age}` : "" %>
+    </span>
+  </body>
+</html>
