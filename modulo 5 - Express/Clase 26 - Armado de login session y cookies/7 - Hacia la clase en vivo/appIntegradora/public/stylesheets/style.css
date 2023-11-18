@@ -23,7 +23,7 @@ form{
   margin: auto;
   width: 60%;
   padding: 20px;
-  background-color: lightskyblue;
+  background-color: lightgreen;
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -38,6 +38,7 @@ form{
 .form-field label{
   text-align: center;
   margin: auto;
+  font-size: 15px;
 }
 
 .form-field input,
@@ -47,7 +48,15 @@ form{
   margin: auto;
   border-radius: 5px;
   margin-top: 5px;
-} 
+}
+
+.form-field p{
+  color: orangered;
+  font-weight: bold;
+  font-size: 15px;
+  margin: auto;
+  padding: 3px 0;
+}
 
 .option1{
   background-color: lightcoral;
