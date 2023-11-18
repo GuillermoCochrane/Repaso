@@ -4,7 +4,7 @@
     <title>Clase en Vivo 26</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body class="<%= locals && locals.msg ? msg.bkg : ' '  %>">
+  <body class="<%= locals && locals.bkg ? bkg : ' '  %>">
     <h2> Registro </h2>
     <div class="form-container">
       
@@ -55,6 +55,11 @@
           <% } %>
         </div>
 
+        <div class="form-field check">
+          <label for="remember">¿Recordar Color?</label>
+          <input type="checkbox" name="remember" id="remember" class="check">
+        </div>
+
         <div class="form-field">
           <button type="submit">Enviar</button>
         </div>
@@ -69,7 +74,7 @@
       </div>
 
       <div>
-        <a href="#">
+        <a href="/forget">
           <button type="submit">Olvidar</button>
         </a>
       </div>

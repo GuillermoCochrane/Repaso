@@ -4,7 +4,7 @@
     <title>Clase en Vivo 26</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body class="<%= locals && locals.msg ? msg.bkg : ' '  %>">
+  <body class="<%= locals && locals.bkg ? bkg : ' '  %>">
     <h2> Saludos </h2>
     <span>
         <%= locals && locals.msg ? `Hola ${msg.name}, gracias por visitarnos`: '' %>

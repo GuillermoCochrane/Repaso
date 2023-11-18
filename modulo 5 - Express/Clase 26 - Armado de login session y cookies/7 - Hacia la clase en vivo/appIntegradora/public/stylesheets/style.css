@@ -47,7 +47,7 @@ form{
 
 .form-field label{
   text-align: center;
-  margin: auto;
+  margin: auto 0;
   font-size: 15px;
 }
 
@@ -92,4 +92,17 @@ span{
   display: block;
   text-align: center;
   font-size: 20px;
+}
+
+.check{
+  width: 89%;
+  padding: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.check input{
+  width: auto;
+  margin-top: 2px;
+  margin-left: 10px;
 }

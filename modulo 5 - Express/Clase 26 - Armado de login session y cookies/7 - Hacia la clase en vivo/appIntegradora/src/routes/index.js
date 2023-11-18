@@ -10,5 +10,7 @@ router.post('/', validations, controller.process);
 
 router.get('/greetings', controller.greetings);
 
+router.get('/forget', controller.forget);
+
 
 module.exports = router;

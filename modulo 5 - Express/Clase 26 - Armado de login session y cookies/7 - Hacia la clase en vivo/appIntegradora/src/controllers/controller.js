@@ -35,10 +35,16 @@ const controller = {
                 age: (req.body.age ? `es: ${req.body.age}` : "no la se, porque no la enviaste"),
                 email: req.body.email,
                 color: color,
-                bkg: bkg
             };
+            if(req.body.remember){
+                res.cookie( "bkg", bkg, {maxAge: 300000});
+            }
             req.session.msg = msg;
-            return res.render("index", {msg: msg})
+            req.session.bkg = bkg;
+            return res.render("index", {
+                msg: msg,
+                bkg: bkg
+            })
             } else {
                 res.render('index', { 
                     errors: errors.mapped(), 
@@ -48,7 +54,16 @@ const controller = {
     },
 
     greetings: function(req,res){
-        res.render("greets", {msg: req.session.msg})
+        res.render("greets", {
+            msg: req.session.msg,
+            bkg: req.session.bkg
+        })
+    },
+
+    forget: function(req,res){
+        res.clearCookie("bkg");
+        req.session.destroy();
+        return res.redirect('/')
     }
 
 };
