@@ -6,8 +6,8 @@ const controller = {
     process: function(req,res){
         let errors = validationResult(req)
 		if (errors.isEmpty()){
-            let color = ''
-            let bkg = ''
+            let color = '';
+            let bkg = '';
             let selectedColor = req.body.color;
             switch(selectedColor){
                 case "1":
@@ -29,14 +29,15 @@ const controller = {
                 default:
                     color = "no seleccionó ninguno"
                     break
-            }
+            };
             let msg = {
                 name: req.body.name,
                 age: (req.body.age ? `es: ${req.body.age}` : "no la se, porque no la enviaste"),
                 email: req.body.email,
                 color: color,
                 bkg: bkg
-            }
+            };
+            req.session.msg = msg;
             return res.render("index", {msg: msg})
             } else {
                 res.render('index', { 
@@ -44,6 +45,10 @@ const controller = {
                     oldData: req.body 
                 });
             };
+    },
+
+    greetings: function(req,res){
+        res.render("greets", {msg: req.session.msg})
     }
 
 };

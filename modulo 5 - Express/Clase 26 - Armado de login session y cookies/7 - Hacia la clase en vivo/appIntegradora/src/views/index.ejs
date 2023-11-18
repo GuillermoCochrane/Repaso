@@ -60,6 +60,21 @@
         </div>
       </form>
     </div>
+
+    <div class="button-container">
+      <div>
+        <a href="/greetings">
+          <button type="submit">Saludar</button>
+        </a>
+      </div>
+
+      <div>
+        <a href="#">
+          <button type="submit">Olvidar</button>
+        </a>
+      </div>
+    </div>
+
     <span>
         <%= locals && locals.msg ? `Hola ${msg.name}, elegiste el color: ${msg.color}, tu email es:
         ${msg.email} y tu edad ${msg.age}` : "" %>
