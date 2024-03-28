@@ -1,0 +1,25 @@
+A vincular
+En este ejercicio debemos vincular el archivo script.js con el archivo index.html.
+
+TIP: En script.js vas a encontrar un console.log(). Esto es una práctica común que nos sirve para verificar de una manera sencilla que vinculamos con éxito nuestro archivo.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+<index.html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JS Front</title>
+    <script src='script.js'></script>
+  </head>
+  <body>
+    <p>Podés abrir la consola del navegador para chequear los resultados</p>
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+<script.js>
+
+console.log('¡Archivo vinculado con éxito!');
+
