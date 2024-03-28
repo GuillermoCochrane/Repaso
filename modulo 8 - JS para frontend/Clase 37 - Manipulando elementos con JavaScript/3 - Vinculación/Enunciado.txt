@@ -11,7 +11,6 @@ TIP: En script.js vas a encontrar un console.log(). Esto es una práctica común
   <head>
     <meta charset="UTF-8">
     <title>JS Front</title>
-    <script src='script.js'></script>
   </head>
   <body>
     <p>Podés abrir la consola del navegador para chequear los resultados</p>
