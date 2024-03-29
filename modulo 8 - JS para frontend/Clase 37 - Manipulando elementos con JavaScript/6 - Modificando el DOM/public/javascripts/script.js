@@ -15,7 +15,8 @@ Javascript Front
 Agregando contenido usando código
 -----------------------------------------------------------------
  */
-
+let styles = confirm("¿Desea cambiar los estilos?");
+if(styles){
 window.addEventListener('load', function() {
     document.querySelector('h3').innerText += " usando código"});
 /* 
@@ -36,3 +37,4 @@ Pero ojo: el <body> ya tiene las etiquetas <h1> y <h3> definidas y no queremos q
 window.addEventListener('load', function() {
     document.querySelector('body').innerHTML += ' <mark>Javascript ROCKS</mark>'
 });
+}
