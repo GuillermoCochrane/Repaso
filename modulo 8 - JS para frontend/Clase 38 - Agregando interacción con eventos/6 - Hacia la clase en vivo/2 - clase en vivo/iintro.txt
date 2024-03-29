@@ -1,0 +1,2 @@
+Punto de partida
+En esta clase vamos a practicar cómo codificar y manipular diferentes eventos tanto del mouse como del teclado. Además, vamos a repasar y comprender cómo se integran los archivos de HTML, CSS y JavaScript.

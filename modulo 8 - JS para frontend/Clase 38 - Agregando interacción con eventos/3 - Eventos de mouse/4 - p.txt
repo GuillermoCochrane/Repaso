@@ -1,0 +1,126 @@
+Mouseover
+
+Tenemos un sitio en desarrollo... por ahora solo hay un título.
+
+En este ejercicio queremos:
+
+﻿Capturar el <h1> y guardarlo en la variable titulo.
+Cuando el usuario pase el mouse por encima de ese <h1>, se le debe agregar la clase "titulo", definida en el CSS.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+      <div class="container">
+        <h1>¡Bienvenidos/as al sitio!</h1>
+      </div>
+
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.addEventListener('load', function() {
+
+  let titulo = document.querySelector('h1')
+
+  titulo.addEventListener('mouseOver',function(){
+    titulo.classList.add('.titulo')
+  })
+
+});
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titulo {
+  background-color: rgba(231, 73, 10, 0.87);
+  padding: 12px;
+  text-transform: uppercase;
+  color: white;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Mouseout
+
+Tenemos una página en construcción y queremos agregarle un poco de estilo a los links de la barra de navegación para darle un poco de dinamismo hasta que esté terminada.
+
+Por eso, debemos:
+
+﻿Capturar todas las etiquetas <a> y almacenarlas en la variable links.
+﻿Usando addEventListener(), le asignes a cada link el evento "mouseout".
+¿Y qué queremos que pase cada vez que el mouse se aleja del link? Si el link no tiene la clase "dark-mode", asignársela y si la tiene, quitársela... ¿Qué método de classlist nos sirve para resolver eso?
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+    <h1 class="titulo">¡Bienvenidos/as al sitio!</h1>
+    <nav>
+        <a href="www.facebook.com">Facebook</a>
+        <a href="www.instagram.com">Instagram</a>
+        <a href="www.twitter.com">Twitter</a>
+    </nav>
+  </div>
+
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+window.addEventListener('load', function() {
+
+  let links = document.querySelectorAll('a')
+
+  for(let link of links) {
+    link.addEventListener('mouseOut',function(){
+      this.classList.toggle('dark-mode')
+    })
+  }
+
+});
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+.dark-mode {
+  color: white;
+  background-color: rgba(231, 73, 10, 0.87);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titulo {
+  background-color: rgba(231, 73, 10, 0.87);
+  padding: 12px;
+  text-transform: uppercase;
+  color: white;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------

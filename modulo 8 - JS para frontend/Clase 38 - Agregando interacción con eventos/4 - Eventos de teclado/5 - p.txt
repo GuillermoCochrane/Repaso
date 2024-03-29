@@ -1,0 +1,95 @@
+
+onkeydown
+
+Estamos haciendo las validaciones de un formulario y en el nombre de usuario está fundamentalmente prohibido el uso de #hashtags para rellenarlo. Para asegurarnos de eso, debemos:
+
+Capturar el input del usuario que tiene como id userName.
+
+Haciendo uso del evento “keydown”, queremos que, en el caso de que el valor de la tecla presionada sea “#”, se dispare un alert con el siguiente mensaje: 
+
+Está prohibido el uso de #hashtags!
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <form action="" method="POST">
+      <label>Nombre de usuario:</label>
+      <input type="text" id="userName">
+
+      <label>Contraseña:</label>
+      <input type="password" id="password">
+
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.addEventListener('load', function() {
+    let userName = document.querySelector('#userName')
+        userName.addEventListener('keydown', function(event){
+            if(event.key=='#'){
+                alert('Está prohibido el uso de #hashtags!')          
+            }        
+    })
+});
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+onkeypress
+
+A veces los programadores somos medio chusmas y bueno… nos gusta saber qué tecla aprieta el usuario, por ejemplo, cuando está rellenando los campos de un formulario. 
+
+
+Queremos saber cuál es la tecla que se presiona dentro del input con ID ‘address’, guardarlo dentro de una variable con nombre "direccion" y que su valor se muestre en un alert.
+
+
+Para eso, debemos:
+
+Capturar el input y guardarlo dentro de la variable.
+
+Ponerlo en escucha del evento.
+
+Crear un alert con el valor del evento.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+      <div class="container">
+        <h1>¡Bienvenidos/as al sitio!</h1>
+        <label>Direccion</label>
+        <input id="address" type="text">
+      </div>
+
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.addEventListener('load', function(){
+
+    let direccion = document.querySelector("#address")
+
+    direccion.addEventListener('keypress', function(event){
+         alert("Se presionó la tecla: "+ event.key);
+    })
+
+})
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------

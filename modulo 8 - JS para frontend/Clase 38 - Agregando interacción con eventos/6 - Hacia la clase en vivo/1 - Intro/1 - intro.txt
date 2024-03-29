@@ -1,0 +1,15 @@
+Esta clase ha sido corta, pero sustanciosa. Aprendimos exclusivamente el uso de los eventos en JavaScript y el porqué de su importancia.
+
+A continuación, compartimos este pequeño listado de preguntas, que servirán como checkpoint para saber qué tan bien entendimos los conceptos.
+
+¿Cuáles fueron los dos tipos de eventos que vimos en esta clase?
+¿Cuáles eventos son los que más comúnmente se usan?
+¿Cuántas maneras existen de aplicar un evento a un elemento del DOM?
+¿Cuál es la manera más recomendada de aplicar eventos? ¿Por qué?
+¿Bajo qué escenarios es recomendable usar los eventos del teclado?
+
+Si logramos responder todas las preguntas, tan solo queda relajarse y esperar la clase en vivo. Si, por el contrario, todavía tenemos algunas dudas, recomendamos revisar el contenido nuevamente.
+
+Tengamos presente que el estudio a fondo de este contenido, nos permitirá encarar el desafío que planteamos más adelante con mucha más confianza.
+
+¡Nos vemos en clase!

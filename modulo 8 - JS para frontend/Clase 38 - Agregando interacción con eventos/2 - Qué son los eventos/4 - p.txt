@@ -1,0 +1,151 @@
+Eventos on y addEventListener
+
+1.
+
+Elegí cuál es la opción correcta para reemplazar los “?????” en la siguiente línea de código, en caso que queramos disparar un evento al hacer clic sobre el elemento:
+
+	elemento.addEventListener(‘?????’, function(event){
+
+		//...
+
+})
+
+click (X)
+
+onClick”
+
+“onclick”
+
+“Click”
+
+¡Felicitaciones!
+
+2.
+
+¿Cuál es el propósito de .preventDefault()?
+
+Evitar que el elemento ejecute el evento que trae por default para que podamos manipularlo antes. (X)
+
+No permitir que se haga clic.
+
+Prohibir la navegación por la página.
+
+Ninguna de las opciones.
+
+¡Felicitaciones!
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Método load
+
+Queremos empezar a escribir código JavaScript, pero es importante asegurarnos que primero se cargue todo el documento HTML para poder manipular los elementos.
+
+Por eso debemos, usando addEventListener(), agregarle el evento "load" al objeto window.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.addEventListener("load",function(){})
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Evento click
+
+Inspeccionemos un poco el código...
+
+Estamos maquetando un sitio y queremos agregarle un evento al link "Contacto" de la barra de navegación. 
+
+En el archivo script.js ya atrapamos ese elemento en la variable linkContacto.
+
+
+Debemos, usando addEventListener(), agregarle el evento "click" al elemento que atrapamos. Y, para asegurarnos de que estemos haciendo bien las cosas, tenemos que realizar un paso más: dentro del callback, debemos hacer un console.log() del elemento sobre el cual se va a ejecutar el evento.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+    <nav>
+      <a class="peliculas" href="#peliculas">Películas</a>
+      <a class="series" href="#series">Series</a>
+      <a class="sobre-nosotros" href="#sobre-nosotros">Sobre nosotros</a>
+      <a class="contacto" href="#contacto">Contacto</a>
+    </nav>
+
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.addEventListener('load', function() {
+
+  let linkContacto = document.querySelector('.contacto');
+    
+  linkContacto.addEventListener('click', function(){
+    console.log(linkContacto)
+  })
+
+});
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Prevent default
+Antes de empezar a validar...
+
+Debemos crear la variable formulario y almacenar en ella el formulario del HTML. Una vez capturado, deberemos asignarle el evento "submit" y prevenir el comportamiento por defecto del formulario.
+
+Para este ejercicio, teenmos que pasarle al callback del evento la variable con nombre evento.
+
+Para este ejercicio, tenemos que pasarle al callback del evento la variable con nombre evento.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <form action="" method="POST">
+      <label>Nombre:</label>
+      <input type="text">
+
+      <label>Password:</label>
+      <input type="password">
+
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.addEventListener('load', function() {
+
+  let formulario = document.querySelector('form')
+  formulario.addEventListener('submit',function(evento){
+    evento.preventDefault()
+  })
+
+});
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
