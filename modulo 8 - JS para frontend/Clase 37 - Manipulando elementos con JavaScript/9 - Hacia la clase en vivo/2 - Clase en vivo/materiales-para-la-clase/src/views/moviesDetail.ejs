@@ -13,16 +13,21 @@
     </figure>
     <h1><%= movie.title %> </h1>    
     <br>
-    <p>CALIFICACIÓN: <%= movie.rating %> </p>
-    <p>PREMIOS: <%= movie.awards %> </p>
-    <p>DURACIÓN: <%= movie.length + ' min'%> </p>
-    <p>FECHA DE CREACIÓN: <%= movie.release_date %> </p>
+    <section >
+        <article>
+            <p>CALIFICACIÓN: <%= movie.rating %> </p>
+            <p>PREMIOS: <%= movie.awards %> </p>
+            <p>DURACIÓN: <%= movie.length + ' min'%> </p>
+            <p>FECHA DE CREACIÓN: <%= movie.release_date %> </p>
+        </article>
+    </section>
+    
     <br>
-    <section>
+    <article id="buttonbox">
         <a class="botonModificar" href="/movies/edit/<%= movie.id %>">Modificar</a>
         <a class="botonBorrar" href="/movies/delete/<%= movie.id %>">Borrar</a>
         <a class="botonVolver" href="/movies">Listado de Películas</a>
-    </section>
-
+    </article>
+    <script src="/js/moviesDetail.js"></script>
 </body>
 </html>
