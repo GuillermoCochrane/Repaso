@@ -1,0 +1,17 @@
+Hacia la clase en vivo
+Qué interesante que estuvo esta clase, ¿no?
+
+Hemos sumado más herramientas a nuestros conocimientos de JavaScript. Ahora no solamente podemos construir una aplicación desde el lado del back-end, sino que ya comenzamos a implementar dinamismo desde el lado del front-end.
+
+Como es habitual en esta instancia, compartimos una serie de preguntas para hacer una autoevaluación:
+
+¿Cuál es la manera más recomendable de vincular un documento JavaScript con nuestros documentos HTML?
+¿Cuáles son esos dos objetos importantes que nos brinda JavaScript y que son la base de lo que vimos?
+Literalmente, ¿qué significan las siglas DOM?
+En tus propias palabras, ¿qué podrías decir que es el DOM?
+¿Para qué se utilizan los selectores en JavaScript?
+¿Cuáles son los selectores de uso más común?
+¿Cuáles son los métodos que nos aporta JavaScript a través del DOM para manipular el contenido de texto de los elementos del HTML?
+¿Qué maneras existen para poder modificar los estilos CSS de un elemento HTML?
+
+Si logramos responderlas sin titubear, la clase en vivo nos espera con ansias. Si por el contrario tuvimos algunas dudas, recomendamos volver a repasar el material. Ya que el mismo será parte fundamental para poder no solo afrontar la clase en vivo, sino también para llevar a cabo el desafío que plantearemos más adelante.

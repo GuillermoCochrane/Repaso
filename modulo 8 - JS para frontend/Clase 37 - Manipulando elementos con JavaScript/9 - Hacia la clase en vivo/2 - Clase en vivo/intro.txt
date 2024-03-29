@@ -1,0 +1,2 @@
+Punto de partida
+Vamos a volver a trabajar con JavaScript, pero esta vez desde el lado del front-end para poder modificar nuestras vistas. Para eso, tendremos que comprender la interpretación que hace JavaScript del HTML.

@@ -1,0 +1,149 @@
+Hacia la clase en vivo
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Desafío: ¡ups cometimos un error!
+Nos dimos cuenta que dentro del documento HTML, un título quedó con errores de ortografía. Actualmente dice: Vienbenidos a mi zitio Wet.
+
+
+Nuestra misión será ajustar el texto de este título y corregir este "horror" ortográfico. Tengamos presente que el título tiene el nombre de clase "title" y lo queremos guardar dentro de la variable "horrorOrtografico". Adicionalmente esperamos que las palabras “sitio web” queden en cursiva (<em>).
+
+
+Completemos el siguiente archivo:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+      <div class="container">
+        <h1 class="title">Vienbenidos a mi zitio Wet.</h1>
+        
+      </div>
+
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.addEventListener('load', function(){
+
+   let horrorOrtografico = document.querySelector('.title')
+   horrorOrtografico.innerHTML = 'Bienvenidos a mi <em>sitio web</em>'
+
+})
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center   
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Desafío: Capturando elementos del documento
+Tenemos un documento de JavaScript (front.js) vinculado correctamente con un documento HTML. 
+
+
+La estructura del documento HTML tiene varios elementos de los cuales nos interesan puntualmente los siguientes:
+
+Un <h2> con clase "subtitle", que debemos guardar en una variable llamada "theSubtitle".
+
+Todos los <p> presentes en el documento, que debemos guardar en una variable llamada "paragraphs".
+
+Todas las <a> dentro de la lista con id "main-navbar", que debemos guardar en una variable llamada "navAnchors".
+
+Una imagen con id "main-image", que debemos guardar en una variable llamada "mainImage".
+
+
+Nuestra misión será entonces completar el archivo front.js que vemos a continuación:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+          <ul id="main-navbar">
+                <a href="" >Soy un Anchor</a>
+                <a href="">Soy un Anchor</a>
+                <a href="">Soy un Anchor</a>
+          </ul>
+      <div class="container">
+
+          <h2 class="subtitle">Hola! Soy un subtitulo</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p>Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate.</p>
+          <p>Voluptatum ducimus voluptates voluptas?</p>
+        <img src="https://camo.githubusercontent.com/283776009d17f1662b3c9f33c24b33ed3be569c074eb01bdb503a307352964fa/68747470733a2f2f687474702e6361742f323030" id="main-image">
+      </div>
+
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.addEventListener('load', function(){
+
+        let theSubtitle = document.querySelector('.subtitle');
+        let paragraphs = document.querySelectorAll('p');
+        let navAnchors = document.querySelectorAll("#main-navbar a")
+        let mainImage = document.querySelector('#main-image');
+
+})
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#main-navbar a {
+margin: 30px
+}
+
+body{
+    background-color: paleturquoise
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Desafío: ¡Cuidado con la clase!
+Hasta el momento nuestro trabajo ha sido bastante bueno, solo nos queda una cosa por realizar.
+
+
+Tenemos un listado de items (<li>) y sabemos que a algunos de ellos se les asignó un nombre de clase que no debería estar ahí. El nombre de clase errado es: alert-danger. Y lo que necesitamos es remover este nombre de clase y asignar el correcto que es: alert-success.
+
+
+Importante: no todos los <li> tienen este nombre de clase errado, por lo que antes de aplicar el nombre de clase correcto, necesitamos saber si ese <li> tiene o no el nombre de clase alert-danger.
+
+
+Tengamos presente que estos elementos <li> se encuentran dentro de un <ul> con el ID cont01.
+
+
+Completemos el siguiente archivo:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+const listItems = document.querySelectorAll("#cont01 li");
+ 
+for (let i = 0; i < listItems.length; i++) {
+  if (listItems[i].classList.contains('alert-danger')) {
+     listItems[i].classList.remove('alert-danger');
+     listItems[i].classList.add('alert-success');
+  }
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
