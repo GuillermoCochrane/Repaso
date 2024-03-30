@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <div>
+      <h1>Clase 38 - Agregando interacción con eventos</h1>
+    </div>
+    <ul>
+      <li>
+        <a href="/1">Ejercicio 1</a>
+        <h3>Método load</h3>
+          <p>Queremos empezar a escribir código JavaScript, pero es importante asegurarnos que primero se cargue todo el documento HTML para poder manipular los elementos.</p>
+          <p>Por eso debemos, usando addEventListener(), agregarle el evento "load" al objeto window.
+          </p>
+      </li>
+      <li>
+        <a href="/2">Ejercicio 2</a>
+        <h3>Evento click</h3>
+          <p>Estamos maquetando un sitio y queremos agregarle un evento al link "Contacto" de la barra de navegación.</p>
+          <p>En el archivo scriptE2.js ya atrapamos ese elemento en la variable linkContacto.</p>
+          <p>Debemos, usando addEventListener(), agregarle el evento "click" al elemento que atrapamos. Y, para asegurarnos de que estemos haciendo bien las cosas, tenemos que realizar un paso más: dentro del callback, debemos hacer un console.log() del elemento sobre el cual se va a ejecutar el evento.</p>
+      </li>
+      <li>
+        <a href="/3">Ejercicio 3</a>
+        <h3>Prevent default</h3>
+          <p>Antes de empezar a validar...</p>
+          <p>Debemos crear la variable formulario y almacenar en ella el formulario del HTML. Una vez capturado, deberemos asignarle el evento "submit" y prevenir el comportamiento por defecto del formulario.</p>
+          <p>Para este ejercicio, teenmos que pasarle al callback del evento la variable con nombre evento.</p>
+      </li>
+    </ul>
+  </body>
+</html>
