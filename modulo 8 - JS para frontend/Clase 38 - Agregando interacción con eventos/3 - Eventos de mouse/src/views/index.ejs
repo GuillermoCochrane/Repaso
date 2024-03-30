@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <div>
+      <h1>Clase 38 - Agregando interacción con eventos</h1>
+    </div>
+    <ul>
+      <li>
+        <a href="/1">Ejercicio 1</a>
+        <h3>Mouseover</h3>
+          <p>Tenemos un sitio en desarrollo... por ahora solo hay un título.</p>
+          <p>En este ejercicio queremos:</p>
+          <p>Capturar el <strong>(&lt;h1&gt;)</strong> y guardarlo en la variable titulo.
+            Cuando el usuario pase el mouse por encima de ese <strong>(&lt;h1&gt;)</strong>, se le debe agregar la clase "titulo", definida en el CSS.</p>
+      </li>
+      <li>
+        <a href="/2">Ejercicio 2</a>
+        <h3>Mouseout</h3>
+          <p>Tenemos una página en construcción y queremos agregarle un poco de estilo a los links de la barra de navegación para darle un poco de dinamismo hasta que esté terminada.
+          </p>
+          <p>Por eso, debemos:</p>
+          <p>Capturar todas las etiquetas <strong>(&lt;a&gt;)</strong> y almacenarlas en la variable links.</p>
+          <p>Usando addEventListener(), le asignes a cada link el evento "mouseout".</p>
+          <p>¿Y qué queremos que pase cada vez que el mouse se aleja del link? Si el link no tiene la clase "dark-mode", asignársela y si la tiene, quitársela... ¿Qué método de classlist nos sirve para resolver eso?</p>
+      </li>
+    </ul>
+  </body>
+</html>
