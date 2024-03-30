@@ -1,4 +1,3 @@
-
 onkeydown
 
 Estamos haciendo las validaciones de un formulario y en el nombre de usuario está fundamentalmente prohibido el uso de #hashtags para rellenarlo. Para asegurarnos de eso, debemos:

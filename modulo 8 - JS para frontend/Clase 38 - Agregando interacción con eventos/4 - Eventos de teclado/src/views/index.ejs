@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <div>
+      <h1>Clase 38 - Agregando interacción con eventos</h1>
+    </div>
+    <ul>
+      <li>
+        <a href="/1">Ejercicio 1</a>
+        <h3>onkeydown</h3>
+          <p>Estamos haciendo las validaciones de un formulario y en el nombre de usuario está fundamentalmente prohibido el uso de #hashtags para rellenarlo. Para asegurarnos de eso, debemos:</p>
+          <p>Capturar el input del usuario que tiene como id userName.</p>
+          <p>Haciendo uso del evento “keydown”, queremos que, en el caso de que el valor de la tecla presionada sea “#”, se dispare un alert con el siguiente mensaje:</p>
+          <p>Está prohibido el uso de #hashtags!</p>
+      </li>
+      <li>
+        <a href="/2">Ejercicio 2</a>
+        <h3>onkeypress</h3>
+          <p>A veces los programadores somos medio chusmas y bueno… nos gusta saber qué tecla aprieta el usuario, por ejemplo, cuando está rellenando los campos de un formulario.</p>
+          <p>Queremos saber cuál es la tecla que se presiona dentro del input con ID: address, guardarlo dentro de una variable con nombre "direccion" y que su valor se muestre en un alert.</p>
+          <p>Para eso, debemos:</p>
+          <ol>
+            <li>Capturar el input y guardarlo dentro de la variable.</li>
+            <li>Ponerlo en escucha del evento.</li>
+            <li>Crear un alert con el valor del evento.</li>
+          </ol>
+          
+      </li>
+    </ul>
+  </body>
+</html>
