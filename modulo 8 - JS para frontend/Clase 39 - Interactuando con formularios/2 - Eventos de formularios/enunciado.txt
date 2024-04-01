@@ -1,0 +1,195 @@
+
+onfocus
+
+Estamos buscando darle un poco más de dinamismo a nuestro sitio web y por eso queremos, ahora que tenemos a disposición las herramientas de JavaScript en el front-end, que empiecen a pasar cosas cuando el usuario navega por nuestra página. Por ejemplo, que el fondo del input de un formulario se vuelva rosa al hacer clic en el mismo.
+Para ello debemos completar las siguentes tareas:
+
+Capturar el input con id "nombre" y guardarlo dentro de la variable "elNombre".
+Asignarle el evento "focus" a la variable que almacena ese input.
+Cuando el input esta en foco, que el fondo cambie a color rosa.
+Completemos el siguiente código.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+      <div class="container">
+        <h1>¡Bienvenidos/as al sitio!</h1>
+        <label>El Nombre</label>
+        <input id="nombre" type="text">
+      </div>
+
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.addEventListener('load', function(){
+
+let elNombre = document.querySelector('#nombre');
+elNombre.addEventListener('focus', ()=>{
+    elNombre.style.backgroundColor = 'pink'
+}
+)
+
+})
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+onblur
+
+Tenemos un usuario que está tratando de iniciar sesión en nuestro sitio y queremos mejorar su experiencia como usuario
+
+Para ello, haremos lo siguiente:
+
+Almacenar dentro de una variable con nombre "elUsuario", el input que tiene como id "user".
+Asignar a esa variable el evento blur para detectar cuando el usuario haga clic fuera del input.
+Cambiar el color del input a "plum" cuando el usuario ejecute el evento blur.
+Completemos el siguiente código.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+      <div class="container">
+        <h1>¡Bienvenidos/as al sitio!</h1>
+        <label>El Usuario</label>
+        <input id="user" type="text">
+      </div>
+
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.addEventListener('load', function(){
+
+    let elUsuario = document.querySelector('#user')
+    elUsuario.addEventListener('blur', function(){
+       elUsuario.style.backgroundColor = 'plum'
+    })
+})
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+onchange
+
+Ahora que conocemos más sobre eventos del formulario, queremos que, cuando una persona haga algún cambio dentro de un input, el color del <body> cambie a rojo.
+Para eso necesitamos capturar el input con id "miInput" dentro de la variable "miInput", asignarle el evento change y cambiarle el color cuando se realice el cambio.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+      <div class="container">
+        <h1>¡Bienvenidos/as al sitio!</h1>
+        <input id="miInput" type="text">
+      </div>
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.addEventListener('load', function(){
+
+let body = document.querySelector('body')
+let miInput = document.querySelector('#miInput')
+    miInput.addEventListener('change', function(){
+    document.body.style.backgroundColor = 'red'
+    })
+
+})
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+onsubmit
+Tenemos un documento HTML dentro del cual tenemos un formulario y un mensaje oculto para el usuario. Queremos que cuando el usuario pulse en enviar se oculte el formulario y se muestre el mensaje oculto.
+
+Para ello, haremos lo siguiente:
+
+Capturar el formulario con id "miForm" en la variable "miForm".
+Capturar el mensaje dentro de la etiqueta <h1> en la variable "mensajeOculto".
+Asignar a la variable "miForm" el evento "submit" para detectar cuándo se envía el formulario.
+Cambiar el display del formulario a "none".
+Cambiar el display del mensaje a "block".
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+      <div class="container">
+        <form id="miForm">
+            <label>Formulario</label>
+            <input id="nombre" type="text">
+            <button>Enviar</button>
+        </form>
+        <h1>Formulario enviado!</h1>
+      </div>
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.addEventListener('load', function(){
+let mensajeOculto = document.querySelector('h1')
+let miForm = document.querySelector('#miForm')
+    miForm.addEventListener('submit', function(){
+    miForm.style.display  = 'none'
+    mensajeOculto.style.display ='block'
+    })
+
+})
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+    display: none
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------

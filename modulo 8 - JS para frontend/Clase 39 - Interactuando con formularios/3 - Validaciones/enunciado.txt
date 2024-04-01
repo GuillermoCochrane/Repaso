@@ -1,0 +1,97 @@
+Validaciones
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Prevent default
+
+Antes de empezar a validar...
+
+Debemos crear la variable formulario y almacenar en ella el formulario del HTML. Una vez capturado, deberemos asignarle el evento "submit" y prevenir el comportamiento por defecto del formulario.
+
+Para este ejercicio, teenmos que pasarle al callback del evento la variable con nombre evento.
+
+Para este ejercicio, tenemos que pasarle al callback del evento la variable con nombre evento.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <form action="" method="POST">
+      <label>Nombre:</label>
+      <input type="text">
+
+      <label>Password:</label>
+      <input type="password">
+
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.addEventListener('load', function() {
+  let formulario = document.querySelector('form')
+  formulario.addEventListener('submit',(evento)=>{
+    evento.preventDefault()
+  })
+});
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Validando campos
+
+Validemos que los datos que completa el usuario sean correctos.
+
+Para eso debemos:
+
+﻿Capturar el input con id nombre en la variable nombre.
+Si el nombre está vacío, hacer un console.log() con el texto 'Hubo un error en el nombre'.
+Capturar el input con id password en la variable password.
+Si el password tiene menos de 4 caracteres, hacer un console.log() con el texto 'Hubo un error en el password'.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <form action="" method="POST">
+      <label>Nombre:</label>
+      <input type="text">
+
+      <label>Password:</label>
+      <input type="password">
+
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+window.addEventListener('load', function() {
+  let formulario = document.querySelector('form');
+  formulario.addEventListener('submit', function(evento) {
+    evento.preventDefault();
+    let nombre = document.querySelector('#nombre')
+    if (nombre.value == ' '){
+      console.log('Hubo un error en el nombre')
+    }password
+    let password = document.querySelector('#password')
+    if (password.value.length > 4){
+      console.log('Hubo un error en el password')
+    }
+  })
+});
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
