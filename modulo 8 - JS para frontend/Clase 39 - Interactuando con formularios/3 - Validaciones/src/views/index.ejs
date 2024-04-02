@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <div>
+      <h1>Clase 39 - Interactuando con formularios</h1>
+      <h2>Validaciones</h2>
+    </div>
+    <ul>
+      <li>
+        <a href="/1">Ejercicio 1</a>
+        <h3>Prevent default</h3>
+          <p>Antes de empezar a validar...</p>
+          <p>Debemos crear la variable formulario y almacenar en ella el formulario del HTML. Una vez capturado, deberemos asignarle el evento "submit" y prevenir el comportamiento por defecto del formulario.</p>
+          <p>Para este ejercicio, teenmos que pasarle al callback del evento la variable con nombre evento.</p>
+      </li>
+      <li>
+        <a href="/2">Ejercicio 2</a>
+        <h3>Validando campos</h3>
+          <p>Validemos que los datos que completa el usuario sean correctos.</p>
+          <p>Para eso debemos:</p>
+          <ol>
+            <li>Capturar el input con id nombre en la variable nombre.</li>
+            <li>Capturar el input con id password en la variable password.</li>
+            <li>Si el password tiene menos de 4 caracteres, hacer un console.log() con el texto 'Hubo un error en el password'.</li>
+          </ol>
+      </li>
+    </ul>
+  </body>
+</html>
