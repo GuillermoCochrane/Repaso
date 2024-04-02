@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <div>
+      <h1>Clase 39 - Interactuando con formularios</h1>
+    </div>
+    <ul>
+      <li>
+        <a href="/1">Ejercicio 1</a>
+        <h3>onfocus</h3>
+          <p>Estamos buscando darle un poco más de dinamismo a nuestro sitio web y por eso queremos, ahora que tenemos a disposición las herramientas de JavaScript en el front-end, que empiecen a pasar cosas cuando el usuario navega por nuestra página. Por ejemplo, que el fondo del input de un formulario se vuelva rosa al hacer clic en el mismo.
+          </p>
+          <p>Para ello debemos completar las siguentes tareas:</p>
+          <ol>
+            <li>Capturar el input con id "nombre" y guardarlo dentro de la variable "elNombre".</li>
+            <li>Asignarle el evento "focus" a la variable que almacena ese input.</li>
+            <li>Cuando el input esta en foco, que el fondo cambie a color rosa.</li>
+          </ol>
+      </li>
+      <li>
+        <a href="/2">Ejercicio 2</a>
+        <h3>onblur</h3>
+          <p>Tenemos un usuario que está tratando de iniciar sesión en nuestro sitio y queremos mejorar su experiencia como usuario
+          </p>
+          <p>Para ello, haremos lo siguiente:</p>
+          <ol>
+            <li>Almacenar dentro de una variable con nombre "elUsuario", el input que tiene como id "user".</li>
+            <li>Asignar a esa variable el evento blur para detectar cuando el usuario haga clic fuera del input.</li>
+            <li>Cambiar el color del input a "plum" cuando el usuario ejecute el evento blur.</li>
+          </ol>
+      </li>
+      <li>
+        <a href="/3">Ejercicio 3</a>
+        <h3>onchange</h3>
+          <p>Ahora que conocemos más sobre eventos del formulario, queremos que, cuando una persona haga algún cambio dentro de un input, el color del <strong>(&lt;body&gt;)</strong> cambie a rojo.</p>
+          <p>Para eso necesitamos capturar el input con id "miInput" dentro de la variable "miInput", asignarle el evento change y cambiarle el color cuando se realice el cambio.</p>
+      </li>
+      <li>
+        <a href="/4">Ejercicio 4</a>
+        <h3>onsubmit</h3>
+          <p>Tenemos un documento HTML dentro del cual tenemos un formulario y un mensaje oculto para el usuario. Queremos que cuando el usuario pulse en enviar se oculte el formulario y se muestre el mensaje oculto.</p>
+          <p>Para ello, haremos lo siguiente:</p>
+          <ol>
+            <li>Capturar el formulario con id "miForm" en la variable "miForm".</li>
+            <li>Capturar el mensaje dentro de la etiqueta <strong>(&lt;h1</h1>&gt;)</strong> en la variable "mensajeOculto".</li>
+            <li>Asignar a la variable "miForm" el evento "submit" para detectar cuándo se envía el formulario.</li>
+            <li>Cambiar el display del formulario a "none".</li>
+            <li>Cambiar el display del mensaje a "block".</li>
+          </ol>
+      </li>
+
+    </ul>
+  </body>
+</html>
