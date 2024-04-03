@@ -1,0 +1,23 @@
+<form class="form" action="/movies/create" method="POST">
+    <label for="title">Titulo </label>
+    <div><input type="text" name="title" id="title" >
+    </div>
+    <label for="rating">Calificación </label>
+    <label for="rating">Calificación </label>
+    <div><input type="number" name="rating" id="rating" > </div>
+</form>
+<script>
+    
+    let $title = document.querySelector("#title");
+    let $rating = document.querySelector("#rating");
+    let e1 = [];
+    function validateTitle(key,message){
+        let condition = document.querySelector(`#${key}`);
+        if((!(condition.value.lenght > 0))){
+            let msg = "Debes poner " + message
+            e1.push(msg);
+            return
+    }}
+    validateTitle("title", "un título");
+</script>
+
