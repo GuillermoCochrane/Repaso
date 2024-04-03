@@ -13,20 +13,15 @@ window.onload = function(){
     let $date = document.querySelector("#release_date");
     let $lenght = document.querySelector("#length");
     let $genre = document.querySelector("#genre_id");
-    let $te = document.querySelector("#title-error");
-    let $re = document.querySelector("#rating-error");
-    let $ae = document.querySelector("#awards-error");
-    let $rde = document.querySelector("#release_date-error");
-    let $le = document.querySelector("#length-error");
-    let $ge = document.querySelector("#genre_id-error");
+    let errorUL = document.querySelector("ul.errores");
 
     let errors = {
-        title: [],
-        rating: [],
-        awards: [],
-        release_date: [],
-        length: [],
-        genre_id: [],
+        title: "",
+        rating: "",
+        awards: "",
+        release_date: "",
+        length: "",
+        genre_id: "",
     };
     let e1 = [];
 
@@ -101,14 +96,18 @@ window.onload = function(){
         errorsNotEmpty("genre_id", "un genero");
     })
 
-
     formulario.addEventListener("submit", (e)=>{
         errorsNotEmpty("title", "un título");
-        errorsNotEmpty("rating","una calificación","rate");
-        errorsNotEmpty("awards","la cantidad de premios","rate");
+        errorsNotEmpty("rating","una calificación");
+        errorsNotEmpty("awards","la cantidad de premios");
         errorsNotEmpty("release_date","la fecha de creación");
-        errorsNotEmpty("length","la duarción","duration");
+        errorsNotEmpty("length","la duarción");
         errorsNotEmpty("genre_id", "un genero");
-        e1.length > 0 ? e.preventDefault()  :  null;
+        e1.length > 6 ? e1.shift() : null
+        for (const error of e1) {
+            errorUL.classList.add("alert-warning");
+            errorUL.innerHTML += `<li>${error}</li>`
+        }
+        e1.length > 0 ? e.preventDefault()  :  alert("La película se guardó satisfactoriamente");
     })
 }
