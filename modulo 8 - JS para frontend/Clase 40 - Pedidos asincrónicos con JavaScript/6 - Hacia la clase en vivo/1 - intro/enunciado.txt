@@ -1,0 +1,69 @@
+¡Saludando a nuestros visitantes!
+
+Nos gustaría personalizar un mensaje de bienvenida en nuestra página web.
+
+
+Queremos que en la etiqueta <h2> se cargue el siguiente texto: "Hola visitante", si es que no hay información del visitante en el almacenamiento local del navegador. O que, en vez de la palabra “visitante”, se muestre el nombre de la persona que está en el almacenamiento local.
+
+
+Para esto, dentro del almacenamiento local del navegador, nos indican que debemos preguntar por la propiedad "user" que es la que guarda el nombre de la persona.
+
+
+Completemos el siguiente código:
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<html>
+  <head>
+    <title>JS Front</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+        <h2>.</h2>
+  </body>
+</html>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// completa el código
+window.addEventListener('load', function(){
+
+const h2 = document.querySelector("h2");
+ 
+if(__¿?__) {
+  h2.innerText = "Hola " + __¿?__;
+} else {
+  __¿?__;
+} 
+})
+
+(INCOMPLETO)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Recordando a la persona que nos visita
+
+
+La anterior funcionalidad quedó excelente, pero ahora queremos darle la oportunidad a la persona que nos visita de que sea ella quien almacene sus datos.
+Para ello dispusimos de un botón en nuestro documento que, al hacerle clic, deberá guardar la información del usuario, la cual está almacenada en una variable llamada userInfo (que es un objeto literal) dentro del almacenamiento local, en una propiedad llamada user. 
+Pero ATENCIÓN, la información solamente deberá ser guardada en el escenario donde NO EXISTA.
+Nuestra misión será completar el siguiente código:
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// completa el código
+window.addEventListener('load', function(){
+const button = document.querySelector("button");
+const h2 = document.querySelector("h2");
+ 
+button.addEventListener("click", function () {
+  if(__¿?__) {
+     localStorage.setItem("user", JSON.stringify(userInfo))
+  }
+})
+});
+
+(INCOMPLETO)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

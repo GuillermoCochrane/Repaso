@@ -1,0 +1,66 @@
+Objeto location v2
+
+Mira las respuestas de cada pregunta:
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1
+Si utilizáramos el atributo href de location sobre la URL: https://www.youtube.com/results?search_query=peaky+blinders, ¿qué obtendríamos??
+
+
+/results?search_query=peaky+blinders
+
+https://www.youtube.com/results?search_query=peaky+blinders (X)
+
+https://www.youtube.com/
+
+
+¡Respuesta correcta!
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2
+¿Qué método del objeto location permite recargar el sitio??
+
+
+location.refresh()
+
+location.reload() (X)
+
+location.restart()
+
+
+¡Respuesta correcta!
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3
+Si utilizáramos el atributo location.search de la URL: https://www.youtube.com/results?search_query=peaky+blinders, ¿qué obtendríamos?
+
+
+search_query=peaky+blinders (X)
+
+/results?search_query=peaky+blinders
+
+peaky+blinders
+
+
+¡Respuesta correcta!
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4
+Si estamos en la URL: https://www.youtube.com/results?search_query=peaky+blinders, y teniendo en cuenta el código: "let query = new URLSearchParams(location.search)", ¿qué devolvería si implementáramos el método query.get(search_query)?
+
+
+search_query=peaky+blinders
+
+search_query
+
+peaky+blinders (X)
+
+Un booleano
+
+
+¡Respuesta correcta!
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

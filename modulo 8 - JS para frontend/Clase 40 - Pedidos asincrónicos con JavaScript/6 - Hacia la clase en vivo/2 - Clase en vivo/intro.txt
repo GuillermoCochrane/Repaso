@@ -1,0 +1,7 @@
+Punto de partida
+
+En esta clase trabajaremos sobre los siguientes objetivos:
+
+Comprender cómo se consume una API Rest desde el front-end.
+Repasar cómo se manipula el DOM con JavaScript.
+Practicar Web storage.
