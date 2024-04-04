@@ -5,14 +5,36 @@
     <link rel='stylesheet' href='/css/style.css' />
     <script src="/javascripts/scriptE2.js"></script>
   </head>
-  <body class="e2">
+  <body>
     <section>
       <h1>Clase 40 - Pedidos asincrónicos con JavaScript</h1>
-      <h2>Session storage y local storage</h2>
+      <h2>6 - Hacia la clase en vivo</h2>
     </section>
     <section>
-      <h3>Session storage</h3>
-        <p>Nos piden que creemos en sessionStorage un item con el nombre "bgColor" con el valor "red" para que desde otro script puedan cambiar el color del body. Además, nos piden que eliminemos el item "font".</p>
+      <a href="/2">Ejercicio 2</a>
+      <h3>Recordando a la persona que nos visita</h3>
+      <p>La anterior funcionalidad quedó excelente, pero ahora queremos darle la oportunidad a la persona que nos visita de que sea ella quien almacene sus datos.</p>
+      <p>Para ello dispusimos de un botón en nuestro documento que, al hacerle clic, deberá guardar la información del usuario, la cual está almacenada en una variable llamada userInfo (que es un objeto literal) dentro del almacenamiento local, en una propiedad llamada user.</p>
+      <p>Pero ATENCIÓN, la información solamente deberá ser guardada en el escenario donde NO EXISTA.</p>
     </section>
-  </body>  
+    <section>
+      <article>
+        <p>----------------------------------------------------------------------------------------------------------------------------------------</p>
+        <h2>Mensaje de bienvenida</h2>
+        <h3 id="greetings">  </h3>
+        <p>----------------------------------------------------------------------------------------------------------------------------------------</p>
+        <aside>
+          <article id="save" >
+            <h3>¿Desea Guardar su información?</h3>
+            <button>Guardar</button>
+          </article>
+          <article id="delete" hidden>
+            <h3>¿Desea borrar su información?</h3>
+            <button >Borrar</button>
+          </article>
+        </aside>        
+        <p>----------------------------------------------------------------------------------------------------------------------------------------</p>
+      </article>
+    </section>
+  </body>
 </html>
