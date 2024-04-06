@@ -12,8 +12,17 @@
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <form class="card formulario">
-        <input type="hidden" name="id">
+    <div class="card formulario" style="margin-bottom: 20px;">
+        <label for="movie">Elija la pelicula a editar </label>
+        <p>
+            <select type="number" name="movie" id="movie" required>
+                
+            </select>
+        </p>
+    </div>
+
+    <form class="card formulario" id="formulario">
+        <input type="hidden" name="id" id="id">
         <div>        
             <label for="title">Título </label>
             <p><input type="text" name="title" id="title" required></p>
@@ -37,9 +46,10 @@
         
         <br>
         <div class="action">
-            <button class="botonAgregar" >Editar</button>
-            <button class="botonAgregar">Crear</button>
-            <button class="botonBorrar">Eliminar</button>
+            <button class="botonAgregar" id="edit">Editar</button>
+            <button class="botonAgregar" id="new">Crear</button>
+            <button class="botonBorrar" id="delete">Eliminar</button>
+            <button type="reset" class="botonBorrar" id="empty">Borrar datos</button>
         </div>
     </form>
     <script src="js/formulario.js"></script>
