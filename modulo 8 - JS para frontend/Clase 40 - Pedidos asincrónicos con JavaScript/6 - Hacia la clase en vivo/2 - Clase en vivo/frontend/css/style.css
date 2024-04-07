@@ -23,6 +23,7 @@ h1 {
   margin: 0 0 2rem 0;
   font-size: 1.5rem;
   color: white;
+  height: 120px;
 }
 
 img {
@@ -87,6 +88,21 @@ p {
 input, select{
   width: 90%;
   height: 25px;
+}
+
+.star-button{
+  margin: 20px 180px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 1em;
+  box-shadow: 0 0 10px #777
+}
+
+.fav{
+  background-color: lime;
+  box-shadow: 0 0 10px #39b54a
 }
 
 @media screen and (min-width: 600px) {
