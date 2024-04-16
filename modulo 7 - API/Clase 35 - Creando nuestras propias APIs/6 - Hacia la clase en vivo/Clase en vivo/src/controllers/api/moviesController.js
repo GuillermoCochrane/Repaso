@@ -1,5 +1,5 @@
 const path = require('path');
-const db = require('../database/models');
+const db = require('../../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const moment = require('moment');
@@ -14,19 +14,31 @@ const Actors = db.Actor;
 const moviesController = {
 
     create: function (req,res) {
+        let data = {
+            title: req.body.title,
+            rating: req.body.rating,
+            awards: req.body.awards,
+            release_date: req.body.release_date,
+            length: req.body.length,
+            genre_id: req.body.genre_id
+        }
         Movies
-        .create(
-            {
-                title: req.body.title,
-                rating: req.body.rating,
-                awards: req.body.awards,
-                release_date: req.body.release_date,
-                length: req.body.length,
-                genre_id: req.body.genre_id
+        .create(data)
+        .then((newMovie)=> {
+            let data = {
+                meta: {
+                    status: 200,
+                    url: "api/movies/create"
+                },
+                data: newMovie
             }
-        )
-        .then(()=> {
-            return res.redirect('/movies')})            
+            if(newMovie){
+                data.meta.created = true
+            } else {
+                data.meta.created = false
+            }
+            return res.json(data)
+        })            
         .catch(error => res.send(error))
     },
 
