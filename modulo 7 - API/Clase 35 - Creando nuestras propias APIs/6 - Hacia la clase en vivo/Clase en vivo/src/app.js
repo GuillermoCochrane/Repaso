@@ -10,7 +10,7 @@ const moviesRoutes = require('./routes/moviesRoutes');
 const genresRoutes = require('./routes/genresRoutes');
 
 //Aquí pueden colocar las rutas de las APIs
-
+const apiGenresRouter = require('./routes/api/genresRoutes')
 
 // view engine setup
 app.set('views', path.resolve(__dirname, './views'));
@@ -28,6 +28,7 @@ app.use('/', indexRouter);
 app.use(moviesRoutes);
 app.use(genresRoutes);
 
+app.use('/api/genres',apiGenresRouter);
 
 //Activando el servidor desde express
 app.listen('3001', () => console.log('Servidor corriendo en el puerto 3001'));
