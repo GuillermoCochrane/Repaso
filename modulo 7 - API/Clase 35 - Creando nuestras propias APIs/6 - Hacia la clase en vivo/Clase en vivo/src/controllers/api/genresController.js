@@ -6,7 +6,15 @@ const genresController = {
     'list': (req, res) => {
         db.Genre.findAll()
             .then(genres => {
-                res.render('genresList.ejs', {genres})
+                let data = {
+                    meta: {
+                        status: 200,
+                        url: "api/genres",
+                        total: genres.length
+                    },
+                    data: genres
+                }
+                return res.json(data)
             })
     },
     'detail': (req, res) => {
