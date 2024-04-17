@@ -100,6 +100,32 @@ const moviesController = {
         .catch(error => res.send(error))
     },
 
+    update: function (req,res) {
+        let movieId = req.params.id;
+        let movieData ={
+                title: req.body.title,
+                rating: req.body.rating,
+                awards: req.body.awards,
+                release_date: req.body.release_date,
+                length: req.body.length,
+                genre_id: req.body.genre_id
+        }
+        Movies
+        .update(movieData,{where: {id: movieId}})
+        .then(() => {
+            let data = {
+                meta: {
+                    status: 200,
+                    url: "api/movies/update/" + req.params.id,
+                    movieID: req.params.id,
+                    updated: true
+                },
+                data: "updated succesfully"
+            }
+            return res.json(data)})            
+        .catch(error => res.send(error))
+    },
+
     destroy: function (req,res) {
         let movieId = req.params.id;
         Movies
