@@ -32,7 +32,7 @@ app.use(genresRoutes);
 
 app.use('/api/genres',apiGenresRouter);
 app.use('/api/movies',apiMoviesRouter);
-app.use('/api/actros',apiActorssRouter);
+app.use('/api/actors',apiActorssRouter);
 
 //Activando el servidor desde express
 app.listen('3001', () => console.log('Servidor corriendo en el puerto 3001'));
