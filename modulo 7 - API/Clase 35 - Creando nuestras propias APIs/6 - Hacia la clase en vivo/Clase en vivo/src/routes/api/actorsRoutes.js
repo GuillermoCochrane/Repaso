@@ -11,4 +11,7 @@ router.get('/:id', actorsAPIController.detail);
 //Agregar un actor
 router.post('/create', actorsAPIController.create);
 
+//Modificar un actor
+router.put('/update/:id', actorsAPIController.update);
+
 module.exports = router;

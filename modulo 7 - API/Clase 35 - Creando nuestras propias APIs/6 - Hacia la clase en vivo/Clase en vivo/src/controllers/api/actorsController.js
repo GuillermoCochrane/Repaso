@@ -61,6 +61,35 @@ const actorsAPIController = {
         })    
         .catch(error => res.send(error))
     },
+
+    update: (req,res) => {
+        let actorID = req.params.id;
+        let actorData = {
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                rating: req.body.rating,
+                favorite_movie_id: req.body.favorite_movie_id,
+        }
+        Actors.update(actorData,{ where: {id: actorID} })
+        .then(confirm => {
+            let data = {
+                meta: {
+                    status: 200,
+                    id: actorID,
+                    url: 'api/actors/update/:id'
+                },
+                data: "Actor Modiicado"
+            };
+            if(confirm){
+                data.meta.updated = true;
+            }else{
+                data.meta.status = 204;
+                data.meta.updated = false;
+            }
+            res.json(data);
+        })    
+        .catch(error => res.send(error))
+    },
 }
 
 module.exports = actorsAPIController;
