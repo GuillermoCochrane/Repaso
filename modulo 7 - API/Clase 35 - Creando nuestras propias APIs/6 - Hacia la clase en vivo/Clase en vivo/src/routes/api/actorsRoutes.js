@@ -8,4 +8,7 @@ router.get('/', actorsAPIController.list);
 //Detalle del actor
 router.get('/:id', actorsAPIController.detail);
 
+//Agregar un actor
+router.post('/create', actorsAPIController.create);
+
 module.exports = router;
