@@ -17,4 +17,7 @@ router.put('/update/:id', actorsAPIController.update);
 //Eliminar un actor
 router.delete('/delete/:id', actorsAPIController.destroy);
 
+//En que peliculas trabajo el actor con id tal
+router.get('/:id/movies', actorsAPIController.actorMovies);
+
 module.exports = router;

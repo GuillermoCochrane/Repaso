@@ -118,7 +118,24 @@ const actorsAPIController = {
             res.json(data);
         })    
         .catch(error => res.send(error))
-    }
+    },
+
+    'actorMovies': (req, res) => {
+        db.Actor.findByPk(req.params.id,{
+            include: ['movies']
+        })
+            .then(actor => {
+                let respuesta = {
+                    meta: {
+                        status: 200,
+                        total: actor.length,
+                        url: '/api/actor/:id'
+                    },
+                    data: actor
+                }
+                res.json(respuesta);
+            });
+    },
 }
 
 module.exports = actorsAPIController;
