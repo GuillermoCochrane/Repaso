@@ -30,6 +30,24 @@ const moviesController = {
             })
     },
 
+    'detail': (req, res) => {
+        db.Movie.findByPk(req.params.id,
+            {
+                include : ['genre']
+            })
+            .then(movie => {
+                let data = {
+                    meta: {
+                        status: 200,
+                        url: `api/movies/detail/${movie.id}`,
+                        id: movie.id
+                    },
+                    data: movie
+                }
+                res.json(data);
+            });
+    },
+
     create: function (req,res) {
         let data = {
             title: req.body.title,
