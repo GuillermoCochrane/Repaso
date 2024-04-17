@@ -63,8 +63,16 @@ const moviesController = {
         let movieId = req.params.id;
         Movies
         .destroy({where: {id: movieId}, force: true}) // force: true es para asegurar que se ejecute la acción
-        .then(()=>{
-            return res.redirect('/movies')})
+        .then((response)=>{
+            data = {
+                meta: {
+                    status: 200,
+                    url: "api/movies/delete/:id",
+                    movieID: req.params.id,
+                    deleted: true
+                },
+            }
+            return res.json(data)})
         .catch(error => res.send(error)) 
     },
 /* 
