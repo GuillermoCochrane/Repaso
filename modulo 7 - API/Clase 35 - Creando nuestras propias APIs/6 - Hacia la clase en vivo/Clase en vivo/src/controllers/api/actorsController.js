@@ -18,6 +18,21 @@ const actorsAPIController = {
                 res.json(data);
             })
     },
+
+    'detail': (req, res) => {
+        db.Actor.findByPk(req.params.id)
+            .then(actor => {
+                let data = {
+                    meta: {
+                        status: 200,
+                        id: actor.id,
+                        url: '/api/actor/:id'
+                    },
+                    data: actor
+                }
+                res.json(data);
+            });
+    },
 }
 
 module.exports = actorsAPIController;
