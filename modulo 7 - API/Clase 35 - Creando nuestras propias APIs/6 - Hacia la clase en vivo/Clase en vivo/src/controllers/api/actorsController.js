@@ -55,7 +55,8 @@ const actorsAPIController = {
             if(confirm){
                 data.meta.created = true
             }else{
-                data.meta.created = false
+                data.meta.created = false;
+                data.data = "No se ha creado el actor"
             }
             res.json(data);
         })    
@@ -85,11 +86,39 @@ const actorsAPIController = {
             }else{
                 data.meta.status = 204;
                 data.meta.updated = false;
+                data.data = "No se ha modiicado el actor";
             }
             res.json(data);
         })    
         .catch(error => res.send(error))
     },
+
+    destroy: (req,res) => {
+        let actorID = req.params.id;
+        Actors
+        .destroy({where: {id: actorID}, force: true}) // force: true es para asegurar que se ejecute la acción
+        .then(confirm => {
+            let data = {
+                meta: {
+                    status: 200,
+                    id: actorID,
+                    url: 'api/actors/delete/:id'
+                },
+                data:confirm 
+            };
+            if(confirm){
+                data.meta.deleted = true;
+                data.data = "Actor eliminado"
+                
+            }else{
+                data.meta.status = 204;
+                data.meta.deleted = false;
+                data.data = "No se ha eliminado el actor"
+            }
+            res.json(data);
+        })    
+        .catch(error => res.send(error))
+    }
 }
 
 module.exports = actorsAPIController;

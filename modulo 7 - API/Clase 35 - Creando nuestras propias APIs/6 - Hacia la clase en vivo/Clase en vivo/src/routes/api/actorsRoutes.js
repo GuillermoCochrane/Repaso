@@ -14,4 +14,7 @@ router.post('/create', actorsAPIController.create);
 //Modificar un actor
 router.put('/update/:id', actorsAPIController.update);
 
+//Eliminar un actor
+router.delete('/delete/:id', actorsAPIController.destroy);
+
 module.exports = router;
