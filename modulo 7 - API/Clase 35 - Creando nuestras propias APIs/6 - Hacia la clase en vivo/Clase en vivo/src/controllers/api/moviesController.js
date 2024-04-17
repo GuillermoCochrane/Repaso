@@ -13,6 +13,23 @@ const Actors = db.Actor;
 
 const moviesController = {
 
+    'list': (req, res) => {
+        db.Movie.findAll({
+            include: ['genre']
+        })
+            .then(movies => {
+                let data = {
+                    meta: {
+                        status: 200,
+                        url: "api/movies",
+                        total: movies.length
+                    },
+                    data: movies
+                }
+                res.json(data)
+            })
+    },
+
     create: function (req,res) {
         let data = {
             title: req.body.title,
@@ -51,14 +68,6 @@ const moviesController = {
         .catch(error => res.send(error)) 
     },
 /* 
-    'list': (req, res) => {
-        db.Movie.findAll({
-            include: ['genre']
-        })
-            .then(movies => {
-                res.render('moviesList.ejs', {movies})
-            })
-    },
     'detail': (req, res) => {
         db.Movie.findByPk(req.params.id,
             {
