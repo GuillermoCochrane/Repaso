@@ -48,6 +48,29 @@ const moviesController = {
             });
     },
 
+    'recomended': (req, res) => {
+        db.Movie.findAll({
+            include: ['genre'],
+            where: {
+                rating: {[db.Sequelize.Op.gte] : 8}
+            },
+            order: [
+                ['rating', 'DESC']
+            ]
+        })
+            .then(movies => {
+                let data = {
+                    meta: {
+                        status: 200,
+                        url: "api/movies/recommended",
+                        total: movies.length
+                    },
+                    data: movies
+                }
+                res.json(data);
+            });
+    },
+
     create: function (req,res) {
         let data = {
             title: req.body.title,
