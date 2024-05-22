@@ -1,0 +1,10 @@
+Punto de partida
+
+A lo largo de las clases en vivo del módulo de React trabajaremos desarrollando un dashboard utilizando las herramientas y conceptos que les iremos proporcionando. En esta primera clase, el objetivo será empezar a migrar de una estructura realizada con HTML y CSS a una que utilice React.
+
+Los objetivos que queremos que se cumplan son:
+
+Migrar un sistema web a uno que utilice React.
+Componer varios elementos de HTML en React valiéndonos de JSX.
+Diagramar los distintos mensajes y ciclos de vida que componen el ecosistema de React.
+Conocer las ventajas y desventajas de utilizar React.
