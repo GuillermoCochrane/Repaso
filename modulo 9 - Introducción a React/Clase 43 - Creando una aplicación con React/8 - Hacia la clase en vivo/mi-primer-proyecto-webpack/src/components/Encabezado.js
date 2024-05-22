@@ -3,7 +3,7 @@ import React from 'react';
 import logo from '../assets/img/logo-DH.png';
 
 function Encabezado(){
-  return (
+    return (
         <header className="encabezado">
             <nav id="logo">
                 <a href="#"><img src={logo} alt="Logo Digital House" /></a>
@@ -17,8 +17,7 @@ function Encabezado(){
                 </ul>
             </nav>
         </header>    
-  )
+    )
 
 }
 export default Encabezado;
-
