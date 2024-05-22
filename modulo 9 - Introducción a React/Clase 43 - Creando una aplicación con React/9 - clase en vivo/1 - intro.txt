@@ -8,3 +8,11 @@ Migrar un sistema web a uno que utilice React.
 Componer varios elementos de HTML en React valiéndonos de JSX.
 Diagramar los distintos mensajes y ciclos de vida que componen el ecosistema de React.
 Conocer las ventajas y desventajas de utilizar React.
+
+Para crear el proyecto con vite:
+- npm create vite@latest
+Para crear un proyecto con webpack:
+- npx create-react-app my-app
+o
+- npm install -g create-react-app
+- npm init react-app proyecto
