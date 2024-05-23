@@ -1,0 +1,8 @@
+Punto de partida
+
+
+En esta clase trabajaremos en los siguientes objetivos:
+
+Entender y practicar la creación de componentes.
+Comprender cómo podemos pasar información a los componentes.
+Repasar cómo usamos propTypes y defaultProps.
