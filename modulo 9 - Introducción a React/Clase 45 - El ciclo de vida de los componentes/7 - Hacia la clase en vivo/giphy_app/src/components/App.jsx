@@ -1,8 +1,26 @@
+import { Component } from 'react'
 import './app.css'
 import NavBar from './NavBar/NavBar'
 import Gif from './Gif/Gif'
 
-function App() {
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      gifs: ''
+    }
+  } 
+
+  componentDidMount() {
+    console.log('componentDidMount')
+  }
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate')
+  }
+
+  render() {  
+
   return (
       <>
 
@@ -26,7 +44,9 @@ function App() {
       </div>
 
       </>
-  )
+      )
+    }
 }
+
 
 export default App
