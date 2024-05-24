@@ -1,4 +1,4 @@
-import banner from '../../../../../../assets/images/mandalorian.jpg'
+import banner from '../../../../assets/images/mandalorian.jpg'
 function LastMovieInDb() {
     return (
         <div className="col-lg-6 mb-4">

@@ -1,4 +1,4 @@
-import avatar from "../../../../assets/images/jordan-walke.png"
+import avatar from "../../../assets/images/jordan-walke.png"
 function Topbar() {
     return (
         <nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
