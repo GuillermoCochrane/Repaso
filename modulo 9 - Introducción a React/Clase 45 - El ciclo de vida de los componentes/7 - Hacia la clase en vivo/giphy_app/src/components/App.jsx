@@ -11,8 +11,19 @@ class App extends Component {
     }
   } 
 
-  componentDidMount() {
-    console.log('componentDidMount')
+  async componentDidMount() {
+    try {
+      let response = await fetch('https://api.giphy.com/v1/gifs/trending?api_key=FSHnaiOlYd2NXPdn06Qdh64qxmGRVM69');
+      let data = await response.json();
+      console.log(data)
+      this.setState(
+        {
+          gif: data.data.image_url
+        }
+      )
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   componentDidUpdate() {
