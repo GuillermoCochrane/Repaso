@@ -1,3 +1,17 @@
+import GenreCard from './GenreCard/GenreCard';
+let genres = [
+    {genreName: 'Acción'},
+    {genreName: 'Animación'},
+    {genreName: 'Aventura'},
+    {genreName: 'CienciaFicción'},
+    {genreName: 'Comedia'},
+    {genreName: 'Documental'},
+    {genreName: 'Drama'},
+    {genreName: 'Fantasia'},
+    {genreName: 'Infantiles'},
+    {genreName: 'Musical'},
+]
+
 function GenresInDb() {
     return (
         <div className="col-lg-6 mb-4">						
@@ -7,81 +21,15 @@ function GenresInDb() {
                 </div>
                 <div className="card-body">
                     <div className="row">
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">
-                                    Acción
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">
-                                    Animación
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">
-                                    Aventura
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">
-                                    Ciencia Ficción
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">
-                                    Comedia
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">
-                                    Documental
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">
-                                    Drama
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">
-                                    Fantasia
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">
-                                    Infantiles
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-4">
-                            <div className="card bg-dark text-white shadow">
-                                <div className="card-body">
-                                    Musical
-                                </div>
-                            </div>
-                        </div>
+                        {
+                            genres.map((genre,i) => 
+                                <GenreCard genreName={genre.genreName} key={`item-${genre.genreName}${i}`}/>
+                            )
+                        }
                     </div>
                 </div>
             </div>
 		</div>
     );
 }
-
 export default GenresInDb;
