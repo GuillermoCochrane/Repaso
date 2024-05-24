@@ -1,0 +1,16 @@
+Hacia la clase en vivo
+
+Otra clase más que pasa y un poco más cerca del final de la teoría. Cómo pasa rápido el tiempo, ¿no?
+
+Como es habitual, y antes de poder afrontar la clase en vivo, proponemos este auto examen que busca validar que tan asentados quedaron los temas vistos en clase:
+
+¿Cuál es la diferencia puntual entre un componente sin estado y uno con estado?
+Al crear un componente con estado, ¿qué necesitamos importar para trabajar de manera adecuada?
+¿Cómo se llama el método dentro del cual definimos el estado inicial del componente?
+Si quisiéramos actualizar el estado de un componente, ¿qué método deberíamos usar?
+¿Dentro de cuál método del ciclo de vida debemos hacer los llamados a las APIs?
+¿Cómo asignamos un evento a la estructura de un componente?
+
+Si tuvimos algunas dudas con las respuestas, recomendamos revisar nuevamente el material para aclarar estos conceptos.
+
+¡Nos vemos en clase!
