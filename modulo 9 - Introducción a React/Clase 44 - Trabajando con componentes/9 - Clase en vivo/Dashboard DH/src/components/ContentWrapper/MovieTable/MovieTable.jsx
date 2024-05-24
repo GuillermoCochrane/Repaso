@@ -1,5 +1,6 @@
 import {Fragment} from 'react';
 import MovieList from './MovieRow/MovieRow';
+
 let movies = [
 	{
 		id: 1,
@@ -32,7 +33,7 @@ function MovieTable(){
 								<tr>
 									{
 										title.map((item, i) => {
-											return 	<th key = {`${item}-${i}`}>
+											return 	<th key = {`${item.title}-${i}`}>
 														{item}
 													</th>
 										})
@@ -43,7 +44,7 @@ function MovieTable(){
 								<tr>
 									{
 										title.map((item, i) => {
-											return 	<th key = {`${i}-${item}-${i}`}>
+											return 	<th key = {`${i}-${item.title}-${i}`}>
 														{item}
 													</th>
 										})	
