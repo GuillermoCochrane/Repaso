@@ -15,7 +15,6 @@ class MovieTable extends Component {
     getMovies = async () => {
         const response = await fetch('/api/api/movies');
         const data = await response.json();
-        console.log(data.data)
         this.setState({
             movies: data.data
         });

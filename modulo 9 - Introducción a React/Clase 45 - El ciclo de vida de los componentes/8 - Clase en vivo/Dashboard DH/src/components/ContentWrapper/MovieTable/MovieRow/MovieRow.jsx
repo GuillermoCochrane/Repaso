@@ -15,7 +15,7 @@ function MovieRow({id, title="Pelicula sin título", rating, awards, length}) {
 MovieRow.propTypes = {
   id: PropTypes.number,
   title: PropTypes.string.isRequired,
-  rating: PropTypes.number,
+  rating: PropTypes.string,
   awards: PropTypes.number,
   length: PropTypes.number
 }
