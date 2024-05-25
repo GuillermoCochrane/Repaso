@@ -27,14 +27,23 @@ class GenresInDb extends Component {
         }
     }
 
+    hoverCard = () => {
+        document.querySelector('#card-body').classList.toggle('bg-secondary');
+        document.querySelector('#card-title-box').classList.toggle('bg-secondary');
+        document.querySelector('#card-title').classList.toggle('text-white');
+        document.querySelector('#card-title').classList.toggle('text-gray-800');
+    }
+
     render() {  
             return (
                 <div className="col-lg-6 mb-4">						
                     <div className="card shadow mb-4">
-                        <div className="card-header py-3">
-                            <h5 className="m-0 font-weight-bold text-gray-800">Genres in Data Base</h5>
+                        <div className="card-header py-3" id="card-title-box">
+                            <h5 className="m-0 font-weight-bold text-gray-800" onMouseOver={()=>this.hoverCard()} id='card-title'>
+                                Genres in Data Base
+                            </h5>
                         </div>
-                        <div className="card-body">
+                        <div className="card-body" id="card-body">
                             <div className="row">
                                 {   
                                     this.state.genres.length == 0 ?
