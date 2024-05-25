@@ -1,4 +1,5 @@
 import logo from "../../assets/images/logo-DH.png"
+import './Sidebar.css'
 function Sidebar() {
     return (    
         <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
