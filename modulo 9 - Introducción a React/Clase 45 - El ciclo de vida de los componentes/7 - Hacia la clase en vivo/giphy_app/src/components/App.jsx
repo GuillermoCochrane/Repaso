@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      gifs: ''
+      gifs: []
     }
   } 
 
@@ -15,10 +15,10 @@ class App extends Component {
     try {
       let response = await fetch('https://api.giphy.com/v1/gifs/trending?api_key=FSHnaiOlYd2NXPdn06Qdh64qxmGRVM69');
       let data = await response.json();
-      console.log(data)
+      console.log(data.data)
       this.setState(
         {
-          gif: data.data.image_url
+          gifs: data.data
         }
       )
     } catch (error) {
@@ -30,26 +30,22 @@ class App extends Component {
     console.log('componentDidUpdate')
   }
 
-  render() {  
+  render() { 
 
   return (
       <>
-
         <NavBar />
 
         <div className="container">
 
           <div className="row text-center">
-
-            <Gif />
-            <Gif />
-            <Gif />
-            <Gif />
-            <Gif />
-            <Gif />
-            <Gif />
-            <Gif />
-
+            {
+                this.state.gifs.length == 0 ? 
+                <p className='text-center'>Cargando...</p> :
+                (this.state.gifs).map((gif, index) => 
+                  <Gif key={`gif${index}`} gif={gif} />
+                )
+            }
           </div>
 
       </div>
@@ -58,6 +54,5 @@ class App extends Component {
       )
     }
 }
-
 
 export default App

@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    font-size: 12px;
+}
+.card-container {
+    max-height: 300px;
+}
+
+.card-gif-container img {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+    margin: auto;
+}
