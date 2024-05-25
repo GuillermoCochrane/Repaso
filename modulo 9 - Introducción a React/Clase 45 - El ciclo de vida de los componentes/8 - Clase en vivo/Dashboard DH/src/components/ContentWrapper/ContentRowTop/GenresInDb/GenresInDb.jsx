@@ -13,7 +13,6 @@ class GenresInDb extends Component {
     getGenres = async () => {
         const response = await fetch('/api/api/genres');
         const data = await response.json();
-        console.log(data.data)
         this.setState({
             genres: data.data
         });
