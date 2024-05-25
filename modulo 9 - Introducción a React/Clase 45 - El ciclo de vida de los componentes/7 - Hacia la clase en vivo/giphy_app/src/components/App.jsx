@@ -9,32 +9,51 @@ class App extends Component {
     this.state = {
       gifs: []
     }
-  } 
+  }
+
+  randomGifList = async () => {
+    let list = [];
+    for (let i = 0; i < 4; i++) {
+    list.push(await this.randomGif())
+    }
+    console.log(list)
+    this.setState({ gifs: list });
+    console.log("hiciste click")
+  }
+
+  async trendingGifs() {
+    let response = await fetch('https://api.giphy.com/v1/gifs/trending?api_key=FSHnaiOlYd2NXPdn06Qdh64qxmGRVM69');
+    let data = await response.json();
+    this.setState({
+      gifs: data.data
+    });
+  }
+
+  async randomGif() {
+    let response = await fetch('https://api.giphy.com/v1/gifs/random?api_key=FSHnaiOlYd2NXPdn06Qdh64qxmGRVM69');
+    let data = await response.json();
+    console.log(data)
+    return data.data; 
+  }
 
   async componentDidMount() {
     try {
-      let response = await fetch('https://api.giphy.com/v1/gifs/trending?api_key=FSHnaiOlYd2NXPdn06Qdh64qxmGRVM69');
-      let data = await response.json();
-      console.log(data.data)
-      this.setState(
-        {
-          gifs: data.data
-        }
-      )
+      await this.trendingGifs();
     } catch (error) {
       console.log(error)
     }
   }
 
+
   componentDidUpdate() {
-    console.log('componentDidUpdate')
+    //console.log('componentDidUpdate')
   }
 
   render() { 
 
   return (
       <>
-        <NavBar />
+        <NavBar randomGifList={this.randomGifList} />
 
         <div className="container">
 
