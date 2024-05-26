@@ -1,0 +1,13 @@
+Punto de partida
+
+En esta clase trabajaremos en pos de cumplir los siguientes objetivos:
+
+Crear componentes con estado.
+Trabajar con los métodos de ciclo de vida del componente.
+Lograr la integración entre una aplicación con React y nuestras APIs en el back-end.
+Crear eventos a través de métodos que realicen operaciones cuando el usuario interactúe con el componente.
+
+Para eso continuaremos desarrollando el dashboard.
+
+
+No se olviden de tener sus archivos subidos a GitHub.
