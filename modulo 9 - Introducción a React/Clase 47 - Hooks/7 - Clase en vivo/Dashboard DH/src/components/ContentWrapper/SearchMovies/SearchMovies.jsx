@@ -1,28 +1,40 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import noPoster from '../../../assets/images/404.png';
 
 function SearchMovies(){
 
 	const [movies, setMovies] = useState([]);
-	const keyword = "Star";
+	const [keyword, setKeyword] = useState('');
+	const inputKeyword = useRef(null);
 	const apiKey = "d4e35e92"; 
-	const endpoint = `https://www.omdbapi.com/?s=${keyword}&apikey=${apiKey}`;
-	const fetchData = async () => {
-		try {
-			const response = await fetch(endpoint);
-			const data = await response.json();
-			setMovies(data.Search);
-		}
-		catch (error) {
-			console.log(error);
-			setMovies([]);
-		}
-	}
+	
+	
 
 	useEffect(() => {
+		const endpoint = `https://www.omdbapi.com/?s=${keyword}&apikey=${apiKey}`;
+		const fetchData = async () => {
+			try {
+				const response = await fetch(endpoint);
+				const data = await response.json();
+				data.Search ?
+					setMovies(data.Search) :
+					setMovies([]);
+			}
+			catch (error) {
+				console.log(error);
+				setMovies([]);
+			}
+		}
 		apiKey !== '' ? fetchData() : console.log('No hay APIKEY');
-	}, []); 
+	}, [keyword]);
+
+	const searchMovies =  (e) => {
+		e.preventDefault();
+		let key = inputKeyword.current.value;// Guardamos el valor de la entrada
+		setKeyword(key); // Cambiamos el estado keyWord con el valor de lo ingresado en el formulario 
+		inputKeyword.current.value = ''; // Limpiamos el formulario
+	}
 
 	return(
 		<div className="container-fluid">
@@ -32,10 +44,10 @@ function SearchMovies(){
 					<div className="row my-4">
 						<div className="col-12 col-md-6">
 							{/* Buscador */}
-							<form method="GET">
+							<form method="GET" onSubmit={searchMovies}>
 								<div className="form-group">
 									<label htmlFor="">Buscar por título:</label>
-									<input type="text" className="form-control" />
+									<input type="text" className="form-control" ref={inputKeyword} />
 								</div>
 								<button className="btn btn-info">Search</button>
 							</form>
@@ -43,7 +55,7 @@ function SearchMovies(){
 					</div>
 					<div className="row">
 						<div className="col-12">
-							<h2>Películas para la palabra: {keyword}</h2>
+							<h2>Películas para la palabra: {keyword}</h2>	
 						</div>
 						{/* Listado de películas */}
 						{
