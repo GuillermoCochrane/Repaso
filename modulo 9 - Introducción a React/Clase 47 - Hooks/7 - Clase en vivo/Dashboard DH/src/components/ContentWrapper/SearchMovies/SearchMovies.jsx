@@ -1,27 +1,28 @@
-//import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import noPoster from '../../../assets/images/404.png';
 
 function SearchMovies(){
 
-	const movies = [
-		{
-			"Title": "Parchís",
-			"Year": "1983",
-			"Poster": "https://m.media-amazon.com/images/M/MV5BYTgxNjg2MTAtYjhmYS00NjQwLTk1YTMtNmZmOTMyNTAwZWUwXkEyXkFqcGdeQXVyMTY5MDE5NA@@._V1_SX300.jpg"
-		},
-		{
-			"Title": "Brigada en acción",
-			"Year": "1977",
-			"Poster": ""
-		},
-	];
+	const [movies, setMovies] = useState([]);
+	const keyword = "Star";
+	const apiKey = "d4e35e92"; 
+	const endpoint = `https://www.omdbapi.com/?s=${keyword}&apikey=${apiKey}`;
+	const fetchData = async () => {
+		try {
+			const response = await fetch(endpoint);
+			const data = await response.json();
+			setMovies(data.Search);
+		}
+		catch (error) {
+			console.log(error);
+			setMovies([]);
+		}
+	}
 
-	const keyword = 'PELÍCULA DEMO';
-
-	// Credenciales de API
-	const apiKey = 'd4e35e92'; // Intenta poner cualquier cosa antes para probar
-	
+	useEffect(() => {
+		apiKey !== '' ? fetchData() : console.log('No hay APIKEY');
+	}, []); 
 
 	return(
 		<div className="container-fluid">
