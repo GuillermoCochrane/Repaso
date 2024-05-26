@@ -46,7 +46,13 @@ function Sidebar() {
                 </Link>
 			</li>
 
-			
+			<li className="nav-item">
+				<Link className="nav-link" to="/search">
+					<i className="fas fa-fw fa-search"></i>
+					<span>Search</span>
+                </Link>
+			</li>
+
 			<hr className="sidebar-divider d-none d-md-block" />
 		</ul>
     )
