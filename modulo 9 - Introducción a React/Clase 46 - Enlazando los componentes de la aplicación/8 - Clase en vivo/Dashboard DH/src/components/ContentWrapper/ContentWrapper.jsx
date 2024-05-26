@@ -3,7 +3,9 @@ import ContentRowTop from "./ContentRowTop/ContentRowTop"
 import Footer from './Footer/Footer'
 import MovieTable from './MovieTable/MovieTable'
 import Error404 from './Error404/Error404'
+import GenreLastMovie from './GenresLastMovie/GenresLastMovie'
 import {Route, Switch} from "react-router-dom"
+
 function ContentWrapper() {
     return (
         <div id="content-wrapper" className="d-flex flex-column">
@@ -12,6 +14,7 @@ function ContentWrapper() {
                 <Switch>
                     <Route path="/" exact component={ContentRowTop}/>
                     <Route path="/movies" exact component={MovieTable}/>
+                    <Route path="/genres" exact component={GenreLastMovie}/>
                     <Route  component={Error404}/>
                 </Switch>
             </div>

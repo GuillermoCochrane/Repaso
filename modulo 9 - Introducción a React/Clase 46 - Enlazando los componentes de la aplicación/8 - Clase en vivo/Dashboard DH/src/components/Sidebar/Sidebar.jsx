@@ -40,7 +40,7 @@ function Sidebar() {
 			</li>
 
 			<li className="nav-item">
-				<Link className="nav-link" to="/">
+				<Link className="nav-link" to="/genres">
 					<i className="fas fa-fw fa-chart-area"></i>
 					<span>Charts</span>
                 </Link>
