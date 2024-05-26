@@ -1,0 +1,9 @@
+Punto de partida
+
+
+Llegamos a la última clase sobre React donde veremos Hooks y buscaremos cumplir los siguientes objetivos:
+
+Entender la diferencia entre el estado de un componente de clase y el Hook useState().
+Entender la diferencia entre los métodos del ciclo de vida y el useEffect().
+Entender la diferencia entre usar el querySelector() el Hook useRef().
+Comprender que estos 3 Hooks nos permiten tener todas las funcionalidades de un componente de clase, dentro de un componente funcional.
