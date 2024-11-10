@@ -1,0 +1,26 @@
+¿Qué tipos de datos podemos ver en SQL?
+
+TEXTO
+
+NUMÉRICO
+
+FECHA
+
+2
+Dentro de los tipos de datos FECHA existen....
+
+DATE
+
+DATETIME
+
+TIME
+
+3
+Dentro de los tipos de datos TEXTO existen....
+
+CHAR
+
+VARCHAR
+
+TEXT
+

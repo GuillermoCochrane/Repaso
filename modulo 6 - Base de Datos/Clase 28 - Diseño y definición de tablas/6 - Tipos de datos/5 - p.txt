@@ -1,0 +1,54 @@
+Cuestionario tipos de datos
+
+Mira las respuestas de cada pregunta:
+
+1
+¿Qué tipos de datos podemos ver en SQL?
+
+
+STRING
+
+TEXTO (X)
+
+NUMÉRICO (X)
+
+FECHA (X)
+
+BOOLEAN
+
+
+¡Respuesta correcta!
+
+2
+Dentro de los tipos de datos FECHA existen....
+
+
+FULLTIME
+
+DATE (X)
+
+FULLDATE
+
+DATETIME (X)
+
+TIME (X)
+
+
+¡Respuesta correcta!
+
+3
+Dentro de los tipos de datos TEXTO existen....
+
+
+CHAR (X)
+
+STRING
+
+VARCHAR (X)
+
+TEXT (X)
+
+TINYTEXT
+
+
+¡Respuesta correcta!
