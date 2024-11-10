@@ -1,0 +1,68 @@
+Tablas
+1
+¿Qué es un diagrama relacional?
+
+
+Una abstracción del negocio.
+
+La representación de las tablas en la base de datos. (X)
+
+Es la tabla física de la base de datos.
+
+
+¡Correcto!, observando el diagrama relacional comprenderemos que tablas hay y sus relaciones.
+
+
+
+2
+Dado el siguiente diagrama:
+
+(img a)
+
+¿Cómo se lee?
+
+
+Hay 3 columnas llamadas "Generos", "Artistas", "Bandas".
+
+Hay 3 tablas llamadas "Generos", "Artistas", "Bandas". (X)
+
+Hay 3 filas llamadas "Generos", "Artistas", "Bandas".
+
+
+¡Muy bien! Cada una de las cajas representa una tabla y una tabla tiene un conjunto de elementos.
+
+
+3
+Musimundos desea agregar, a su sistema de base de datos, la información relacionada a los artistas.
+
+De los mismos desea almacenar:
+
+- nombre fantasía
+
+- nombre
+
+- ranking
+
+- edad
+
+
+
+Dado el siguiente diagrama:
+
+(img b)
+
+¿Qué campos faltan?
+
+
+nombre fantasía (X)
+
+nombre
+
+ranking
+
+edad (X)
+
+id (pk) (X)
+
+
+¡Excelente! Ahora tenemos el diseño de la tabla completa.
