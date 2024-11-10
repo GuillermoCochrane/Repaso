@@ -1,0 +1,59 @@
+Introducción a bases de datos
+
+1
+Cuáles de los siguientes datos necesito para conectarme a una base de datos?
+
+
+Nombre de la base de datos. (X)
+
+Tablas de la base de datos.
+
+Servidor donde está.(X)
+
+Tipo de sistema operativo del servidor
+
+Usuario y contraseña.(X)
+
+
+¡Felicitaciones!
+
+
+2
+
+En una base de datos, el lenguaje de SQL permite...
+
+
+Crear estructuras en la base de datos. (X)
+
+Consultar información  (X)
+
+Actualizar información.  (X)
+
+Crear el front-end de la base de datos.
+
+
+¡Respuesta correcta!
+
+
+3
+¿Qué es una clave primaria?
+
+
+Una clave que permite identificar en forma unívoca una tabla.
+
+Una clave que permite identificar en forma unívoca un registro. (X)
+
+Un dato que puede ser nulo.
+
+Un dato que no puedo borrar.
+
+
+¡Respuesta correcta!
+
+4
+Una clave primaria puede ser formada por:
+
+
+Un dato único. (X)
+
+Un conjunto de datos.(X)
