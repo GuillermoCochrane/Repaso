@@ -1,0 +1,99 @@
+Cuestionario De Relaciones
+
+Mira las respuestas de cada pregunta:
+
+
+1
+¿Qué tipos de relaciones existen en las bases de datos relacionales?
+
+
+Uno a uno. (X)
+
+Algunos a muchos.
+
+Uno a muchos. (X)
+
+Pocos a muchos.
+
+Uno a pocos.
+
+Muchos a muchos. (X)
+
+
+¡Respuesta correcta!
+
+2
+Si queremos modelar que una persona tiene muchas mascotas y, a su vez, cada mascota tiene un dueño, teniendo la siguiente guía:
+
+(A)
+
+¿Qué cambios proponés?
+
+
+Agregar una tabla intermedia.
+
+Agregar la columna persona_id en la tabla Mascotas. (X)
+
+Agregar la columna mascota_id en la tabla Personas.
+
+
+¡Correcto! Al agregar persona_id en la tabla Mascotas ahora cada mascota va a poder tener un dueño y a su vez este dueño puede estar asociado a varias mascotas.
+
+
+3
+¿Qué es una clave foránea?
+
+
+Un sinónimo de una clave primaria.
+
+Un campo que debe ser único.
+
+Un campo que se aclara su importancia para asegurar performance.
+
+Una referencia a la clave primaria de otra tabla.  (X)
+
+
+¡Muy bien! Una clave foránea es una referencia a la clave primaria de otra tabla.
+
+
+4
+Supongamos que estamos trabajando en el sistema de reservas de un hotel.
+
+En este mismo sistema tenemos el modelo Habitaciones y el modelo Huéspedes. 
+
+Ahora queremos representar la relación en la cual un huésped puede reservar varias habitaciones y que una habitación puede ser reservada por varios huéspedes.
+
+Utilizando como guía los siguientes modelos:
+
+(B)
+
+¿Qué cambios proponés?
+
+
+Agregar la columna huesped_id en Habitaciones.
+
+Agregar la columna Habitacion_id en Huespedes.
+
+Agregar ambas columnas anteriormente mencionadas.
+
+Crear una tabla intermedia. (X)
+
+
+¡EXACTO! Recordá que cuando estamos enfrente de una relación de muchos a muchos SIEMPRE la solución es crear una tabla intermedia.
+
+
+5
+¿Cómo se lee la siguiente relación?
+(C)
+
+
+Un jugador esta relacionado con muchos equipos.
+
+Un jugador esta relacionado con un equipo.(X)
+
+Un equipo esta relacionado con un jugador.
+
+Un equipo esta relacionado con muchos jugadores.(X)
+
+
+¡Muy Bien!
