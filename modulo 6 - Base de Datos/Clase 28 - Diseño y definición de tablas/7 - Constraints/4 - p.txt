@@ -1,0 +1,50 @@
+Cuestionario Constraints
+
+Mira las respuestas de cada pregunta:
+1
+Cuando hablamos de un CONSTRAINT nos referimos a...
+
+
+limitaciones de bases de datos.
+
+limitaciones en tipos de datos de una columna de la tabla. (X)
+
+limitaciones en tablas pivot.
+
+
+¡Respuesta correcta!
+
+
+2
+Si quisieras establecer un campo que sí o sí se tenga que rellenar, ¿qué constraint deberías usar?
+¡Escribila en mayúscula!
+
+NOT NULL
+
+
+¡Respuesta correcta!
+
+3
+Si quisieras que un dato no se repita jamás en una columna, ¿qué tipo de restricción usarías?
+¡Escribila en mayúscula!
+
+
+UNIQUE
+
+
+¡Respuesta correcta!
+
+4
+¿Para qué sirve la restricción PRIMARY KEY?
+
+
+Para identificar el nombre de la tabla.
+
+Para identificar el nombre de la base de datos.
+
+Para identificar de forma única cada fila de la tabla. (X)
+
+Para identificar de forma única cada columna de la tabla.
+
+
+¡Respuesta correcta!
