@@ -1,0 +1,9 @@
+Es el momento de poner en práctica todo lo que aprendimos anteriormente, pero como siempre decimos: antes de meter manos en el código, es bueno hacer una pausa y pensar un poco en lo que vamos a construir.
+
+Por ello, a continuación, proponemos pensar en la arquitectura que tendrá una base de datos, pero no a partir de sentencias SQL, sino a nivel estructural, lógico y relacional, partiendo desde la conceptualización de la misma en un Diagrama de Entidad de Relaciones (DER).
+
+Este tipo de diagramas son la piedra angular de cualquier sistema que busque almacenar información en una base de datos. Así que a alistar lápiz y papel o, más bien, teclado y mouse para llevar a cabo los desafíos que propondremos a continuación.
+
+Recordemos igualmente que una vez generado el DER, ahí si podremos ir directamente a las sentencias MySQL y crear la base de datos tal y como la pensamos.
+
+¡Éxitos!
