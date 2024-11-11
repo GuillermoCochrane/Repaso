@@ -1,0 +1,36 @@
+https://sequelize.org/
+
+Base de datos modelos y consultas básicas.
+
+1.
+
+¿Para qué sirve un ORM?
+
+Sirve para "transformar" las tablas de una base de datos, en una serie de entidades que simplifiquen las tareas básicas para manipular los datos.
+
+2.
+
+Dentro del patrón de diseño MVC, ¿qué representa un modelo?
+
+
+Contiene una representación de los datos que maneja el sistema, su lógica de negocio, y sus mecanismos de persistencia.
+
+3.
+
+¿Qué es Sequelize?
+
+Es un ORM basado en promesas para Node.js que soporta bases de datos relacionales como MySQL.
+
+4.
+
+El método define() nos permite definir asignaciones entre un modelo y una tabla. 
+
+Este recibe 3 parámetros: 
+
+Un alias que identifica al modelo, un objeto con la configuración de las columnas en la base de datos y un objeto con configuraciones adicionales.
+
+5
+¿Qué método debemos usar para buscar todos los datos registrados en una tabla?
+
+
+findAll()
