@@ -1,0 +1,35 @@
+Ejercicio: Beneficios
+
+
+Mira las respuestas de cada pregunta:
+
+1
+Desde el departamento de fidelización de clientes de Musimundos vamos a sacar al mercado una campaña la cual implica que nuestros clientes van a tener un título que les otorgará beneficios a la hora de realizar compras. Para esto necesitamos crear una nueva tabla en nuestra base de datos. El nombre de la tabla será tipo_cliente y dentro tendrá dos columnas, la primera llamada id_tipo_cliente, siendo un int(6) primary key not null. Y el segundo campo llamado titulo, siendo varchar(20) y not null.
+
+Ingresá la consulta que creaste.
+
+Recordá escribir las sentencias SQL en mayúscula.
+
+148/1500 caracteres
+CREATE TABLE `musimundos`.`tipo_cliente` (
+  `id_tipo_cliente` INT(6) NOT NULL,
+  `titulo` VARCHAR(20) NOT NULL,
+  PRIMARY KEY (`id_tipo_cliente`));
+¡Respuesta correcta!
+1
+
+
+Ejercicio: Fe de erratas (cosas que pasan)
+
+
+Mira las respuestas de cada pregunta:
+
+1
+Al crear la tabla tipo_cliente, el equipo de fidelización no tuvo en cuenta que cada tipo de cliente debe tener una cantidad de descuento asignada. De casualidad, justo caminás por el equipo de fidelización y te preguntan si sabés algo de MySQL. Te solicitan una query que altere la tabla tipo_cliente agregando la columna porcentaje_descuento y que sea TINYINT UNSIGNED.
+
+Recordá escribir las sentencias SQL en mayúscula.
+
+112/1500 caracteres
+ALTER TABLE `musimundos`.`tipo_cliente` 
+ADD COLUMN `porcentaje_descuento` TINYINT UNSIGNED NULL AFTER `titulo`;
+¡Respuesta correcta!
