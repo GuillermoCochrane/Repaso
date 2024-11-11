@@ -1,0 +1,33 @@
+Foreing keys
+
+
+Mira las respuestas de cada pregunta:
+1
+¿Cómo y con qué se relaciona una Foreing Key?
+
+
+Con un dato de otra base de datos.
+
+Con una clave foránea de otra tabla.
+
+Con una clave primaria de otra tabla. (X)
+
+
+
+Con un registro de otra base de datos.
+¡Respuesta correcta!
+
+2
+¿Cuántas foreing keys puede haber en una tabla?
+
+
+Infinitas, siempre depende de las tablas que tengamos que relacionar y el espacio en memoria. (X)
+
+Una sola, así como la Primary Key.
+
+Una por cada tabla que relacionemos. (X)
+
+Solo dos, para la Primary Key de su tabla y otra para la relación.
+
+
+¡Respuesta correcta!
