@@ -1,0 +1,23 @@
+Ejercicio: ¿Qué álbumes tenemos?
+
+Mira las respuestas de cada pregunta:
+
+1
+Viene el manager de Musimundos y, para organizar su inventario de discos, te pide un informe con todos los álbumes que posee la empresa. Realizá una consulta que devuelva todos los álbumes. Ingresá de la columna titulo el nombre del álbum que aparece quinto.
+
+Big Ones
+
+¡Respuesta correcta!
+
+
+Ejercicio: Control de ventas v3
+
+Mira las respuestas de cada pregunta:
+
+1
+Para realizar un control de ventas, Musimundos te pide el primer nombre y teléfono de todos sus clientes.
+Insertá el número de teléfono del segundo cliente que obtuviste.
+
++49 0711 2842222
+
+¡Respuesta correcta!
