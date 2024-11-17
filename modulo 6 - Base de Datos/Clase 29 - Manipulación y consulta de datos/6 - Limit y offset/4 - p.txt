@@ -1,0 +1,28 @@
+Para repasar - 1
+
+Ejercicio: Top 3
+Mira las respuestas de cada pregunta:
+
+1
+El encargado del equipo de UX de Musimundos solicita hacer un pequeño slide con solo tres canciones de nuestra colección. Además, pide que sean las tres con mayor duración. ¡Vamos con eso!
+Insertá el ID del álbum de las tres canciones que obtuviste, en orden, sin espacios y separados por coma.
+
+227,229,253
+
+¡Respuesta correcta!
+
+
+Para repasar - 2
+
+DAB 2020 - SQL I - Limit y Offset #2 - Paginación
+Mira las respuestas de cada pregunta:
+
+1
+Tenemos un nuevo comunicado del departamento de UX.
+En esta ocasión necesitan hacer una paginación de canciones. La primera página ya está resuelta, pero para la segunda debes saltear cinco canciones y traer las próximas cinco. Estas deben estar ordenadas alfabéticamente por nombre.
+
+Insertá el compositor de la quinta canción que obtuviste.
+
+Santana
+
+¡Respuesta correcta!
