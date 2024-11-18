@@ -154,8 +154,25 @@ Ya casi culminamos todos los desafíos. Utilizando el Between y Like, hagamos la
 
 1. Mostrar el título y rating de todas las películas cuyo título sea Harry Potter.
 
+    ``` sql
+    SELECT title AS título, rating
+    FROM movies
+    WHERE title LIKE "%Harry Potter%"
+    ```
+
 2. Mostrar a todos los actores cuyos nombres empiecen con Sam.
 
+    ``` sql
+    SELECT first_name AS Nombre, last_name AS Apellido
+    FROM actors
+    WHERE first_name LIKE "Sam%"
+
 3. Mostrar el título de las películas que salieron entre el 2004 y 2008
+
+    ``` sql
+    SELECT title AS título
+    FROM movies
+    WHERE release_date BETWEEN "2004-01-01 00:00:00" AND "2008-12-31 23:59:59"
+    ```
 
 ---
