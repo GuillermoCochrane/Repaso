@@ -100,16 +100,56 @@ Vamos muy bien, no nos desanimemos ni por un minuto. Ahora, para la realización
 
 1. Mostrar los títulos de las primeras tres películas en la base de datos.
 
+    ``` sql
+    SELECT title AS título
+    FROM movies
+    LIMIT 3
+    ```
+
+
 2. Mostrar el top 5 de las películas con mayor rating.
+
+    ``` sql
+    SELECT title AS título, rating
+    FROM movies
+    ORDER BY rating DESC
+    LIMIT 5
+    ```
+
+
 
 3. Mostrar las top 5 a 10 de las películas con mayor rating.
 
+    ``` sql
+    SELECT title AS título, rating
+    FROM movies
+    ORDER BY rating DESC
+    LIMIT 5
+    OFFSET 5
+    ```
+
+
 4. Listar los primeros 10 actores (sería la página 1).
-     - Luego, usar offset para traer la página 3.
+
+    ``` sql
+    SELECT first_name AS Nombre, last_name AS Apellido
+    FROM actors
+    LIMIT 10
+    ```
+
+5. Luego, usar offset para traer la página 3.
+
+    ``` sql
+    SELECT first_name AS Nombre, last_name AS Apellido
+    FROM actors
+    LIMIT 10
+    OFFSET 20
+    ```
 
 ---
 
 ### Micro desafío - Paso 4:
+
 Ya casi culminamos todos los desafíos. Utilizando el Between y Like, hagamos las siguientes consultas:
 
 1. Mostrar el título y rating de todas las películas cuyo título sea Harry Potter.
