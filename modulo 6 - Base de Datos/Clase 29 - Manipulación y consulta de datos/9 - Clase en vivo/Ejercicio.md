@@ -43,22 +43,22 @@ Utilizando el Insert, Update, Delete, debemos ejecutar lo siguiente:
 
 4. Mostrar todos los registros de la tabla “movies”.
 
-  ``` sql
-  SELECT * FROM movies
-  ```   
+    ``` sql
+    SELECT * FROM movies
+    ```   
 
 5. Mostrar el nombre, apellido y rating de todos los actores.
 
-  ``` sql
-  SELECT first_name, last_name, rating FROM actors
-  ```
+    ``` sql
+    SELECT first_name, last_name, rating FROM actors
+    ```
 
 6. Mostrar el título de todas las series. Tomar en cuenta que tanto el nombre de la tabla como el campo estén en español.
 
-  ``` sql
-  SELECT title AS título
-  FROM series
-  ```
+    ``` sql
+    SELECT title AS título
+    FROM series
+    ```
 
 ---
 
@@ -68,9 +68,29 @@ Utilizando el Where y Order by, ejecutemos las siguientes consultas (ten en cuen
 
 1. Mostrar el nombre y apellido de los actores cuyo rating sea mayor a 7.5.
 
+    ``` sql
+    SELECT first_name AS Nombre, last_name AS apellido
+    FROM actors
+    WHERE rating > 7.5
+    ```
+
 2. Mostrar el título de las películas, el rating y los premios de las películas con un rating mayor a 7.5 y con más de dos premios.
 
+    ``` sql
+    SELECT title AS título, rating, awards AS premios
+    FROM movies
+    WHERE rating > 7.5 
+    AND awards > 2
+    ```
+
 3. Mostrar el título de las películas y el rating ordenadas por rating en forma ascendente.
+
+   ``` sql
+   SELECT title AS título, rating
+   FROM movies
+   ORDER BY rating 
+   ASC
+   ```
 
 ---
 
