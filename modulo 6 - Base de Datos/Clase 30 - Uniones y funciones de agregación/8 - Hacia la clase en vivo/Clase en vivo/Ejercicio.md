@@ -48,7 +48,8 @@ actor/actriz.
         ON actor_movie.actor_id = actors.id
         INNER JOIN movies 
         ON actor_movie.movie_id = movies.id
-        WHERE movies.title LIKE "%guerra%galaxia%";
+        WHERE movies.title 
+        LIKE "%guerra%galaxia%";
         ```
 
 ---
@@ -70,3 +71,25 @@ podemos usar la función COALESCE() que retorna el primer valor no nulo de una l
         LEFT JOIN genres 
         ON movies.genre_id = genres.id;
         ```
+
+---
+
+### Micro desafío - Paso 4:
+1. Necesitamos mostrar, de cada serie, la cantidad de días desde su estreno hasta su n, con la particularidad de que a la columna que mostrará dicha cantidad la renombraremos: “Duración”. Por ejemplo:
+
+  | Título       | Duración |
+  |--------------|----------|
+  | Supernatural | 130      |
+
+   - Ingresá la consulta que creaste. Recordá escribir las sentencias SQL en mayúscula.
+
+        ``` sql
+      SELECT title 
+      AS Título, 
+      DATEDIFF(NOW(), release_date) 
+      AS Duración 
+      FROM series;
+      ```
+
+---
+
