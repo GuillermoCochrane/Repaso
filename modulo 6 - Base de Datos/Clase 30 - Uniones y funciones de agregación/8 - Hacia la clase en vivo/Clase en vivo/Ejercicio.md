@@ -31,3 +31,23 @@
         ```
 
 ---
+
+### Micro desafío - Paso 2:
+1. Para nuestro próximo desafío necesitamos obtener a todos los actores o actrices (mostrar
+nombre y apellido) que han trabajado en cualquier película de la saga de la Guerra de las
+galaxias, pero ¡cuidado!: debemos asegurarnos de que solo se muestre una sola vez cada
+actor/actriz.
+
+   - Ingresá la consulta que creaste. Recordá escribir las sentencias SQL en mayúscula.
+
+        ``` sql
+        SELECT DISTINCT actors.first_name AS Nombre, actors.last_name AS Apellido
+        FROM actor_movie
+        INNER JOIN actors 
+        ON actor_movie.actor_id = actors.id
+        INNER JOIN movies 
+        ON actor_movie.movie_id = movies.id
+        WHERE movies.title LIKE "%guerra%galaxia%";
+        ```
+
+---
