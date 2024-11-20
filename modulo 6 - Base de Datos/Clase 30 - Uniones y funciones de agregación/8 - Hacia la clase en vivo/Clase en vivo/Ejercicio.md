@@ -93,3 +93,46 @@ podemos usar la función COALESCE() que retorna el primer valor no nulo de una l
 
 ---
 
+### Micro desafío - Paso 5:
+
+- Listar los actores ordenados alfabéticamente cuyo nombre sea mayor a 6 caracteres.
+
+    ```sql
+    SELECT first_name, last_name
+    FROM actors
+    WHERE LENGTH(first_name) > 6
+    ORDER BY first_name ASC;
+    ```
+- Debemos mostrar la cantidad total de los episodios guardados en la base de datos.
+
+    ```sql
+        SELECT COUNT(*)
+        AS cantidad_de_episodios
+        FROM episodes;
+    ```
+
+- Para el siguiente desafío nos piden que obtengamos el título de todas las series y el total de temporadas que tiene cada una de ellas.
+
+    ```sql	
+    SELECT  series.title AS nombre_de_la_serie, 
+            COUNT(seasons.id) AS cantidad_de_temporadas
+    FROM  seasons
+    INNER JOIN series 
+    ON seasons.serie_id = series.id
+    GROUP BY series.title;
+    ``` 
+
+- Mostrar, por cada género, la cantidad total de películas que posee, siempre que sea mayor
+o igual a 3.
+
+    ```sql
+    SELECT  genres.name, 
+            COUNT(*) AS cantidad_de_peliculas
+    FROM movies
+    INNER JOIN genres 
+    ON movies.genre_id = genres.id
+    GROUP BY genres.name
+    HAVING COUNT(*) >= 3;
+    ```
+
+---
