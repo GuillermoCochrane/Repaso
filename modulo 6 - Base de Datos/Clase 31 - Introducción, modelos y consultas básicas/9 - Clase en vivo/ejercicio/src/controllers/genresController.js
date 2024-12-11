@@ -11,6 +11,17 @@ let GenresController = {
         res.status(500).send(error);
       });
   },
+
+  detail: function(req, res) {
+    let id = req.params.id;
+    Generos.findByPk(id)
+      .then(genre => {
+        res.render('genresDetail', { genre });
+      })
+      .catch(error => {
+        res.status(500).send(error);
+      });
+  },
 };
 
 module.exports = GenresController;
