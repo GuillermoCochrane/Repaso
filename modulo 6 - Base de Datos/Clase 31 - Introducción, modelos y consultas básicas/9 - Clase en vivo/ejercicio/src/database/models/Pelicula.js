@@ -3,7 +3,9 @@ module.exports = (sequelize, DataTypes) => {
 
   let config = {
     tableName: "movies", 
-    timestamps: true,    
+    timestamps: true,
+    createdAt: 'created_at', // Nombre personalizado para la columna createdAt
+    updatedAt: 'updated_at', // Nombre personalizado para la columna updatedAt    
   };
 
   let cols = {
