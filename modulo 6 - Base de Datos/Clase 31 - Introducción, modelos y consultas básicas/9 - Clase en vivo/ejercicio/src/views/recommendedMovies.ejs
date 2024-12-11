@@ -14,8 +14,17 @@
     <ul>
         <% for( let i = 0; i < movies.length; i++ ) { %>
         <li>
-            <a href="/movies/detail/<%=movies[i].id%>"><%= movies[i].title %> </a> <br>
-            <%= 'RATING: ' + movies[i].rating %> 
+            <a href="/movies/detail/<%=movies[i].id%>">
+                <h2>
+                    <%= movies[i].title %> 
+                </h2>
+            </a> 
+            <br>
+            <p>
+                <h3>RATING: </h3>
+                <%=  movies[i].rating %> 
+                <br>
+            </p>
         </li>
         <% } %>
         

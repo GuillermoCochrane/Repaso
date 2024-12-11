@@ -35,6 +35,18 @@ let MoviesController = {
       res.status(500).send(error);
     });
   },
+
+  recomended: function(req, res) {
+    Peliculas.findAll({
+      order: [['rating', 'DESC']],
+      limit: 5,
+    }).then(movies => {
+      res.render('recommendedMovies', { movies });
+    })
+    .catch(error => {
+      res.status(500).send(error);
+    });
+  },
 };
 
 module.exports = MoviesController;
