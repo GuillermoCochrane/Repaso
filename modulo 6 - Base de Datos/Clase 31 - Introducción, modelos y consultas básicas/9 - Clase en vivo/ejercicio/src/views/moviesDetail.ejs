@@ -13,10 +13,25 @@
     </figure>
     <h1><%= movie.title %> </h1>    
     <br>
-    <p>RATING: <%= movie.rating %> </p>
-    <p>AWARDS: <%= movie.awards %> </p>
-    <p>LENGTH: <%= movie.length + ' min'%> </p>
-    <p>RELEASE DATE: <%= movie.release_date %> </p>
+    <p>
+        <strong>RATING: </strong>
+        <%= movie.rating %> 
+    </p>
+    <br>
+    <p>
+        <strong>AWARDS: </strong>
+        <%= movie.awards %> 
+    </p>
+    <br>
+    <p>
+        <strong>LENGTH: </strong>
+        <%=  (movie.length === null ? '-' : movie.length) %> min </p>
+    </p>
+    <br>
+    <p>
+        <strong>RELEASE DATE: </strong>
+        <%= movie.release_date %> 
+    </p>
 
 </body>
 </html>

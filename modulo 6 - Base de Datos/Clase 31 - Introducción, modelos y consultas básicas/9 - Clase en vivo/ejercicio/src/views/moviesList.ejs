@@ -14,10 +14,16 @@
         <img src="/img/logo-DH.png" alt="Logo Digital House">
     </figure>
     <h1>LISTADO DE PELÍCULAS</h1>
+    <br>
     <ul>
         <% for( let i = 0; i < movies.length; i++ ) { %>
         <li>
-            <a href="/movies/detail/<%= movies[i].id %>"><%= movies[i].title %></a>
+            <a href="/movies/detail/<%= movies[i].id %>">
+                <h2>
+                    <%= movies[i].title %>
+                </h2>
+            </a>
+            <br>
         </li>
         <% } %>
 
