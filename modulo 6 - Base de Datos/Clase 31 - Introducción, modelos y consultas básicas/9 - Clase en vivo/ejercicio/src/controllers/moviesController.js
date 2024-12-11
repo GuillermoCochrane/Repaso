@@ -24,6 +24,17 @@ let MoviesController = {
       });
   },
 
+  new: function(req, res) {
+    Peliculas.findAll({
+      order: [['release_date', 'DESC']],
+      limit: 5,
+    }).then(movies => {
+      res.render('newestMovies', { movies });
+    })
+    .catch(error => {
+      res.status(500).send(error);
+    });
+  },
 };
 
 module.exports = MoviesController;
