@@ -11,7 +11,18 @@ let MoviesController = {
       .catch(error => {
         res.status(500).send(error);
       });
-  }
+  },
+
+  detail: function(req, res) {
+    let id = req.params.id;
+    Peliculas.findByPk(id)
+      .then(movie => {
+        res.render('moviesDetail', { movie });
+      })
+      .catch(error => {
+        res.status(500).send(error);
+      });
+  },
 
 };
 
