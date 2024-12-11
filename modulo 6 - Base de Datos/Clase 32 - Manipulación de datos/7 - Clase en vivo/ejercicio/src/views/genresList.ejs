@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listado de Generos</title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+
+<body>
+    <figure>
+        <img src="/img/logo-DH.png" alt="Logo Digital House">
+    </figure>
+    <h1>LISTADO DE GENEROS</h1>
+    <br>
+    <ul>
+        <% for( let i = 0; i < genres.length; i++ ) { %>
+        <li>
+            <a href="/genres/detail/<%= genres[i].id %>">
+                <H2>
+                    <%= genres[i].name %>
+                </H2>
+                <br>
+            </a>
+        </li>
+        <% } %>
+
+    </ul>
+</body>
+
+</html>
