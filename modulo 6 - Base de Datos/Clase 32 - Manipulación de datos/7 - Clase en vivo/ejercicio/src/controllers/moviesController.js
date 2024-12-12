@@ -1,3 +1,4 @@
+const { where } = require("sequelize");
 const db = require("../database/models");
 const {Peliculas} = db;
 
@@ -52,12 +53,14 @@ const moviesController = {
   },
 
   //Aqui debemos modificar y completar lo necesario para trabajar con el CRUD
+
   add: function (req, res) {
     return res.render('moviesAdd');
   },
 
   create: function (req, res) {
     const data = req.body;
+
       Peliculas.create({
         title:        data.title,
         rating:       data.rating,
@@ -75,6 +78,7 @@ const moviesController = {
 
   edit: function(req, res) {
       let id = req.params.id;
+
       Peliculas.findByPk(id)
         .then(Movie => {
           return res.render('moviesEdit', { Movie });
@@ -85,8 +89,28 @@ const moviesController = {
   },
 
   update: function (req,res) {
-      // TODO
+      let id = req.params.id;
+      let data = req.body
+
+      Peliculas.update({
+        title:        data.title,
+        rating:       data.rating,
+        awards:       data.awards,
+        release_date: data.release_date,
+        length:       data.length,
+      },
+      {
+        where: {id: id}
+      }
+    )
+    .then(() => {
+      return res.redirect('/movies/detail/' + id);
+    })
+    .catch(error => {
+      res.status(500).send(error);
+    })
   },
+
   delete: function (req, res) {
       // TODO
   },

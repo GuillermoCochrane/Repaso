@@ -32,6 +32,10 @@
         <strong>RELEASE DATE: </strong>
         <%= movie.release_date %> 
     </p>
-
+    <br>
+    <aside style="display: flex; justify-content: space-between; width: 200px;">
+        <a href="/movies/edit/<%= movie.id %>"><button>Editar</button></a>
+        <a href="/movies/delete/<%= movie.id %>"><button>Eliminar</button></a>
+    </aside>
 </body>
 </html>

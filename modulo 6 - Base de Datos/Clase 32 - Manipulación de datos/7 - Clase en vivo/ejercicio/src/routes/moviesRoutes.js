@@ -12,7 +12,7 @@ router.get('/movies/detail/:id', moviesController.detail);
 router.get('/movies/add', moviesController.add);
 router.post('/movies/create', moviesController.create);
 router.get('/movies/edit/:id', moviesController.edit);
-//router.???('', moviesController.update);
+router.put('/movies/update/:id', moviesController.update);
 //router.???('', moviesController.delete);
 //router.???('', moviesController.destroy);
 
