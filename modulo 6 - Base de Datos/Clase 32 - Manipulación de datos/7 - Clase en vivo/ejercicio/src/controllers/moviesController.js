@@ -50,12 +50,27 @@ const moviesController = {
       res.status(500).send(error);
     });
   },
+
   //Aqui debemos modificar y completar lo necesario para trabajar con el CRUD
   add: function (req, res) {
-    // TODO   
+    return res.render('moviesAdd');
   },
+
   create: function (req, res) {
-      // TODO
+    const data = req.body;
+      Peliculas.create({
+        title:        data.title,
+        rating:       data.rating,
+        awards:       data.awards,
+        release_date: data.release_date,
+        length:       data.length,
+      })
+      .then(movie => {
+        res.redirect('/movies');
+      })
+      .catch(error => {
+        res.status(500).send(error);
+      });
   },
   edit: function(req, res) {
       // TODO

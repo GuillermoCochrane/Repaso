@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie add</title>
+    <title>Agregar Película</title>
     <link rel='stylesheet' href='/css/style.css' />
 </head>
 
@@ -12,24 +12,25 @@
     <figure>
         <img src="/img/logo-DH.png" alt="Logo Digital House">
       </figure>
-    <h1 class="titulo">Agregar Película</h1>
+    <h1 class="titulo" style="margin: auto; text-align: center;">Agregar Película</h1>
     <br>
-    <section class="formulario">
-        <form action="/movies/create" method="POST">
+    <section class="formulario" style="margin: auto; display: flex; justify-content: center; align-items: center;">
+        <form action="/movies/create" method="POST" style="margin: auto;">
             <label for="title">Title </label>
-            <p><input type="text" name="title" id="" required></p>
+            <p><input type="text" name="title" id="title" required></p>
             <label for="rating">Rating </label>
-            <p><input type="number" name="rating" id="" required> </p>
+            <p><input type="number" name="rating" id="rating" required> </p>
             <label for="awards">Awards </label>
-            <p><input type="number" name="awards" id="" required></p>
+            <p><input type="number" name="awards" id="awards" required></p>
             <label for="release_date">Release date </label>
-            <p><input type="date" name="release_date" id="" required></p>
+            <p><input type="date" name="release_date" id="release_date" required></p>
             <label for="length">Length </label>
-            <p><input type="number" name="length" id="" required></p>
+            <p><input type="number" name="length" id="length" required></p>
 
             <br>
             <p> <button class="botonAgregar" type="submit">Agregar</button>
-            
+            <br>
+            <br>
             <a  class="botonVolver" href="/movies">Listado de Películas</a></p>
         </form>
     </section>
