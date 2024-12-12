@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const methodOverride = require('method-override')
 
 
 const indexRouter = require('./routes/index');
@@ -17,7 +18,8 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 
 //URL encode  - Para que nos pueda llegar la información desde el formulario al req.body
 app.use(express.urlencoded({ extended: false }));
-
+// method override  - Para que los métodos PUT y DELETE funcionen
+app.use(methodOverride("_method"));
 
 app.use('/', indexRouter);
 app.use(moviesRoutes);
