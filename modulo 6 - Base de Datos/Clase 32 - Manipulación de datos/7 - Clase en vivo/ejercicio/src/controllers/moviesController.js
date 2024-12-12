@@ -72,9 +72,18 @@ const moviesController = {
         res.status(500).send(error);
       });
   },
+
   edit: function(req, res) {
-      // TODO
+      let id = req.params.id;
+      Peliculas.findByPk(id)
+        .then(Movie => {
+          return res.render('moviesEdit', { Movie });
+        })
+        .catch(error => {
+          res.status(500).send(error);
+        });
   },
+
   update: function (req,res) {
       // TODO
   },
