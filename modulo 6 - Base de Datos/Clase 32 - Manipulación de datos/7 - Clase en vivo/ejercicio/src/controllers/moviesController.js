@@ -112,7 +112,14 @@ const moviesController = {
   },
 
   delete: function (req, res) {
-      // TODO
+      let {id} = req.params;
+      Peliculas.findByPk(id)
+        .then((Movie) => {
+          return res.render("moviesDelete", { Movie });
+        })
+        .catch(error => {
+          res.status(500).send(error);
+        });
   },
   destroy: function (req, res) {
       // TODO
