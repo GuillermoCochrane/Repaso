@@ -121,8 +121,18 @@ const moviesController = {
           res.status(500).send(error);
         });
   },
+
   destroy: function (req, res) {
-      // TODO
+      let {id} = req.params;
+      Peliculas.destroy({
+        where: {id: id}
+      })
+      .then(() => {
+        return res.redirect('/movies');
+      })
+      .catch(error => {
+        res.status(500).send(error);
+      });
   }
 
 };
