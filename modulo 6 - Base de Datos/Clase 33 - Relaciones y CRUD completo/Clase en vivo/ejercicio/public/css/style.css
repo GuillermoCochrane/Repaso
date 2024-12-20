@@ -21,24 +21,35 @@ figure{
 .titulo{
   text-align: center;
 }
-.botonAgregar , .botonModificar{
+
+section.botones{
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+  align-items: center;
+  margin: 0
+}
+
+.botonAgregar , .botonModificar, .botonBorrar, .botonVolver{
   color: white;
   background-color: green;
   padding: 10px;
   border-radius: 10px;
 }
+
+.botonModificar{
+  background-color: goldenrod;
+}
+
 .botonBorrar{
-  color: white;
   background-color: red;
-  padding: 10px;
-  border-radius: 10px;
+  border: none;
 }
+
 .botonVolver{
-  color: white;
   background-color: #00B7FF;
-  padding: 10px;
-  border-radius: 10px;
 }
+
 .formulario{
   margin: auto;
   width: 20%;

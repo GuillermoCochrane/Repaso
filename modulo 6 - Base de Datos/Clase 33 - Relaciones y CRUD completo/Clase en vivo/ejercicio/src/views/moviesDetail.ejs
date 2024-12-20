@@ -11,15 +11,27 @@
     <figure>
         <img src="/img/logo-DH.png" alt="Logo Digital House">
     </figure>
+    <br>
+    <p>
+        <a class="botonAgregar" href="/movies/add">Agregar una Pelicula</a>
+        <a class="botonVolver" href="/">inicio</a>
+    </p>
+    <br>
+    <hr>
     <h1><%= movie.title %> </h1>    
     <br>
     <p>RATING: <%= movie.rating %> </p>
     <p>AWARDS: <%= movie.awards %> </p>
     <p>LENGTH: <%= movie.length + ' min'%> </p>
     <p>RELEASE DATE: <%= movie.release_date %> </p>
+    <hr>
     <br>
-    <section>
+    <section class="botones">
         <!--Aquí debe colocar los botones de Modificar - Borrar y Listado de Películas-->
+        <a class="botonAgregar" href="/movies/edit/<%= movie.id %>" style="background-color: goldenrod;">Modificar</a>
+        <form action="/movies/delete/<%= movie.id %>" method="POST"> 
+            <button class="botonBorrar" type="submit">Borrar</button>
+        </form>
     </section>
 
 </body>
