@@ -22,10 +22,16 @@ const moviesController = {
     },
 
     'detail': (req, res) => {
-        db.Movie.findByPk(req.params.id)
-            .then(movie => {
-                res.render('moviesDetail.ejs', {movie});
-            });
+        db.Movie.findByPk(req.params.id,{
+            include: [
+                {
+                    association: 'genero'
+                }
+            ]
+        })
+        .then(movie => {
+            res.render('moviesDetail.ejs', {movie});
+        });
     },
 
     'new': (req, res) => {
@@ -63,7 +69,17 @@ const moviesController = {
     },
 
     create: function (req,res) {
-
+        Movies.create({
+            title: req.body.title,
+            rating: req.body.rating,
+            awards: req.body.awards,
+            release_date: req.body.release_date,
+            length: req.body.length,
+            genre_id: req.body.genre_id
+        })
+        .then(movie => {
+            res.redirect('/movies');
+        });
     },
     edit: function(req,res) {
 
