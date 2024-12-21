@@ -2,7 +2,7 @@ const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
-
+const utilities = require('../utilities/utilities');
 
 //Aqui tienen una forma de llamar a cada uno de los modelos
 // const {Movies,Genres,Actor} = require('../database/models');
@@ -11,7 +11,6 @@ const { Op } = require("sequelize");
 const Movies = db.Movie;
 const Genres = db.Genre;
 const Actors = db.Actor;
-
 
 const moviesController = {
     'list': (req, res) => {
@@ -87,7 +86,7 @@ const moviesController = {
         let allGenresPromise = Genres.findAll();
         Promise.all([MoviePromise,allGenresPromise])
             .then(([Movie,allGenres]) => {
-                //return res.json({Movie,allGenres});
+                Movie.release_date = utilities.formatDate(Movie.release_date);
                 return res.render('moviesEdit.ejs', {Movie,allGenres});
             })
     },
