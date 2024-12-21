@@ -81,15 +81,24 @@ const moviesController = {
             res.redirect('/movies');
         });
     },
-    edit: function(req,res) {
 
+    edit: function(req,res) {
+        let MoviePromise = Movies.findByPk(req.params.id);
+        let allGenresPromise = Genres.findAll();
+        Promise.all([MoviePromise,allGenresPromise])
+            .then(([Movie,allGenres]) => {
+                //return res.json({Movie,allGenres});
+                return res.render('moviesEdit.ejs', {Movie,allGenres});
+            })
     },
+
     update: function (req,res) {
 
     },
     delete: function (req,res) {
 
     },
+
     destroy: function (req,res) {
 
     }
