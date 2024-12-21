@@ -13,14 +13,14 @@ const Genres = db.Genre;
 const Actors = db.Actor;
 
 const moviesController = {
-    'list': (req, res) => {
+    list: (req, res) => {
         db.Movie.findAll()
             .then(movies => {
                 res.render('moviesList.ejs', {movies})
             })
     },
 
-    'detail': (req, res) => {
+    detail: (req, res) => {
         db.Movie.findByPk(req.params.id,{
             include: [
                 {
@@ -33,7 +33,7 @@ const moviesController = {
         });
     },
 
-    'new': (req, res) => {
+    new: (req, res) => {
         db.Movie.findAll({
             order : [
                 ['release_date', 'DESC']
@@ -45,7 +45,7 @@ const moviesController = {
             });
     },
 
-    'recomended': (req, res) => {
+    recomended: (req, res) => {
         db.Movie.findAll({
             where: {
                 rating: {[db.Sequelize.Op.gte] : 8}
@@ -86,14 +86,30 @@ const moviesController = {
         let allGenresPromise = Genres.findAll();
         Promise.all([MoviePromise,allGenresPromise])
             .then(([Movie,allGenres]) => {
-                Movie.release_date = utilities.formatDate(Movie.release_date);
+                Movie.release_date = utilities.formDate(Movie.release_date);
                 return res.render('moviesEdit.ejs', {Movie,allGenres});
             })
     },
 
     update: function (req,res) {
-
+        Movies.update({
+            title: req.body.title,
+            rating: req.body.rating,
+            awards: req.body.awards,
+            release_date: req.body.release_date,
+            length: req.body.length,
+            genre_id: req.body.genre_id 
+        }, 
+        {
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(movie => {
+            res.redirect('/movies/detail/' + req.params.id);
+        });
     },
+
     delete: function (req,res) {
 
     },
