@@ -29,11 +29,8 @@
     <hr>
     <br>
     <section class="botones">
-        <!--Aquí debe colocar los botones de Modificar - Borrar y Listado de Películas-->
-        <a class="botonAgregar" href="/movies/edit/<%= movie.id %>" style="background-color: goldenrod;">Modificar</a>
-        <form action="/movies/delete/<%= movie.id %>" method="POST"> 
-            <button class="botonBorrar" type="submit">Borrar</button>
-        </form>
+        <a class="botonModificar" href="/movies/edit/<%= movie.id %>">Modificar</a>
+        <a class="botonBorrar" href="/movies/delete/<%= movie.id %>">Borrar</a>
     </section>
 
 </body>
