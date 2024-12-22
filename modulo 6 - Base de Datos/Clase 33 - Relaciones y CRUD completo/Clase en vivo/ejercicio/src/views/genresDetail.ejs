@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= genre.name %> </title>
-    <link rel='stylesheet' href='/css/style.css' />
+<%- include('partials/head') %>
 
-</head>
 <body>
-    <figure>
-        <img src="/img/logo-DH.png" alt="Logo Digital House">
-    </figure>
-    <br>
+
+    <%- include('partials/header') %>
     <p>
         <a class="botonAgregar" href="/genres/add">Agregar un Género</a>
         <a class="botonVolver" href="/">Inicio</a>

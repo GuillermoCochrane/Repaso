@@ -27,6 +27,7 @@ const genresController = {
                     return res.status(404).send('Género no encontrado');
                 }
                 res.render('genresDetail.ejs', { 
+                    title: genre.name,
                     genre,
                     movies: genre.peliculas 
                 });
