@@ -120,7 +120,14 @@ const moviesController = {
     },
 
     destroy: function (req,res) {
-
+        Movies.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(movie => {
+            res.redirect('/movies');
+        });
     }
 }
 
