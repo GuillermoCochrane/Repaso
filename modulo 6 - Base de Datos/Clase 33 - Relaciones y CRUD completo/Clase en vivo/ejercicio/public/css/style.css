@@ -3,23 +3,31 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #33b;
   text-decoration: none;
 }
+
 img{
   width: 100%;
 }
+
 figure{
   width: 20%;
 }
+
 .titulo{
   text-align: center;
+}
+
+ul{
+  list-style: none;
 }
 
 section.botones{
