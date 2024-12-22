@@ -29,6 +29,8 @@ const moviesController = {
             ]
         })
         .then(movie => {
+            let release_date = utilities.formatDateDisplay(movie.release_date);
+            movie.dataValues.release_date = release_date;
             res.render('moviesDetail.ejs', {movie});
         });
     },
