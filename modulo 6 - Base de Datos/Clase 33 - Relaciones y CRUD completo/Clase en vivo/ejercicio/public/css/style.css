@@ -57,7 +57,7 @@ ul{
 section.botones{
   display: flex;
   justify-content: space-between;
-  width: 150px;
+  width: 220px;
   align-items: center;
   margin: 0
 }
