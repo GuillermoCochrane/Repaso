@@ -3,6 +3,7 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const utilities = require('../utilities/utilities');
+const { title } = require('process');
 
 //Aqui tienen una forma de llamar a cada uno de los modelos
 // const {Movies,Genres,Actor} = require('../database/models');
@@ -31,7 +32,7 @@ const moviesController = {
         .then(movie => {
             let release_date = utilities.formatDateDisplay(movie.release_date);
             movie.dataValues.release_date = release_date;
-            res.render('moviesDetail.ejs', {movie});
+            res.render('moviesDetail.ejs', {movie, title: movie.title});
         });
     },
 

@@ -1,37 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= movie.title %> </title>
-    <link rel='stylesheet' href='/css/style.css' />
-
-</head>
+<%- include('partials/head') -%>
 <body>
-    <figure>
-        <img src="/img/logo-DH.png" alt="Logo Digital House">
-    </figure>
-    <br>
-    <p>
-        <a class="botonAgregar" href="/movies/add">Agregar una Pelicula</a>
-        <a class="botonVolver" href="/">inicio</a>
-    </p>
-    <br>
-    <hr>
-    <h1><%= movie.title %> </h1>    
-    <br>
+    <%- include('partials/header') -%>
+    
+    <%- include ('partials/moviesHeaderButtons.ejs') %>
+    
     <p>RATING: <%= movie.rating %> </p>
     <p>AWARDS: <%= movie.awards %> </p>
     <p>LENGTH: <%= movie.length + ' min'%> </p>
     <p>RELEASE DATE: <%= movie.release_date %> </p>
     <p>GENRE: <%= movie.genero.name %> </p>
     <br>
-    <hr>
-    <br>
-    <section class="botones">
-        <a class="botonModificar" href="/movies/edit/<%= movie.id %>">Modificar</a>
-        <a class="botonBorrar" href="/movies/delete/<%= movie.id %>">Borrar</a>
-    </section>
+
+    <%- include ('partials/moviesFooterButtons.ejs') %>
 
 </body>
 </html>
