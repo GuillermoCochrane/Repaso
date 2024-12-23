@@ -16,7 +16,7 @@ const moviesController = {
     list: (req, res) => {
         db.Movie.findAll()
             .then(movies => {
-                res.render('moviesList.ejs', {movies})
+                res.render('moviesList.ejs', {movies, title: 'Listado de Películas'});
             })
     },
 
