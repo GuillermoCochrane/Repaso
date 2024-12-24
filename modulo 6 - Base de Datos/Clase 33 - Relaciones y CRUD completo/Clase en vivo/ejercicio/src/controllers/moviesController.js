@@ -77,7 +77,8 @@ const moviesController = {
     add: function (req, res) {
         Genres.findAll()
             .then(genres => {
-                res.render('moviesAdd.ejs', {allGenres: genres});
+                let data = {title: "Agregar Película"}
+                res.render('moviesAdd.ejs', {allGenres: genres, data});
             });
     },
 
@@ -100,7 +101,7 @@ const moviesController = {
         let allGenresPromise = Genres.findAll();
         Promise.all([MoviePromise,allGenresPromise])
             .then(([Movie,allGenres]) => {
-                Movie.release_date = utilities.formDate(Movie.release_date);
+                Movie.release_date = utilities.formatDateForm(Movie.release_date);
                 return res.render('moviesEdit.ejs', {Movie,allGenres});
             })
     },

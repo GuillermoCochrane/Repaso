@@ -24,9 +24,10 @@ header{
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  padding: 20px 0;
+  padding: 10px 5px;
   background-color: #ebebeb;
   border-radius: 10px;
+  margin: auto;
 }
 
 nav{
@@ -70,6 +71,7 @@ section.botones{
   background-color: green;
   padding: 10px;
   border-radius: 10px;
+  border: none;
 }
 
 .botonModificar{
@@ -78,7 +80,6 @@ section.botones{
 
 .botonBorrar{
   background-color: red;
-  border: none;
 }
 
 .botonVolver{
@@ -88,4 +89,8 @@ section.botones{
 .formulario{
   margin: auto;
   width: 20%;
+}
+
+p input, p select{
+  margin-bottom: 1em;
 }
