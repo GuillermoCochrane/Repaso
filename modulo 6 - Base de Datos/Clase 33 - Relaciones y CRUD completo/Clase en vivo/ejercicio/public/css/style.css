@@ -25,6 +25,8 @@ header{
   width: 100%;
   max-width: 1200px;
   padding: 20px 0;
+  background-color: #ebebeb;
+  border-radius: 10px;
 }
 
 nav{
@@ -48,6 +50,7 @@ figure{
 
 h1{
   text-transform: uppercase;
+  margin-top: 1em;
 }
 
 ul{

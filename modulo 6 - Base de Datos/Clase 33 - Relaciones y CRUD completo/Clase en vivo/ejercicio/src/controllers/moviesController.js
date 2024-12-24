@@ -68,7 +68,8 @@ const moviesController = {
             ]
         })
             .then(movies => {
-                res.render('recommendedMovies.ejs', {movies});
+                let data = {title: "Películas ordenadas por rating"}
+                res.render('recommendedMovies.ejs', {movies, data});
             });
     },
 
