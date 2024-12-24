@@ -1,0 +1,24 @@
+<label for="title">Title </label>
+<p><input type="text" name="title" id="title" value="<%= locals.Movie && Movie.title ? Movie.title : ""  %>" required></p>
+<label for="rating">Rating </label>
+<p><input type="number" name="rating" id="rating" value="<%= locals.Movie && Movie.rating ? Movie.rating : "" %>" required></p>
+<label for="awards">Awards </label>
+<p><input type="number" name="awards" id="awards" value="<%= locals.Movie && Movie.awards ? Movie.awards : "" %>" required></p>
+<label for="release_date">Release date </label>
+<p><input type="date" name="release_date" id="release_date" value="<%= locals.Movie && Movie.release_date ? Movie.release_date : "" %>" required></p>
+<label for="length">Length </label>
+<p><input type="number" name="length" id="length" value="<%= locals.Movie && Movie.length ? Movie.length : "" %>" required></p>
+<label for="genre_id">Genre </label>
+<p>
+    <select name="genre_id" id="genre_id" required>
+      <option value="" disabled <%= !(locals.Movie) ? "selected" : null %>>- select genre - </option>
+        <% allGenres.forEach(genre => { %>
+            <option 
+                value="<%= genre.id %>" 
+                <%= (locals.Movie  && Movie.genre_id === genre.id) ? "selected" : null %>
+            >
+                <%= genre.name %>
+            </option>
+        <% }); %>
+    </select>
+</p>
