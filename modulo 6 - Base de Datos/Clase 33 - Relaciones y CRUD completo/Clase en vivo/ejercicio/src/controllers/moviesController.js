@@ -3,7 +3,6 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const utilities = require('../utilities/utilities');
-const { title } = require('process');
 
 //Aqui tienen una forma de llamar a cada uno de los modelos
 // const {Movies,Genres,Actor} = require('../database/models');
@@ -19,7 +18,7 @@ const moviesController = {
             .then(movies => {
                 let data = { title: 'Listado de Películas'}
                 data.path = "movies"
-                res.render('moviesList.ejs', {movies, data});
+                res.render('movies/moviesList.ejs', {movies, data});
             })
     },
 
@@ -37,7 +36,7 @@ const moviesController = {
             let data = {title: movie.title};
             data.path = "movies"
             data.id = movie.id
-            res.render('moviesDetail.ejs', {movie, data});
+            res.render('movies/moviesDetail.ejs', {movie, data});
         });
     },
 
@@ -54,7 +53,7 @@ const moviesController = {
                 for (const movie of movies) {
                     movie.dataValues.release_date = utilities.formatDateDisplay(movie.dataValues.release_date);
                 }
-                res.render('newestMovies', {movies, data});
+                res.render('movies/newestMovies', {movies, data});
             });
     },
 
@@ -69,7 +68,7 @@ const moviesController = {
         })
             .then(movies => {
                 let data = {title: "Películas ordenadas por rating"}
-                res.render('recommendedMovies.ejs', {movies, data});
+                res.render('movies/recommendedMovies.ejs', {movies, data});
             });
     },
 
@@ -78,7 +77,7 @@ const moviesController = {
         Genres.findAll()
             .then(genres => {
                 let data = {title: "Agregar Película"}
-                res.render('moviesAdd.ejs', {allGenres: genres, data});
+                res.render('movies/moviesAdd.ejs', {allGenres: genres, data});
             });
     },
 
@@ -103,7 +102,7 @@ const moviesController = {
             .then(([Movie,allGenres]) => {
                 Movie.release_date = utilities.formatDateForm(Movie.release_date);
                 let data = {title: "Editar Película"}
-                return res.render('moviesEdit.ejs', {Movie,allGenres, data});
+                return res.render('movies/moviesEdit.ejs', {Movie,allGenres, data});
             })
     },
 
@@ -130,7 +129,7 @@ const moviesController = {
         Movies.findByPk(req.params.id)
             .then(Movie => {
                 let data = {title: "Borrado de la Película"}
-                return res.render('moviesDelete.ejs', {Movie,data});
+                return res.render('movies/moviesDelete.ejs', {Movie,data});
             })
     },
 

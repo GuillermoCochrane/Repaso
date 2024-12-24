@@ -1,14 +1,14 @@
-<%- include('partials/head') -%>
+<%- include('../partials/head') -%>
 
 <body>
 
-    <%- include('partials/header') -%>
+    <%- include('../partials/header') -%>
 
     <h1 class="titulo"><%= data.title %>:  <%= Movie.title %></h1>
     <section class="formulario">
         <form action="/movies/update/<%= Movie.id %>" method="POST">
 
-            <%- include('partials/formInputs.ejs') -%>
+            <%- include('../partials/formInputs.ejs') -%>
 
             <br>
 

@@ -1,8 +1,8 @@
-<%- include('partials/head') -%>
+<%- include('../partials/head') -%>
 <body>
-    <%- include('partials/header') -%>
+    <%- include('../partials/header') -%>
     
-    <%- include ('partials/ButtonsHeader.ejs') %>
+    <%- include ('../partials/ButtonsHeader.ejs') %>
     
     <p>RATING: <%= movie.rating %> </p>
     <p>AWARDS: <%= movie.awards %> </p>
@@ -11,7 +11,7 @@
     <p>GENRE: <%= movie.genero.name %> </p>
     <br>
 
-    <%- include ('partials/ButtonsFooter.ejs') %>
+    <%- include ('../partials/ButtonsFooter.ejs') %>
 
 </body>
 </html>

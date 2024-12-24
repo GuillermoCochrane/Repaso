@@ -1,15 +1,15 @@
-<%- include('partials/head') -%>
+<%- include('../partials/head') -%>
 
 <body>
-    <%- include('partials/header') -%>
-    <h1>PELIÍCULAS ORDENADAS POR FECHA</h1>
+    <%- include('../partials/header') -%>
+    <h1> <%= data.title %> </h1>
     <br>
     <ul>
         <% for( let i = 0; i < movies.length; i++ ) { %>
         <li>
             <a href="/movies/detail/<%=movies[i].id%>"><%= movies[i].title %> </a> 
             <br>
-            <p><%= 'RELEASE DATE: ' + movies[i].release_date %> </p>
+            <p><%= 'RATING: ' + movies[i].rating %> </p>
             <br>
         </li>
         <% } %>

@@ -1,14 +1,14 @@
-<%- include('partials/head') -%>
+<%- include('../partials/head') -%>
 <body>
 
-    <%- include('partials/header') -%>
+    <%- include('../partials/header') -%>
 
     <h1 class="titulo"><%= data.title %></h1>
     <br>
     <section class="formulario">
         <form action="/movies/create" method="POST">
 
-            <%- include('partials/formInputs.ejs') -%>
+            <%- include('../partials/formInputs.ejs') -%>
             <br>
             <p> 
                 <button class="botonAgregar" type="submit">Agregar</button>
