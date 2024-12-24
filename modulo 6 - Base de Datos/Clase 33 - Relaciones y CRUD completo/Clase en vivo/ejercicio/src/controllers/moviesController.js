@@ -129,7 +129,8 @@ const moviesController = {
     delete: function (req,res) {
         Movies.findByPk(req.params.id)
             .then(Movie => {
-                return res.render('moviesDelete.ejs', {Movie});
+                let data = {title: "Borrado de la Película"}
+                return res.render('moviesDelete.ejs', {Movie,data});
             })
     },
 
