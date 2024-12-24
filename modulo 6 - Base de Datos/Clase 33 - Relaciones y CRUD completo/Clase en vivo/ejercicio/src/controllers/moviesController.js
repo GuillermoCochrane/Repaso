@@ -17,7 +17,9 @@ const moviesController = {
     list: (req, res) => {
         db.Movie.findAll()
             .then(movies => {
-                res.render('moviesList.ejs', {movies, title: 'Listado de Películas'});
+                let data = { title: 'Listado de Películas'}
+                data.path = "movies"
+                res.render('moviesList.ejs', {movies, data});
             })
     },
 
@@ -32,7 +34,10 @@ const moviesController = {
         .then(movie => {
             let release_date = utilities.formatDateDisplay(movie.release_date);
             movie.dataValues.release_date = release_date;
-            res.render('moviesDetail.ejs', {movie, title: movie.title});
+            let data = {title: movie.title};
+            data.path = "movies"
+            data.id = movie.id
+            res.render('moviesDetail.ejs', {movie, data});
         });
     },
 
