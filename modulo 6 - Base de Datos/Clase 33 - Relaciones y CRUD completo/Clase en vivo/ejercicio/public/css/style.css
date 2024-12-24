@@ -5,8 +5,10 @@
 }
 
 body {
-  padding: 50px;
+  padding: 25px 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 a {
@@ -58,12 +60,19 @@ ul{
   list-style: none;
 }
 
-section.botones{
+section.botones, section.botones-listado{
   display: flex;
   justify-content: space-between;
   width: 220px;
   align-items: center;
   margin: 0
+}
+
+section.botones-listado{
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .botonAgregar , .botonModificar, .botonBorrar, .botonVolver{
