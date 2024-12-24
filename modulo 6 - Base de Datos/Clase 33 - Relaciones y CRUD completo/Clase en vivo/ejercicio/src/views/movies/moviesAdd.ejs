@@ -3,17 +3,22 @@
 
     <%- include('../partials/header') -%>
 
+    <%- include('../partials/ButtonsHeader.ejs') -%>
+
     <h1 class="titulo"><%= data.title %></h1>
     <br>
     <section class="formulario">
         <form action="/movies/create" method="POST">
 
             <%- include('../partials/formInputs.ejs') -%>
+
             <br>
-            <p> 
+
+            <section class="botones"> 
                 <button class="botonAgregar" type="submit">Agregar</button>
                 <a  class="botonVolver" href="/movies">Listado de Películas</a>
-            </p>
+            </section>
+
         </form>
     </section>
     

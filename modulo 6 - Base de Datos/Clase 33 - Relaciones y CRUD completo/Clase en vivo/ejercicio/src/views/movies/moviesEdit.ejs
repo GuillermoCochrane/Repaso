@@ -4,7 +4,10 @@
 
     <%- include('../partials/header') -%>
 
+    <%- include('../partials/ButtonsHeader.ejs') -%>
+
     <h1 class="titulo"><%= data.title %>:  <%= Movie.title %></h1>
+    <br>
     <section class="formulario">
         <form action="/movies/update/<%= Movie.id %>" method="POST">
 
@@ -12,9 +15,11 @@
 
             <br>
 
-            <p> <button class="botonAgregar" type="submit">Actualizar</button>
-        
-            <a  class="botonVolver" href="/movies">Listado de Películas</a></p>
+            <section class="botones"> 
+                <button class="botonAgregar" type="submit">Agregar</button>
+                <a  class="botonVolver" href="/movies">Listado de Películas</a>
+            </section>
+
         </form>
     </section>
 </body>
