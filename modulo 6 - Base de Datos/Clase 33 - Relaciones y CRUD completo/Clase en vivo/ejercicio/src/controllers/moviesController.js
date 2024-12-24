@@ -102,7 +102,8 @@ const moviesController = {
         Promise.all([MoviePromise,allGenresPromise])
             .then(([Movie,allGenres]) => {
                 Movie.release_date = utilities.formatDateForm(Movie.release_date);
-                return res.render('moviesEdit.ejs', {Movie,allGenres});
+                let data = {title: "Editar Película"}
+                return res.render('moviesEdit.ejs', {Movie,allGenres, data});
             })
     },
 
