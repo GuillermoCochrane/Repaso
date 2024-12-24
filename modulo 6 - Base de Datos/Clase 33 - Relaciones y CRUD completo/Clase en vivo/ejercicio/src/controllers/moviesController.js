@@ -49,7 +49,12 @@ const moviesController = {
             limit: 5
         })
             .then(movies => {
-                res.render('newestMovies', {movies});
+                let data = {};
+                data.title = "Películas ordenas por fecha";
+                for (const movie of movies) {
+                    movie.dataValues.release_date = utilities.formatDateDisplay(movie.dataValues.release_date);
+                }
+                res.render('newestMovies', {movies, data});
             });
     },
 
