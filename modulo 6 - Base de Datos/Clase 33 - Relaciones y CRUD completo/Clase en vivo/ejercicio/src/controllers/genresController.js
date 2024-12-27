@@ -44,7 +44,14 @@ const genresController = {
                 console.error(err);
                 res.status(500).send('Error interno del servidor');
             });
-    }
+    },
+
+    add:  (req, res) => {
+        let data = { title: "Agregar Género"}
+        res.render('genres/genresAdd.ejs', {data});
+    },
+
+
 };
 
 module.exports = genresController;
