@@ -9,7 +9,7 @@ const genresController = {
     list: (req, res) => {
         Genres.findAll()
             .then(genres => {
-                res.render('genresList.ejs', { genres });
+                res.render('genres/genresList.ejs', { genres });
             });
     },
 
@@ -26,7 +26,7 @@ const genresController = {
                 if (!genre) {
                     return res.status(404).send('Género no encontrado');
                 }
-                res.render('genresDetail.ejs', { 
+                res.render('genres/genresDetail.ejs', { 
                     title: genre.name,
                     genre,
                     movies: genre.peliculas 
