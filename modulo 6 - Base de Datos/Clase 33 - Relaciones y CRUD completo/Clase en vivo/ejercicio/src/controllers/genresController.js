@@ -91,7 +91,18 @@ const genresController = {
     },
 
     update: (req, res) => {
-        
+        Genres.update({
+            name: req.body.name
+        }, {
+            where: {
+                id: req.params.id
+            }
+        }).then(() => {
+            res.redirect('/genres/edit/' + req.params.id);
+        }).catch(err => {
+            console.error(err);
+            res.status(500).send('Error interno del servidor');
+        })
     }
 };
 

@@ -7,6 +7,6 @@ router.get('/genres/detail/:id', genresController.detail);
 router.get('/genres/add/', genresController.add);
 router.post('/genres/create/', genresController.create);
 router.get('/genres/edit/:id', genresController.edit);
-//router.post('/genres/update/:id', genresController.update);
+router.post('/genres/update/:id', genresController.update);
 
 module.exports = router;
