@@ -1,0 +1,19 @@
+<%- include('../partials/head') -%>
+
+<body>
+
+    <%- include('../partials/header') -%>
+
+    <h1>Estas seguro de querer borrar este Género: <%= Genre.title %>???</h1>
+    <p>
+        <form action="/genres/delete/<%= Genre.id %>" method="POST"></form>
+            <br>
+            <p> <button class="botonBorrar" type="submit">Borrar el Género</button>
+            
+            <a  class="botonVolver" href="/genres">Listado de Géneros</a></p>
+        </form>
+    </p>
+    
+</body>
+
+</html>
