@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Movie'; // esto debería estar en singular
+    let alias = 'Movie'; 
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -24,7 +24,16 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         length: dataTypes.BIGINT(10),
-        genre_id: dataTypes.BIGINT(10)
+        genre_id: {
+            type: dataTypes.BIGINT(10),
+            allowNull: true, // Permite que sea null si el género es eliminado
+            references: {
+                model: 'genres', // Nombre de la tabla a la que hace referencia
+                key: 'id'
+            },
+            onDelete: 'SET NULL', // Establece null si se elimina el género
+            onUpdate: 'CASCADE' // Actualiza automáticamente si cambia el id del género
+        }
     };
     let config = {
         timestamps: true,
@@ -34,12 +43,12 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Movie = sequelize.define(alias,cols,config);
 
-    //Aquí debes realizar lo necesario para crear las relaciones con los otros modelos (Genre - Actor)
-
     Movie.associate = function (models) {
         Movie.belongsTo(models.Genre, {
             as: 'genero',
-            foreignKey: 'genre_id'
+            foreignKey: 'genre_id',
+            onDelete: 'SET NULL',
+            onUpdate: 'CASCADE'
         });
 
         Movie.belongsToMany(models.Actor, {

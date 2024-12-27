@@ -7,8 +7,6 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        // created_at: dataTypes.TIMESTAMP,
-        // updated_at: dataTypes.TIMESTAMP,
         name: {
             type: dataTypes.STRING(100),
             allowNull: false
@@ -31,12 +29,12 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Genre = sequelize.define(alias, cols, config);
 
-    //Aquí debes realizar lo necesario para crear las relaciones con el modelo (Movie)
-
     Genre.associate = function (models) {
         Genre.hasMany(models.Movie, {
             as: 'peliculas',
-            foreignKey: 'genre_id'
+            foreignKey: 'genre_id',
+            onDelete: 'SET NULL', 
+            onUpdate: 'CASCADE'
         });
     };
 
