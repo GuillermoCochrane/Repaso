@@ -1,13 +1,11 @@
-<%- include('partials/head') %>
+<%- include('../partials/head') %>
 
 <body>
 
-    <%- include('partials/header') %>
-    <p>
-        <a class="botonAgregar" href="/genres/add">Agregar un Género</a>
-        <a class="botonVolver" href="/">Inicio</a>
-    </p>
-    <br>    
+    <%- include('../partials/header') %>
+
+    <%- include('../partials/ButtonsHeaderGenre.ejs') %>    
+    
     <h1><%= genre.name %> </h1>
     <br>
     <p>NAME: <%= genre.name %> </p>
@@ -25,10 +23,6 @@
     </ul>
     <br>
     <hr>
-    <br>
-    <section class="botones">
-        <a class="botonModificar" href="/genres/edit/<%= genre.id %>">Modificar</a>
-        <a class="botonBorrar" href="/genres/delete/<%= genre.id %>">Borrar</a>
-    </section>
+    <%- include('../partials/ButtonsFooter.ejs') %>
 </body>
 </html>

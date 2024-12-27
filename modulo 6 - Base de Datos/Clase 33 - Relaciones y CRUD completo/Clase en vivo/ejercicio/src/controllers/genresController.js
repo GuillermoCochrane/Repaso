@@ -31,8 +31,11 @@ const genresController = {
                 if (!genre) {
                     return res.status(404).send('Género no encontrado');
                 }
+                let data = { title: 'Detalle del género: ' + genre.name };
+                data.id = genre.id;
+                data.path = 'genres';
                 res.render('genres/genresDetail.ejs', { 
-                    title: genre.name,
+                    data,
                     genre,
                     movies: genre.peliculas 
                 });
