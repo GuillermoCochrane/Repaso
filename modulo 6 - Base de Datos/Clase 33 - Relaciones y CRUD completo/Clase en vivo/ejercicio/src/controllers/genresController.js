@@ -9,7 +9,12 @@ const genresController = {
     list: (req, res) => {
         Genres.findAll()
             .then(genres => {
-                res.render('genres/genresList.ejs', { genres });
+                let data = { title: 'Listado de generos' };
+                res.render('genres/genresList.ejs', { genres, data });
+            })
+            .catch(err => {
+                console.error(err);
+                res.status(500).send('Error interno del servidor');
             });
     },
 
