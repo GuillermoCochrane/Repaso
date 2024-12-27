@@ -51,7 +51,27 @@ const genresController = {
         res.render('genres/genresAdd.ejs', {data});
     },
 
-
+    create: (req, res) => {
+        Genres.findOne({
+            order: [['id', 'DESC']]
+        })
+        .then(lastGenre => {
+            const newRanking = lastGenre ? lastGenre.id + 1 : 1; 
+            // Calcular ranking, usando el último + 1
+            return Genres.create({
+                name: req.body.name,
+                ranking: newRanking,
+                active: true 
+            });
+        })
+        .then(() => {
+            res.redirect('/genres');
+        })
+        .catch(error => {
+            console.error(error);
+            res.status(500).send('Error al crear el género');
+        });
+    },
 };
 
 module.exports = genresController;
