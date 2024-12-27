@@ -1,0 +1,27 @@
+<%- include('../partials/head') -%>
+<body>
+
+    <%- include('../partials/header') -%>
+
+    <%- include('../partials/ButtonsHeaderGenre.ejs') -%>
+
+    <h1 class="titulo"><%= data.title %></h1>
+    <br>
+    <section class="formulario">
+        <form action="/genres/update/<%= Genre.id %>" method="POST">
+
+            <%- include('../partials/formInputsGenre.ejs') -%>
+
+            <br>
+
+            <section class="botones"> 
+                <button class="botonModificar" type="submit">Modificar</button>
+                <a  class="botonVolver" href="/genres">Listado de Géneros</a>
+            </section>
+
+        </form>
+    </section>
+    
+</body>
+
+</html>
