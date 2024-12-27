@@ -119,6 +119,10 @@ const genresController = {
                 console.error(err);
                 res.status(500).send('Error interno del servidor');
             });
+    },
+
+    destroy:  (req, res) => {
+        return res.send(`Genero ${req.params.id} borrado`);
     }
 };
 
