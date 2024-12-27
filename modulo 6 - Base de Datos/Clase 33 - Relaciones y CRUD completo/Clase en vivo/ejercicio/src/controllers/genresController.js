@@ -103,6 +103,22 @@ const genresController = {
             console.error(err);
             res.status(500).send('Error interno del servidor');
         })
+    },
+
+    delete:  (req, res) => {
+        Genres.findByPk(req.params.id)
+            .then(Genre => {
+                if (!Genre) {
+                    return res.status(404).send('Género no encontrado');
+                }
+
+                let data = { title: 'Eliminar Género: ' + Genre.name };
+                res.render('genres/genresDelete.ejs', { data, Genre });
+            })
+            .catch(err => {
+                console.error(err);
+                res.status(500).send('Error interno del servidor');
+            });
     }
 };
 
