@@ -72,6 +72,27 @@ const genresController = {
             res.status(500).send('Error al crear el género');
         });
     },
+
+    edit: (req, res) => {
+        Genres.findByPk(req.params.id)
+            .then(Genre => {
+                if (!Genre) {
+                    return res.status(404).send('Género no encontrado');
+                }
+                let data = { title: 'Editar Género: ' + Genre.name };
+                data.id = Genre.id;
+                data.path = 'genres';
+                res.render('genres/genresEdit.ejs', { data, Genre });
+            })
+            .catch(err => {
+                console.error(err);
+                res.status(500).send('Error interno del servidor');
+            });
+    },
+
+    update: (req, res) => {
+        
+    }
 };
 
 module.exports = genresController;
