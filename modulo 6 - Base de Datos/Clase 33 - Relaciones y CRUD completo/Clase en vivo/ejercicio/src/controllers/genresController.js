@@ -10,6 +10,8 @@ const genresController = {
         Genres.findAll()
             .then(genres => {
                 let data = { title: 'Listado de generos' };
+                data.path = 'genres';
+                data.section = 'Género';
                 res.render('genres/genresList.ejs', { genres, data });
             })
             .catch(err => {
@@ -34,6 +36,7 @@ const genresController = {
                 let data = { title: 'Detalle del género: ' + genre.name };
                 data.id = genre.id;
                 data.path = 'genres';
+                data.section = 'Género';
                 res.render('genres/genresDetail.ejs', { 
                     data,
                     genre,
@@ -48,6 +51,8 @@ const genresController = {
 
     add:  (req, res) => {
         let data = { title: "Agregar Género"}
+        data.path = 'genres';
+        data.section = 'Género';
         res.render('genres/genresAdd.ejs', {data});
     },
 
@@ -82,6 +87,7 @@ const genresController = {
                 let data = { title: 'Editar Género: ' + Genre.name };
                 data.id = Genre.id;
                 data.path = 'genres';
+                data.section = 'Género';
                 res.render('genres/genresEdit.ejs', { data, Genre });
             })
             .catch(err => {
