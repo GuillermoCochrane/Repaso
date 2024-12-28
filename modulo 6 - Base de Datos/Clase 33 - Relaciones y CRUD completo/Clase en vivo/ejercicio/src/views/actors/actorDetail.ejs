@@ -1,0 +1,29 @@
+<%- include('../partials/head') %>
+
+<body>
+
+    <%- include('../partials/header') %>
+
+    <%- include('../partials/ButtonsHeader.ejs') %>    
+    
+    <h1><%= actor.first_name %> <%= actor.last_name %> </h1>
+    <br>
+    <p>NAME: <%= actor.name %> </p>
+    <p>LAST NAME: <%= actor.last_name %> </p>
+    <p>RANKING: <%= actor.ranking %> </p>
+    <br>
+    <hr>
+    <h3>Películas</h3>
+    <br>
+    <ul>
+        <% for (const movie of movies) { %>
+        <li>
+            <a href="/movies/detail/<%= movie.id %>"><%= movie.title %></a>
+        </li>
+        <% } %>
+    </ul>
+    <br>
+    <hr>
+    <%- include('../partials/ButtonsFooter.ejs') %>
+</body>
+</html>
