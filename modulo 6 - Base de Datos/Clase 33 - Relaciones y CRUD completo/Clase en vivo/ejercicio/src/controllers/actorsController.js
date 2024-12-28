@@ -21,6 +21,29 @@ const actorsController = {
             }
     },
 
+    detail: async(req, res) => {
+        try {
+            let actor = await Actors.findByPk(req.params.id, {
+                include: [
+                    {
+                        model: Movies,
+                        as: 'peliculas'
+                    }
+                ]
+            });
+            if (!actor) {
+                return res.status(404).send('Actor no encontrado');
+            }
+            let data = { title: 'Detalle del actor: ' + actor.first_name + ' ' + actor.last_name };
+            data.id = actor.id;
+            data.path = 'actors';
+            data.section = 'Actor';
+            return res.render('actors/actorDetail.ejs', { data, actor, movies: actor.peliculas });
+            } catch (error) {
+                console.error(error);
+                res.status(500).send('Error interno del servidor');
+            }
+    },
 };
 
 module.exports = actorsController;
