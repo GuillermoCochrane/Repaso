@@ -121,9 +121,36 @@ const genresController = {
             });
     },
 
-    destroy:  (req, res) => {
-        return res.send(`Genero ${req.params.id} borrado`);
-    }
+    destroy: (req, res) => {
+        Genres.findByPk(req.params.id, {
+            include: [{ model: Movies, as: 'peliculas' }]
+        })
+        .then(Genre => {
+            if (!Genre) {
+                return res.status(404).send('Género no encontrado');
+            }
+    
+            // Si el género tiene películas asociadas, renderiza la vista de confirmación
+            if (Genre.peliculas.length > 0) {
+                let data = { 
+                    title: 'Eliminar Género: ' + Genre.name,
+                    confirm: true 
+                };
+                return res.render('genres/genresDelete.ejs', { data, Genre });
+            }
+    
+            // Si no tiene películas asociadas, elimina directamente
+            return Genres.destroy({
+                where: { id: req.params.id }
+            }).then(() => {
+                res.redirect('/genres'); // Redirige después de eliminar
+            });
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).send('Error al eliminar el género');
+        });
+    },
 };
 
 module.exports = genresController;
