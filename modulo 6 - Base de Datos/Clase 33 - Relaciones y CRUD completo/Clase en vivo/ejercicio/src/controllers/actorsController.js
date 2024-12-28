@@ -7,9 +7,20 @@ const { Op } = require("sequelize");
 const utilities = require('../utilities/utilities');
 
 const actorsController = {
-    list: (req, res) => {
-      return res.send('lista de actores');
-    }
+    list: async(req, res) => {
+        try {
+            let actors = await Actors.findAll();
+
+            let data = { title: 'Listado de actores' };
+            data.path = 'actors';
+            data.section = 'Actor';
+            return res.render('actors/actorsList.ejs', { actors, data });
+            } catch (error) {
+                console.error(error);
+                res.status(500).send('Error interno del servidor');
+            }
+    },
+
 };
 
 module.exports = actorsController;
