@@ -1,0 +1,27 @@
+<%- include('../partials/head') -%>
+<body>
+
+    <%- include('../partials/header') -%>
+
+    <%- include('../partials/ButtonsHeader.ejs') -%>
+
+    <h1 class="titulo"><%= data.title %></h1>
+    <br>
+    <section class="formulario">
+        <form action="/actors/create" method="POST">
+
+            <%- include('../partials/formInputsActors.ejs') -%>
+
+            <br>
+
+            <section class="botones"> 
+                <button class="botonAgregar" type="submit">Agregar</button>
+                <a  class="botonVolver" href="/actors">Listado de Actores</a>
+            </section>
+
+        </form>
+    </section>
+    
+</body>
+
+</html>
