@@ -1,0 +1,6 @@
+<label for="first_name">First name </label>
+<p><input type="text" name="first_name" id="first_name" value="<%= locals.Actor && Actor.first_name ? Actor.first_name : ""  %>" required></p>
+<label for="last_name">Last name </label>
+<p><input type="text" name="last_name" id="last_name" value="<%= locals.Actor && Actor.last_name ? Actor.first_name : ""  %>" required></p>
+<label for="rating">Rating </label>
+<p><input type="number" name="rating" id="rating" value="<%= locals.Actor && Actor.rating ? Actor.rating : "" %>" required></p>
