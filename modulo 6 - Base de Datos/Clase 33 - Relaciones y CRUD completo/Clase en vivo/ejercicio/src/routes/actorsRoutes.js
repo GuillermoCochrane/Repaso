@@ -4,7 +4,7 @@ const actorsController = require('../controllers/actorsController');
 
 router.get('/actors', actorsController.list);
 router.get('/actors/detail/:id', actorsController.detail);
-//router.get('/actors/add/', actorsController.add);
+router.get('/actors/add/', actorsController.add);
 //router.post('/actors/create/', actorsController.create);
 //router.get('/actors/edit/:id', actorsController.edit);
 //router.post('/actors/update/:id', actorsController.update);

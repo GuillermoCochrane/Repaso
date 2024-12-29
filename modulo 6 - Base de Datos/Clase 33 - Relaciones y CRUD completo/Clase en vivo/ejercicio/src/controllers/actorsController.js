@@ -44,6 +44,14 @@ const actorsController = {
                 res.status(500).send('Error interno del servidor');
             }
     },
+
+    add: (req, res) => {
+        let data = { title: "Agregar Actor"}
+        data.path = 'actors';
+        data.section = 'Actor';
+        return res.render('actors/actorAdd.ejs', {data});
+    },
+
 };
 
 module.exports = actorsController;
