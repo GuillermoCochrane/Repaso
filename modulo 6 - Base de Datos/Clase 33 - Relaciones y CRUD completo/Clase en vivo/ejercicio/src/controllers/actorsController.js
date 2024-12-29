@@ -52,6 +52,20 @@ const actorsController = {
         return res.render('actors/actorAdd.ejs', {data});
     },
 
+    create: async(req, res) => {
+        try {
+            const actor = await Actors.create({
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                rating: req.body.rating
+            });
+            return res.redirect('/actors/detail/' + actor.id);
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
+
 };
 
 module.exports = actorsController;
