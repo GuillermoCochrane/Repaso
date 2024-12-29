@@ -8,9 +8,9 @@
     
     <h1><%= actor.first_name %> <%= actor.last_name %> </h1>
     <br>
-    <p>NAME: <%= actor.name %> </p>
+    <p>NAME: <%= actor.first_name %> </p>
     <p>LAST NAME: <%= actor.last_name %> </p>
-    <p>RANKING: <%= actor.ranking %> </p>
+    <p>RANKING: <%= actor.rating %> </p>
     <br>
     <hr>
     <h3>Películas</h3>
@@ -21,6 +21,7 @@
             <a href="/movies/detail/<%= movie.id %>"><%= movie.title %></a>
         </li>
         <% } %>
+        <%= locals.movies && movies.length === 0 ? "El actor no tiene  películas asociadas" : null %>
     </ul>
     <br>
     <hr>
