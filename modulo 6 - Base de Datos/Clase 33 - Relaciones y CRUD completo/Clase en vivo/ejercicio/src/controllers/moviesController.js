@@ -153,7 +153,23 @@ const moviesController = {
         let movie = await Movies.findByPk(req.params.id);        
         let data = {title: "Asignar actor a la película " + movie.title};
         res.render('movies/moviesAssign.ejs', {actors, data, movie});
-    }
+    },
+
+    associate: async function (req,res) {
+        try{
+            let movie = await Movies.findByPk(req.params.id);
+
+            if (!movie) {
+                return res.status(404).send('Película no encontrada');
+            }
+
+            await movie.addActores(req.body.actor_id);
+            return res.redirect('/movies/detail/' + movie.id);
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor'); 
+        }
+    },
 }
 
 module.exports = moviesController;
