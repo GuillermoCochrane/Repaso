@@ -115,6 +115,24 @@ const actorsController = {
         }
     },
 
+    destroy: async(req, res) => {
+        try {
+            let Actor = await Actors.findByPk(req.params.id);
+            if (!Actor) {
+                return res.status(404).send('Actor no encontrado');
+            }
+            let process = await Actors.destroy({
+                where: {
+                    id: req.params.id
+                }
+                });
+            return res.redirect('/actors');
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
+
 };
 
 module.exports = actorsController;

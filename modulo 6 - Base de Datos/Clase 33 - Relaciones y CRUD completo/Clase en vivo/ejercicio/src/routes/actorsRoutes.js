@@ -9,7 +9,7 @@ router.post('/actors/create/', actorsController.create);
 router.get('/actors/edit/:id', actorsController.edit);
 router.post('/actors/update/:id', actorsController.update);
 router.get('/actors/delete/:id', actorsController.delete)
-//router.post('/actors/delete/:id', actorsController.destroy)
+router.post('/actors/delete/:id', actorsController.destroy)
 //router.post('/actors/confirmDelete/:id', actorsController.confirm)
 
 module.exports = router;
