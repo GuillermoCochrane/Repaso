@@ -5,7 +5,8 @@
 }
 
 body {
-  padding: 25px 50px;
+  padding-inline: 50px;
+  padding-bottom: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   max-width: 1200px;
   margin: 0 auto;

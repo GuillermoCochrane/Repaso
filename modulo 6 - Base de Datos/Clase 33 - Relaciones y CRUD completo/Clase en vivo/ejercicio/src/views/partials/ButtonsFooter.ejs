@@ -1,6 +1,8 @@
 <br>
 <section class="botones">
-    <a class="botonAgregar" href="/<%= data.path %>/assign/<%= data.id %>">Agregar <%= data.path === 'actors' ? 'Peliculas' : 'Actores' %></a>
+    <% if (data.path === 'movies' || data.path === 'actors') { %>
+        <a class="botonAgregar" href="/<%= data.path %>/assign/<%= data.id %>">Agregar <%= data.path === 'actors' ? 'Peliculas' : 'Actores' %></a>
+    <% } %>
     <a class="botonModificar" href="/<%= data.path %>/edit/<%= data.id %>">Modificar</a>
     <a class="botonBorrar" href="/<%= data.path %>/delete/<%= data.id %>">Borrar</a>
 </section>
