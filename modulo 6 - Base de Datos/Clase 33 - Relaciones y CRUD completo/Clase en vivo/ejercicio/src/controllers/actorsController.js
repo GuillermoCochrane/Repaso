@@ -66,6 +66,23 @@ const actorsController = {
         }
     },
 
+    edit: async(req, res) => {
+        try {
+            let Actor = await Actors.findByPk(req.params.id);
+            if (!Actor) {
+                return res.status(404).send('Actor no encontrado');
+            }
+            let data = { title: 'Editar Actor: ' + Actor.first_name + ' ' + Actor.last_name };
+            data.id = Actor.id;
+            data.path = 'actors';
+            data.section = 'Actor';
+            return res.render('actors/actorEdit.ejs', { data, Actor });
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
+
 };
 
 module.exports = actorsController;
