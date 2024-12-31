@@ -111,6 +111,18 @@ section.botones-listado{
   width: 20%;
 }
 
+.assign{
+  width: 25%; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  margin: auto;
+}
+
+.assign select{
+  margin: 25px auto;
+}
+
 p input, p select{
   margin-bottom: 1em;
 }
