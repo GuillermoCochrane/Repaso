@@ -83,6 +83,24 @@ const actorsController = {
         }
     },
 
+    update: async(req, res) => {
+        try {
+            let Actor = await Actors.update({
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                rating: req.body.rating
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            });
+            return res.redirect('/actors/detail/' + req.params.id);
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
+
 };
 
 module.exports = actorsController;
