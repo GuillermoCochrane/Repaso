@@ -18,9 +18,12 @@
     <br>
     <ul>
         <% for (const actor of movie.actores) { %>
-        <li>
-            <a href="/actors/detail/<%= actor.id %>"><%= actor.first_name %> <%= actor.last_name %></a>
-        </li>
+            <li class="sublista">
+                <a href="/actors/detail/<%= actor.id %>"><%= actor.first_name %> <%= actor.last_name %></a> 
+                <a href="/movies/remove/<%= movie.id %>/<%= actor.id %>">
+                    <button class="botonBorrar"> Eliminar </button>
+                </a>
+            </li>
         <% } %>
     </ul>
     <br>
