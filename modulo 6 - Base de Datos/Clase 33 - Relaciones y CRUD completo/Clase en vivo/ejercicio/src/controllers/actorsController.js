@@ -101,6 +101,20 @@ const actorsController = {
         }
     },
 
+    delete: async(req, res) => {
+        try {
+            let Actor = await Actors.findByPk(req.params.id);
+            if (!Actor) {
+                return res.status(404).send('Actor no encontrado');
+            }
+            let data = { title: 'Eliminar Actor: ' + Actor.first_name + ' ' + Actor.last_name };
+            return res.render('actors/actorDelete.ejs', { data, Actor });
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
+
 };
 
 module.exports = actorsController;
