@@ -146,6 +146,13 @@ const moviesController = {
         .then(movie => {
             res.redirect('/movies');
         });
+    },
+
+    assign: async function (req,res) {
+        let actors = await Actors.findAll();
+        let movie = await Movies.findByPk(req.params.id);        
+        let data = {title: "Asignar actor a la película " + movie.title};
+        res.render('movies/moviesAssign.ejs', {actors, data, movie});
     }
 }
 
