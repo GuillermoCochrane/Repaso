@@ -3,6 +3,7 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const utilities = require('../utilities/utilities');
+const { raw } = require('express');
 
 //Aqui tienen una forma de llamar a cada uno de los modelos
 // const {Movies,Genres,Actor} = require('../database/models');
@@ -27,16 +28,19 @@ const moviesController = {
             include: [
                 {
                     association: 'genero'
+                },
+                {
+                    association: 'actores'
                 }
-            ]
+            ],
         })
         .then(movie => {
-            let release_date = utilities.formatDateDisplay(movie.release_date);
-            movie.dataValues.release_date = release_date;
-            let data = {title: movie.title};
+            const plainMovie = movie.get({ plain: true });
+            plainMovie.release_date = utilities.formatDateDisplay(plainMovie.release_date);;
+            let data = {title: plainMovie.title};
             data.path = "movies"
-            data.id = movie.id
-            res.render('movies/moviesDetail.ejs', {movie, data});
+            data.id = plainMovie.id
+            res.render('movies/moviesDetail.ejs', {movie: plainMovie, data});
         });
     },
 
