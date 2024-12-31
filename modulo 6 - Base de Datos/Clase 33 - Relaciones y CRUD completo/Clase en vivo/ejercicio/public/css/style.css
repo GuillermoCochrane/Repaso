@@ -60,10 +60,20 @@ ul{
   list-style: none;
 }
 
+.sublista{
+  width: 33%;
+  max-width: 330px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0;
+}
+
 section.botones, section.botones-listado{
   display: flex;
   justify-content: space-between;
-  width: 220px;
+  width: 330px;
   align-items: center;
   margin: 0
 }
