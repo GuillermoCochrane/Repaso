@@ -1,12 +1,18 @@
 <%- include('../partials/head') -%>
 
 <body>
-
     <%- include('../partials/header') -%>
 
-    <h1>Estas seguro de querer borrar esta película: <%= Movie.title %>???</h1>
+    <%
+        let action = data.confirm ? `/movies/confirmDelete/${Movie.id}` : `/movies/delete/${Movie.id}`;
+        let message = data.confirm 
+            ? `La película ${Movie.title} contiene actores asociados. ¿Estás seguro de querer borrarla?`
+            : `¿Estás seguro de querer borrar esta película: ${Movie.title}?`;
+    %>
+
+    <h1><%= message %></h1>
     <p>
-        <form action="/movies/delete/<%= Movie.id %>" method="POST">
+        <form action="<%= action %>" method="POST">
             <br>
             <p> <button class="botonBorrar" type="submit">Borrar la Película</button>
             
