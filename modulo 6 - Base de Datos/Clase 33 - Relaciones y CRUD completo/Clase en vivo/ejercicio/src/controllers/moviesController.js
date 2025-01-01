@@ -3,7 +3,6 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 const utilities = require('../utilities/utilities');
-const { raw } = require('express');
 
 //Aqui tienen una forma de llamar a cada uno de los modelos
 // const {Movies,Genres,Actor} = require('../database/models');
@@ -172,6 +171,24 @@ const moviesController = {
         } catch (error) {
             console.error(error);
             res.status(500).send('Error interno del servidor');
+        }
+    },
+
+    confirm: async function (req,res) {
+        try{
+            let movie = await Movies.findByPk(req.params.id);
+
+            if (!movie) {
+                return res.status(404).send('Película no encontrada');
+            }
+
+            await movie.setActores([]);
+            await movie.destroy();
+
+            return res.redirect('/movies/');
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor'); 
         }
     },
 

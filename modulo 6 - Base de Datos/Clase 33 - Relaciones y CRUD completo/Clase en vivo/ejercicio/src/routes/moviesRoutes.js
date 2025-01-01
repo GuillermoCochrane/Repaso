@@ -13,6 +13,7 @@ router.get('/movies/edit/:id', moviesController.edit);
 router.post('/movies/update/:id', moviesController.update);
 router.get('/movies/delete/:id', moviesController.delete);
 router.post('/movies/delete/:id', moviesController.destroy);
+router.post('/movies/confirmDelete/:id', moviesController.confirm)
 router.get('/movies/assign/:id', moviesController.assign);
 router.post('/movies/assign/:id', moviesController.associate);
 router.get('/movies/remove/:movieID/:actorID', moviesController.remove);
