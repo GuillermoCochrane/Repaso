@@ -137,15 +137,42 @@ const moviesController = {
             })
     },
 
-    destroy: function (req,res) {
-        Movies.destroy({
-            where: {
-                id: req.params.id
+    destroy: async function (req,res) {
+        try {
+
+            let Movie = await Movies.findByPk(req.params.id,
+                {
+                    include: [
+                        {
+                            association: 'actores'
+                        }
+                    ],
+                }
+            );
+
+            if (!Movie) {
+                return res.status(404).send('Película no encontrada');
             }
-        })
-        .then(movie => {
-            res.redirect('/movies');
-        });
+
+            if (Movie.actores.length > 0) {
+                let data = {
+                    title: "Borrado de la Película: " + Movie.title,
+                    confirm: true
+                };
+                return res.render('movies/moviesDelete.ejs', {Movie, data});
+            }
+
+            await Movies.destroy({
+                where: {
+                    id: req.params.id
+                }
+            })
+            return res.redirect('/movies');
+
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor');
+        }
     },
 
     assign: async function (req,res) {
