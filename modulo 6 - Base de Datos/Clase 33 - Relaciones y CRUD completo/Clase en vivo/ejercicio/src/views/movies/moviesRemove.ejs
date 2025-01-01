@@ -6,7 +6,7 @@
 
     <h1>Estas seguro de querer eliminar el actor <%= actor.first_name %> <%= actor.last_name %>, de la película <%= movie.title %>?</h1>
     <p>
-        <form action="/movies/delete/<%= movie.id %>" method="POST">
+        <form action="/movies/remove/<%= movie.id %>/<%= actor.id %>" method="post">
             <br>
             <p> <button class="botonBorrar" type="submit">Eliminar</button>
             
