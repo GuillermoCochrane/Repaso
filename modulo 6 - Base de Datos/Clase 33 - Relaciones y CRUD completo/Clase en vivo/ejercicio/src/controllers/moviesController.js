@@ -187,7 +187,25 @@ const moviesController = {
             console.error(error);
             res.status(500).send('Error interno del servidor');
         }
-    }
+    },
+
+    eliminate: async function (req,res) {
+        try{
+            let movie = await Movies.findByPk(req.params.movieID);
+            let actor = await Actors.findByPk(req.params.actorID);
+            if (!movie) {
+                return res.status(404).send('Película no encontrada');
+            }
+            if (!actor) {
+                return res.status(404).send('Actor no encontrado');
+            }
+            await movie.removeActores(actor);
+            return res.redirect('/movies/detail/' + movie.id);
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor'); 
+        }
+    },
 }
 
 module.exports = moviesController;
