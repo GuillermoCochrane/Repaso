@@ -17,8 +17,11 @@
     <br>
     <ul>
         <% for (const movie of movies) { %>
-        <li>
+        <li class="sublista">
             <a href="/movies/detail/<%= movie.id %>"><%= movie.title %></a>
+            <a href="/actors/remove/<%= actor.id %>/<%= movie.id %>">
+                <button class="botonBorrar"> Eliminar </button>
+            </a>
         </li>
         <% } %>
         <%= locals.movies && movies.length === 0 ? "El actor no tiene  películas asociadas" : null %>
