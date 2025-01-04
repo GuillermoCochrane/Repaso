@@ -12,7 +12,7 @@ router.get('/actors/delete/:id', actorsController.delete)
 router.post('/actors/delete/:id', actorsController.destroy)
 //router.post('/actors/confirmDelete/:id', actorsController.confirm)
 router.get('/actors/assign/:id', actorsController.assign);
-//router.post('/actors/assign/:id', actorsController.associate);
+router.post('/actors/assign/:id', actorsController.associate);
 //router.get('/actors/remove/:movieID/:actorID', actorsController.remove);
 //router.post('/actors/remove/:movieID/:actorID', actorsController.eliminate);
 

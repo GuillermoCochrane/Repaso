@@ -141,9 +141,6 @@ const actorsController = {
             }
             let movies = await Movies.findAll();
             let data = { title: 'Asignar Película al Actor: ' + actor.first_name + ' ' + actor.last_name };
-            data.id = actor.id;
-            data.path = 'actors';
-            data.section = 'Actor';
             return res.render('actors/actorAssign.ejs', { data, actor, movies })
         } catch (error) {
             console.error(error);
@@ -151,7 +148,27 @@ const actorsController = {
         }
     },
 
+    associate: async (req, res) => {
+        try {
+            let actor = await Actors.findByPk(req.params.id);
 
+            if (!actor) {
+                return res.status(404).send('Actor no encontrado');
+            }
+
+            let movie = await Movies.findByPk(req.body.movie_id);
+
+            if (!movie) {
+                return res.status(404).send('Película no encontrada');
+            }
+
+            await actor.addPeliculas(req.body.movie_id);
+            return res.redirect('/actors/detail/' + actor.id);
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor');
+        }
+    }
 };
 
 module.exports = actorsController;
