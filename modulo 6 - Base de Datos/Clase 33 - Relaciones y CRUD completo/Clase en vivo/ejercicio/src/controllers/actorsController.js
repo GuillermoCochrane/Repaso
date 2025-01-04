@@ -133,6 +133,25 @@ const actorsController = {
         }
     },
 
+    assign: async (req, res) => {
+        try {
+            let actor = await Actors.findByPk(req.params.id);
+            if (!actor) {
+                return res.status(404).send('Actor no encontrado');
+            }
+            let movies = await Movies.findAll();
+            let data = { title: 'Asignar Película al Actor: ' + actor.first_name + ' ' + actor.last_name };
+            data.id = actor.id;
+            data.path = 'actors';
+            data.section = 'Actor';
+            return res.render('actors/actorAssign.ejs', { data, actor, movies })
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
+
+
 };
 
 module.exports = actorsController;
