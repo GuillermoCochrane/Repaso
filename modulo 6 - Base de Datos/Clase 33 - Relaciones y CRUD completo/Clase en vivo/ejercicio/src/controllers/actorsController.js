@@ -151,6 +151,24 @@ const actorsController = {
         }
     },
 
+    confirm: async (req, res) => {
+        try {
+            let actor = await Actors.findByPk(req.params.id);
+
+            if (!actor) {
+                return res.status(404).send('Actor no encontrado');
+            }
+            
+            await actor.setPeliculas([]);
+            await actor.destroy();
+
+            return res.redirect('/actors/');
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
+
     assign: async (req, res) => {
         try {
             let actor = await Actors.findByPk(req.params.id);
