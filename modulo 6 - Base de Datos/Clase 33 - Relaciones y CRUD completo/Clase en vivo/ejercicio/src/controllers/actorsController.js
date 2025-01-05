@@ -117,11 +117,29 @@ const actorsController = {
 
     destroy: async(req, res) => {
         try {
-            let Actor = await Actors.findByPk(req.params.id);
+            let Actor = await Actors.findByPk(req.params.id,
+                {
+                    include: [
+                        {
+                            association: 'peliculas'
+                        }
+                    ],
+                }
+            );
+
             if (!Actor) {
                 return res.status(404).send('Actor no encontrado');
             }
-            let process = await Actors.destroy({
+
+            if (Actor.peliculas.length > 0) {
+                let data = {
+                    title: 'Borrado de Actor: ' + Actor.first_name + ' ' + Actor.last_name,
+                    confirm: true
+                };
+                return res.render('actors/actorDelete.ejs', { Actor, data });
+            }
+
+            await Actors.destroy({
                 where: {
                     id: req.params.id
                 }
