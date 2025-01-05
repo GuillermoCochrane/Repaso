@@ -4,9 +4,16 @@
 
     <%- include('../partials/header') -%>
 
-    <h1>Estas seguro de querer borrar esta Actor: <%= Actor.first_name %> <%= Actor.last_name %>?</h1>
+    <%
+        let action = data.confirm ? `/actors/confirmDelete/${Actor.id}` : `/actors/delete/${Actor.id}`;
+        let message = data.confirm 
+            ? `El actor ${Actor.first_name} ${Actor.last_name} contiene películas asociadas. ¿Estás seguro de querer borrarlo?`
+            : `¿Estás seguro de querer borrar a este actor: ${Actor.first_name} ${Actor.last_name}?`;
+    %>
+
+    <h1><%= message %></h1>
     <p>
-        <form action="/actors/delete/<%= Actor.id %>" method="POST">
+        <form action="<%= action %>" method="POST">
             <br>
             <p> <button class="botonBorrar" type="submit">Borrar el Actor</button>
             <a  class="botonVolver" href="/actors">Listado de Actores</a>
