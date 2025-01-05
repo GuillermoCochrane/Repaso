@@ -168,7 +168,25 @@ const actorsController = {
             console.error(error);
             res.status(500).send('Error interno del servidor');
         }
-    }
+    },
+
+    remove: async (req, res) => {
+        try {
+            let actor = await Actors.findByPk(req.params.actorID);
+            if (!actor) {
+                return res.status(404).send('Actor no encontrado');
+            }
+            let movie = await Movies.findByPk(req.params.movieID);
+            if (!movie) {
+                return res.status(404).send('Película no encontrada');
+            }
+            let data = { title: 'Eliminar película de un actor '};
+            return res.render('actors/actorRemove.ejs', { data, actor, movie });
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
 };
 
 module.exports = actorsController;
